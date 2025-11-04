@@ -241,27 +241,27 @@ export default function DataLayer() {
               </table>
             </div>
 
-            {/* Regional Distribution Charts - Top 5 Keywords Only */}
+            {/* Regional Distribution Charts - Top 6 Keywords in 2 Rows */}
             <div className="mt-6">
-              <h4 className="text-sm font-semibold text-gray-700 mb-4">Distribución Regional por Keyword (Top 5)</h4>
-              <div className="space-y-6">
-                {trendsData?.keywords?.slice(0, 5).map((kw, idx) => (
+              <h4 className="text-sm font-semibold text-gray-700 mb-4">Distribución Regional por Keyword (Top 6)</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {trendsData?.keywords?.slice(0, 6).map((kw, idx) => (
                   kw.top_regions && Object.keys(kw.top_regions).length > 0 && (
-                    <div key={idx} className="bg-gray-50 rounded-lg p-4">
-                      <h5 className="text-sm font-medium text-gray-900 mb-3">{kw.keyword}</h5>
-                      <div className="space-y-2">
+                    <div key={idx} className="bg-gray-50 rounded-lg p-3">
+                      <h5 className="text-xs font-semibold text-gray-900 mb-2 truncate">{kw.keyword}</h5>
+                      <div className="space-y-1.5">
                         {Object.entries(kw.top_regions)
                           .sort(([, a], [, b]) => b - a)
-                          .slice(0, 5)
+                          .slice(0, 3)
                           .map(([region, score], regionIdx) => (
-                            <div key={regionIdx} className="flex items-center gap-3">
-                              <div className="w-24 text-xs font-medium text-gray-700 truncate">{region}</div>
-                              <div className="flex-1 bg-gray-200 rounded-full h-6 relative">
+                            <div key={regionIdx} className="flex items-center gap-2">
+                              <div className="w-16 text-[10px] font-medium text-gray-700 truncate">{region}</div>
+                              <div className="flex-1 bg-gray-200 rounded-full h-4 relative">
                                 <div
-                                  className="bg-gradient-to-r from-blue-500 to-blue-600 h-6 rounded-full flex items-center justify-end pr-2 transition-all duration-500"
+                                  className="bg-gradient-to-r from-blue-500 to-blue-600 h-4 rounded-full flex items-center justify-end pr-1.5 transition-all duration-500"
                                   style={{ width: `${score}%` }}
                                 >
-                                  <span className="text-xs font-semibold text-white">{score}</span>
+                                  <span className="text-[10px] font-semibold text-white">{score}</span>
                                 </div>
                               </div>
                             </div>
