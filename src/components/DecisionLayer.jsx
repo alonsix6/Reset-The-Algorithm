@@ -1,6 +1,6 @@
 import { Target, Users, MessageSquare, TrendingUp, Lightbulb, Zap, AlertCircle, Car } from 'lucide-react';
-import { OPPORTUNITY_SCORE, TARGET_AUDIENCES, KEY_MESSAGES } from '../data/mockData';
-import { LAYER_CONFIG } from '../data/config';
+import { OPPORTUNITY_SCORE, TARGET_AUDIENCES } from '../data/mockData';
+import { LAYER_CONFIG, KEY_MESSAGES } from '../data/config';
 
 export default function DecisionLayer() {
   const recommendations = [
