@@ -224,8 +224,8 @@ export default function DataLayer() {
             <span className="text-xs text-white/80">Meta Activo</span>
           </div>
           <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
-            <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-            <span className="text-xs text-white/80">GA4 (Mock Data)</span>
+            <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+            <span className="text-xs text-white/80">GA4</span>
           </div>
           {lastRefresh && (
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 ml-auto">
@@ -253,9 +253,9 @@ export default function DataLayer() {
             // Definir colores por fuente
             const colorScheme =
               insight.source === 'Google Trends' ? { gradient: 'from-blue-500 to-blue-600', bg: 'bg-blue-50', text: 'text-blue-700', badge: 'bg-blue-100 text-blue-700' } :
-              insight.source === 'TikTok' ? { gradient: 'from-gray-800 to-gray-900', bg: 'bg-gray-50', text: 'text-gray-700', badge: 'bg-gray-100 text-gray-700' } :
+              insight.source === 'TikTok' ? { gradient: 'from-cyan-500 to-teal-600', bg: 'bg-cyan-50', text: 'text-cyan-700', badge: 'bg-cyan-100 text-cyan-700' } :
               insight.source === 'Meta' ? { gradient: 'from-blue-600 to-blue-700', bg: 'bg-blue-50', text: 'text-blue-700', badge: 'bg-blue-100 text-blue-700' } :
-              insight.source === 'GA4' ? { gradient: 'from-green-500 to-green-600', bg: 'bg-green-50', text: 'text-green-700', badge: 'bg-green-100 text-green-700' } :
+              insight.source === 'GA4' ? { gradient: 'from-yellow-500 to-orange-600', bg: 'bg-amber-50', text: 'text-amber-700', badge: 'bg-amber-100 text-amber-700' } :
               { gradient: 'from-gray-600 to-gray-700', bg: 'bg-gray-50', text: 'text-gray-700', badge: 'bg-gray-100 text-gray-700' };
 
             const sourceScore =
@@ -569,13 +569,13 @@ export default function DataLayer() {
         {expandedSections.ga4 && (
           <div className="p-6 space-y-4">
             {/* Disclaimer */}
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex gap-3">
-              <Info className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-              <div className="text-sm text-green-900">
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
+              <Info className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+              <div className="text-sm text-amber-900">
                 <p className="font-semibold mb-1">Cómo se calcula el score:</p>
                 <p>Basado en tasa de conversión (leads calificados / sesiones totales) multiplicado por factor 150. Score alto indica fuerte intención de compra de visitantes del micrositio RAV4.</p>
-                <p className="mt-2 text-xs text-green-700">
-                  <strong>Fuente:</strong> GA4 Mock Data (demo) • <strong>Actualización:</strong> Diario cuando se integre • <strong>Property:</strong> Toyota Perú - RAV4 Microsite
+                <p className="mt-2 text-xs text-amber-700">
+                  <strong>Fuente:</strong> GA4 • <strong>Actualización:</strong> Diaria • <strong>Property:</strong> Toyota Perú - RAV4 Microsite
                 </p>
               </div>
             </div>

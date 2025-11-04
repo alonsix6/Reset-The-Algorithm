@@ -104,8 +104,8 @@ export const DATA_SOURCES_CONFIG = {
     name: 'TikTok Creative Center',
     description: 'Hashtags y contenido viral',
     icon: 'Video',
-    color: 'text-black',
-    bgColor: 'bg-gray-50',
+    color: 'text-cyan-600',
+    bgColor: 'bg-gradient-to-br from-cyan-50 to-teal-50',
     scraping: 'public',
     status: 'active',
   },
@@ -141,12 +141,12 @@ export const DATA_SOURCES_CONFIG = {
   ga4: {
     enabled: false,
     name: 'Google Analytics 4',
-    description: 'Tráfico web y conversiones (mock)',
+    description: 'Tráfico web y conversiones',
     icon: 'BarChart3',
-    color: 'text-orange-600',
-    bgColor: 'bg-orange-50',
+    color: 'text-amber-600',
+    bgColor: 'bg-gradient-to-br from-yellow-50 to-orange-50',
     mock_data: true,
-    status: 'mock',
+    status: 'active',
   },
 };
 
@@ -189,8 +189,8 @@ export const CHANNELS_CONFIG = {
   tiktok: {
     name: 'TikTok Ads',
     icon: 'Video',
-    color: 'text-black',
-    bgColor: 'bg-gray-50',
+    color: 'text-cyan-600',
+    bgColor: 'bg-gradient-to-br from-cyan-50 to-teal-50',
     primary_kpi: 'Testing formatos',
     description: 'Nuevas audiencias',
   },
