@@ -238,20 +238,55 @@ export default function DataLayer() {
       </div>
 
       {/* Insights Clave del Mercado */}
-      <div className="bg-white rounded-xl shadow-lg p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-          📊 Insights Clave del Mercado
-        </h3>
-        <div className="space-y-3">
-          {insights.map((insight, idx) => (
-            <div key={idx} className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
-              <span className="text-2xl flex-shrink-0">{insight.icon}</span>
-              <div className="flex-1">
-                <p className="text-xs font-semibold text-gray-500 uppercase mb-1">{insight.source}</p>
-                <p className="text-sm text-gray-800 leading-relaxed">{insight.text}</p>
+      <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-toyota-lg p-8 border border-gray-100">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-12 h-12 bg-gradient-to-br from-toyota-red to-toyota-darkRed rounded-xl flex items-center justify-center shadow-lg">
+            <span className="text-2xl">📊</span>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900">Insights Clave del Mercado</h3>
+            <p className="text-sm text-gray-600">Análisis automático multi-fuente</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-4">
+          {insights.map((insight, idx) => {
+            // Definir colores por fuente
+            const colorScheme =
+              insight.source === 'Google Trends' ? { gradient: 'from-blue-500 to-blue-600', bg: 'bg-blue-50', text: 'text-blue-700', badge: 'bg-blue-100 text-blue-700' } :
+              insight.source === 'TikTok' ? { gradient: 'from-pink-500 to-purple-600', bg: 'bg-purple-50', text: 'text-purple-700', badge: 'bg-purple-100 text-purple-700' } :
+              insight.source === 'Meta' ? { gradient: 'from-blue-600 to-indigo-600', bg: 'bg-indigo-50', text: 'text-indigo-700', badge: 'bg-indigo-100 text-indigo-700' } :
+              insight.source === 'GA4' ? { gradient: 'from-green-500 to-emerald-600', bg: 'bg-green-50', text: 'text-green-700', badge: 'bg-green-100 text-green-700' } :
+              { gradient: 'from-orange-500 to-red-600', bg: 'bg-orange-50', text: 'text-orange-700', badge: 'bg-orange-100 text-orange-700' };
+
+            const sourceScore =
+              insight.source === 'Google Trends' ? scores.search :
+              insight.source === 'TikTok' ? scores.trend :
+              insight.source === 'Meta' ? scores.social :
+              insight.source === 'GA4' ? scores.intent : null;
+
+            return (
+              <div key={idx} className={`relative ${colorScheme.bg} rounded-xl p-5 border-2 border-transparent hover:border-gray-200 transition-all duration-300 hover:shadow-lg group`}>
+                <div className="flex items-start gap-4">
+                  <div className={`w-14 h-14 bg-gradient-to-br ${colorScheme.gradient} rounded-xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                    <span className="text-3xl">{insight.icon}</span>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <p className={`text-xs font-bold ${colorScheme.text} uppercase tracking-wider`}>{insight.source}</p>
+                      {sourceScore && (
+                        <span className={`${colorScheme.badge} px-2 py-0.5 rounded-full text-xs font-bold`}>
+                          {sourceScore}/10
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm text-gray-700 leading-relaxed font-medium">{insight.text}</p>
+                  </div>
+                </div>
+                {/* Decorative accent */}
+                <div className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b ${colorScheme.gradient} rounded-l-xl`}></div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
