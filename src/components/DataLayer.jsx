@@ -612,10 +612,14 @@ export default function DataLayer() {
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Sentimiento:</span>
                         <span className={`font-semibold ${
-                          topic.sentiment > 70 ? 'text-green-600' :
-                          topic.sentiment > 40 ? 'text-yellow-600' : 'text-red-600'
+                          topic.sentiment === 'very positive' ? 'text-green-600' :
+                          topic.sentiment === 'positive' ? 'text-green-600' :
+                          topic.sentiment === 'neutral' ? 'text-gray-600' : 'text-yellow-600'
                         }`}>
-                          {topic.sentiment}% positivo
+                          {topic.sentiment === 'very positive' ? 'Muy Positivo' :
+                           topic.sentiment === 'positive' ? 'Positivo' :
+                           topic.sentiment === 'neutral' ? 'Neutral' :
+                           topic.sentiment === 'negative' ? 'Negativo' : topic.sentiment}
                         </span>
                       </div>
                     )}
