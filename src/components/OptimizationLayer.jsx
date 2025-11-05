@@ -224,10 +224,10 @@ export default function OptimizationLayer() {
       <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
         <h3 className="text-base font-bold text-gray-900 mb-4">Distribución de Leads por Canal</h3>
 
-        <div className="flex items-center gap-6">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
           {/* Pie Chart */}
           <div className="flex-shrink-0">
-            <ResponsiveContainer width={220} height={220}>
+            <ResponsiveContainer width={280} height={280}>
               <PieChart>
                 <Pie
                   data={channelData}
@@ -235,7 +235,7 @@ export default function OptimizationLayer() {
                   cy="50%"
                   labelLine={false}
                   label={false}
-                  outerRadius={90}
+                  outerRadius={110}
                   fill="#8884d8"
                   dataKey="value"
                 >
@@ -248,17 +248,17 @@ export default function OptimizationLayer() {
             </ResponsiveContainer>
           </div>
 
-          {/* Legend - Right side */}
-          <div className="flex-1 space-y-2">
+          {/* Legend - Right side, compact */}
+          <div className="flex-1 max-w-xs space-y-1.5">
             {channelData.map((channel, idx) => (
-              <div key={idx} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: channel.color }}></div>
-                  <span className="text-sm font-medium text-gray-700">{channel.name}</span>
+              <div key={idx} className="flex items-center justify-between px-3 py-1.5 bg-gray-50 rounded hover:bg-gray-100 transition-colors">
+                <div className="flex items-center gap-2 min-w-0">
+                  <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: channel.color }}></div>
+                  <span className="text-xs font-medium text-gray-700 truncate">{channel.name}</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-sm font-bold text-gray-900">{channel.leads} leads</span>
-                  <span className="text-xs font-bold text-gray-600 bg-gray-200 px-2 py-1 rounded">{channel.value}%</span>
+                <div className="flex items-center gap-2 flex-shrink-0 ml-2">
+                  <span className="text-xs font-bold text-gray-900">{channel.leads}</span>
+                  <span className="text-xs font-bold text-gray-600 bg-gray-200 px-1.5 py-0.5 rounded">{channel.value}%</span>
                 </div>
               </div>
             ))}
