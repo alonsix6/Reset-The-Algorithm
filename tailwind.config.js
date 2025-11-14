@@ -7,52 +7,52 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Toyota Brand Colors - Official
-        toyota: {
-          red: '#EB0A1E',        // Toyota Red (color principal oficial)
-          darkRed: '#CC0000',    // Rojo oscuro
+        // Honda Brand Colors - Official
+        honda: {
+          red: '#CC0000',        // Honda Red (color principal oficial)
+          darkRed: '#A00000',    // Rojo oscuro
           black: '#000000',      // Negro (secundario)
           gray: '#54565A',       // Gris corporativo
           lightGray: '#E6E6E6',  // Gris claro
           white: '#FFFFFF',      // Blanco
-          silver: '#C0C0C0',     // Plateado (híbrido/tecnología)
-          green: '#00A650',      // Verde (ecológico/híbrido)
+          silver: '#C0C0C0',     // Plateado (tecnología)
+          blue: '#0056A3',       // Azul (tecnología/híbrido)
         },
-        // Mantener colores Aruma como alias para compatibilidad (se reemplazarán en componentes)
+        // Mantener colores Aruma como alias para compatibilidad
         aruma: {
-          pink: '#EB0A1E',       // Mapear a Toyota Red
-          magenta: '#CC0000',    // Mapear a Dark Red
+          pink: '#CC0000',       // Mapear a Honda Red
+          magenta: '#A00000',    // Mapear a Dark Red
           purple: '#54565A',     // Mapear a Gray
-          blue: '#00A650',       // Mapear a Green
+          blue: '#0056A3',       // Mapear a Blue
           light: '#E6E6E6',      // Mapear a Light Gray
           dark: '#000000',       // Mapear a Black
         },
         // Semantic colors
-        success: '#00A650',      // Verde Toyota para éxito
+        success: '#0056A3',      // Azul Honda para éxito
         warning: '#F59E0B',
-        error: '#CC0000',        // Rojo oscuro Toyota
-        info: '#54565A',         // Gris Toyota
+        error: '#CC0000',        // Rojo Honda
+        info: '#54565A',         // Gris Honda
       },
       fontFamily: {
         sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
         display: ['Inter', 'Helvetica Neue', 'sans-serif'],
       },
       backgroundImage: {
-        // Gradientes Toyota
-        'gradient-toyota': 'linear-gradient(135deg, #EB0A1E 0%, #000000 100%)',
-        'gradient-toyota-light': 'linear-gradient(135deg, #FFFFFF 0%, #E6E6E6 100%)',
-        'gradient-hybrid': 'linear-gradient(135deg, #00A650 0%, #54565A 100%)',
-        // Mantener nombres Aruma como alias (se reemplazarán)
-        'gradient-aruma': 'linear-gradient(135deg, #EB0A1E 0%, #000000 100%)',
+        // Gradientes Honda
+        'gradient-honda': 'linear-gradient(135deg, #CC0000 0%, #000000 100%)',
+        'gradient-honda-light': 'linear-gradient(135deg, #FFFFFF 0%, #E6E6E6 100%)',
+        'gradient-hybrid': 'linear-gradient(135deg, #0056A3 0%, #54565A 100%)',
+        // Mantener nombres Aruma como alias
+        'gradient-aruma': 'linear-gradient(135deg, #CC0000 0%, #000000 100%)',
         'gradient-aruma-light': 'linear-gradient(135deg, #E6E6E6 0%, #FFFFFF 100%)',
       },
       boxShadow: {
-        'toyota': '0 20px 50px rgba(235, 10, 30, 0.15)',
-        'toyota-lg': '0 30px 60px rgba(235, 10, 30, 0.25)',
-        'hybrid': '0 15px 40px rgba(0, 166, 80, 0.20)',
+        'honda': '0 20px 50px rgba(204, 0, 0, 0.15)',
+        'honda-lg': '0 30px 60px rgba(204, 0, 0, 0.25)',
+        'hybrid': '0 15px 40px rgba(0, 86, 163, 0.20)',
         // Mantener alias Aruma
-        'aruma': '0 20px 50px rgba(235, 10, 30, 0.15)',
-        'aruma-lg': '0 30px 60px rgba(235, 10, 30, 0.25)',
+        'aruma': '0 20px 50px rgba(204, 0, 0, 0.15)',
+        'aruma-lg': '0 30px 60px rgba(204, 0, 0, 0.25)',
       },
       animation: {
         'fadeIn': 'fadeIn 0.5s ease-in-out',

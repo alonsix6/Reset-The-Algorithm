@@ -1,4 +1,4 @@
-// Mock Data para Toyota RAV4 Híbrida - Dashboard Demo
+// Mock Data para Honda - Dashboard Demo (Autos y Motos)
 // Datos simulados realistas para presentación a cliente
 
 // ============================================================================
@@ -18,8 +18,8 @@ export const MOCK_GA4_DATA = {
   // Páginas más visitadas
   top_pages: [
     {
-      page: '/rav4-hibrida',
-      title: 'RAV4 Híbrida - Características',
+      page: '/cr-v-advanced-hybrid',
+      title: 'CR-V Advanced Hybrid - Características',
       views: 34500,
       bounce_rate: 32,
       avg_time: '2:45',
@@ -46,8 +46,8 @@ export const MOCK_GA4_DATA = {
       avg_time: '2:10',
     },
     {
-      page: '/galeria',
-      title: 'Galería de Fotos',
+      page: '/hr-v-2026',
+      title: 'HR-V 2026 - Galería',
       views: 7850,
       bounce_rate: 38,
       avg_time: '1:50',
@@ -294,14 +294,14 @@ export const BUDGET_ALLOCATION = {
 };
 
 // ============================================================================
-// CONTENT PILLARS - Pilares de contenido RAV4
+// CONTENT PILLARS - Pilares de contenido Honda
 // ============================================================================
 export const CONTENT_PILLARS = [
   {
-    id: 'hybrid-tech',
-    title: 'Tecnología Híbrida',
-    description: 'Eficiencia sin sacrificar potencia',
-    formats: ['Videos explicativos', 'Infografías', 'Testimoniales'],
+    id: 'ehev-tech',
+    title: 'Tecnología e:HEV',
+    description: 'Híbrido sin enchufar, 70% eléctrico',
+    formats: ['Videos explicativos', 'Infografías', 'Demos tecnología'],
     performance: {
       engagement_rate: 3.2,
       reach: 890000,
@@ -311,9 +311,9 @@ export const CONTENT_PILLARS = [
     status: 'performing',
   },
   {
-    id: 'family-safety',
-    title: 'Seguridad Familiar',
-    description: 'Protegemos lo que más importa',
+    id: 'honda-sensing',
+    title: 'Honda Sensing',
+    description: 'Tecnología que protege lo que más importa',
     formats: ['Demos de seguridad', 'Historias reales', 'Video emocional'],
     performance: {
       engagement_rate: 4.1,
@@ -324,10 +324,10 @@ export const CONTENT_PILLARS = [
     status: 'overperforming',
   },
   {
-    id: 'adventure-4x4',
-    title: 'Aventura 4x4',
-    description: 'Libertad sin límites',
-    formats: ['Videos de ruta', 'Challenges', 'UGC'],
+    id: 'versatility-suv',
+    title: 'Versatilidad SUV',
+    description: 'De la ciudad a la aventura sin límites',
+    formats: ['Videos de ruta', 'Magic Seats demos', 'UGC'],
     performance: {
       engagement_rate: 2.8,
       reach: 720000,
@@ -337,10 +337,10 @@ export const CONTENT_PILLARS = [
     status: 'ontrack',
   },
   {
-    id: 'sustainability',
-    title: 'Sostenibilidad',
-    description: 'Movilidad responsable',
-    formats: ['Data viz', 'Comparativas ecológicas', 'Educativo'],
+    id: 'efficiency',
+    title: 'Eficiencia Real',
+    description: 'Hasta 22 km/litro en modo económico',
+    formats: ['Data viz', 'Comparativas ahorro', 'Testimoniales'],
     performance: {
       engagement_rate: 2.1,
       reach: 480000,
@@ -451,38 +451,38 @@ export const AB_TESTS = [
 // ============================================================================
 export const COMPETITOR_INSIGHTS = [
   {
-    brand: 'Honda CR-V',
-    sentiment: 72,
+    brand: 'Toyota RAV4',
+    sentiment: 85,
     share_of_voice: 28,
-    trending_topics: ['Espacio interior', 'Tecnología', 'Precio'],
+    trending_topics: ['Confiabilidad', 'Híbrida', 'Líder mercado'],
     threat_level: 'high',
   },
   {
     brand: 'Mazda CX-5',
     sentiment: 78,
     share_of_voice: 18,
-    trending_topics: ['Diseño', 'Manejo deportivo'],
+    trending_topics: ['Diseño', 'Manejo deportivo', 'Premium'],
     threat_level: 'medium',
   },
   {
     brand: 'Hyundai Tucson',
     sentiment: 68,
     share_of_voice: 22,
-    trending_topics: ['Garantía', 'Precio competitivo'],
+    trending_topics: ['Garantía', 'Precio competitivo', 'Equipamiento'],
     threat_level: 'high',
   },
   {
     brand: 'Nissan X-Trail',
     sentiment: 65,
     share_of_voice: 15,
-    trending_topics: ['7 asientos', 'Espacio'],
+    trending_topics: ['7 asientos', 'e-POWER', 'Espacio'],
     threat_level: 'medium',
   },
   {
-    brand: 'Geely Okavango Híbrida',
-    sentiment: 70,
+    brand: 'Hyundai Creta',
+    sentiment: 72,
     share_of_voice: 12,
-    trending_topics: ['Precio accesible', 'Mild Hybrid 48V', '3 filas'],
+    trending_topics: ['Precio accesible', 'SUV compacta', 'Equipamiento'],
     threat_level: 'medium',
   },
   {
@@ -493,10 +493,10 @@ export const COMPETITOR_INSIGHTS = [
     threat_level: 'medium',
   },
   {
-    brand: 'Toyota RAV4',
-    sentiment: 85,
+    brand: 'Honda CR-V / HR-V',
+    sentiment: 82,
     share_of_voice: 17,
-    trending_topics: ['Híbrida', 'Confiabilidad', 'Ahorro'],
+    trending_topics: ['e:HEV', 'Honda Sensing', 'Confiabilidad'],
     threat_level: null, // Es nuestra marca
   },
 ];
