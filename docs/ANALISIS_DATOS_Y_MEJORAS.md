@@ -1,4 +1,4 @@
-# 📊 Análisis de Datos y Mejoras Necesarias - Aruma Algorithm MVP
+# 📊 Análisis de Datos y Mejoras Necesarias - Honda Algorithm MVP
 
 **Fecha de análisis:** 31 de octubre, 2025
 **Preparado para:** Presentación al Cliente

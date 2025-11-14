@@ -1,4 +1,4 @@
-# Guía de Scrapers - Aruma Algorithm
+# Guía de Scrapers - Honda Algorithm
 
 Esta guía explica cómo funcionan los 3 scrapers de tendencias de beauty del proyecto.
 

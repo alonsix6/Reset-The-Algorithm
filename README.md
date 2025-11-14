@@ -1,24 +1,24 @@
-# 🚗 Toyota Algorithm
+# 🚗 Honda Algorithm
 
-**Social Intelligence para el lanzamiento de Toyota en el mercado automotriz peruano**
+**Social Intelligence para Honda Autos y Motos en el mercado peruano**
 
-![Version](https://img.shields.io/badge/version-1.0.0-EB0A1E)
-![Status](https://img.shields.io/badge/status-MVP-00A650)
+![Version](https://img.shields.io/badge/version-1.0.0-CC0000)
+![Status](https://img.shields.io/badge/status-MVP-0056A3)
 ![License](https://img.shields.io/badge/license-Proprietary-000000)
 
 ---
 
 ## 📋 Descripción
 
-El **Toyota Algorithm** es una plataforma de Social Intelligence que unifica datos de diversas fuentes digitales para optimizar la estrategia de lanzamiento de la **Toyota RAV4 Híbrida en Perú**.
+El **Honda Algorithm** es una plataforma de Social Intelligence que unifica datos de diversas fuentes digitales para optimizar la estrategia de lanzamiento de **Honda CR-V Advanced Hybrid y HR-V en Perú**.
 
 Identifica microcomportamientos, emociones e intenciones de compra en el sector automotriz, optimizando la inversión publicitaria mediante decisiones automatizadas basadas en señales de data en tiempo real.
 
 ### 🎯 Propuesta de Valor
 
-- **Cliente**: Toyota Perú
+- **Cliente**: Honda Perú
 - **Agencia**: Reset (Barranco, Lima)
-- **Objetivo**: Sistema automatizado de Social Intelligence para optimizar la estrategia digital del lanzamiento RAV4 Híbrida
+- **Objetivo**: Sistema automatizado de Social Intelligence para optimizar la estrategia digital del lanzamiento CR-V Advanced Hybrid
 - **Enfoque**: Leads calificados, alcance e interacciones (no solo ventas directas)
 
 ---
@@ -37,9 +37,9 @@ Monitoreo en tiempo real del ecosistema digital automotriz:
 
 ### 2. **🎯 Capa de Decisión (Decision Layer)**
 Inteligencia de mercado y estrategia automática:
-- **Toyota Opportunity Score**: Índice de oportunidad 0-100
+- **Honda Opportunity Score**: Índice de oportunidad 0-100
 - **Audiencias objetivo**: Familias jóvenes, profesionales eco-conscious, aventureros urbanos
-- **Mensajes clave**: Tecnología híbrida, seguridad familiar, aventura 4x4, sostenibilidad
+- **Mensajes clave**: Tecnología e:HEV, Honda Sensing, versatilidad SUV, eficiencia
 - **Recomendaciones automáticas** basadas en signals de mercado
 
 **Output**: Qué mensaje activar, en qué momento y en qué plataforma
@@ -47,7 +47,7 @@ Inteligencia de mercado y estrategia automática:
 ### 3. **⚡ Capa de Ejecución (Execution Layer)**
 Distribución inteligente de presupuesto y contenidos:
 - **Budget Allocation**: Google Search (35%), Meta Ads (30%), YouTube (20%), Display (10%), TikTok (5%)
-- **Pilares de Contenido**: Híbrido, Familia, Aventura, Sostenibilidad
+- **Pilares de Contenido**: e:HEV, Honda Sensing, Versatilidad, Eficiencia
 - **Timing Óptimo**: Mejores horarios y días para pauta
 - **KPIs por canal**: Leads calificados, alcance, engagement
 
@@ -57,7 +57,7 @@ Distribución inteligente de presupuesto y contenidos:
 Performance y ajustes automáticos:
 - **KPIs principales**: Leads calificados, alcance único, interacciones totales
 - **Funnel de conversión**: Impresiones → Clics → Landing → Formularios → Test Drives
-- **Análisis de competencia**: Honda CR-V, Mazda CX-5, Hyundai Tucson, Nissan X-Trail
+- **Análisis de competencia**: Toyota RAV4, Mazda CX-5, Hyundai Tucson, Nissan X-Trail
 - **A/B Testing automático** y alertas en tiempo real
 
 **Output**: Evaluación continua y redistribución de inversión
@@ -68,7 +68,7 @@ Performance y ajustes automáticos:
 
 ### Frontend
 - **React 18** + **Vite**
-- **Tailwind CSS** (branding Toyota: rojo #EB0A1E, negro, gris, verde híbrido)
+- **Tailwind CSS** (branding Honda: rojo #CC0000, negro, gris, azul tech)
 - **Recharts** para visualizaciones de datos
 - **Lucide React** para iconografía
 
@@ -89,8 +89,8 @@ Performance y ajustes automáticos:
 ### 1. Clonar repositorio
 
 ```bash
-git clone https://github.com/alonsix6/toyota-algorithm-mvp.git
-cd toyota-algorithm-mvp
+git clone https://github.com/alonsix6/honda-algorithm-mvp.git
+cd honda-algorithm-mvp
 ```
 
 ### 2. Instalar dependencias
@@ -152,7 +152,7 @@ netlify deploy --prod
 
 ## 📊 Métricas del Sistema
 
-### Toyota Opportunity Score: **87/100** (Grado A)
+### Honda Opportunity Score: **87/100** (Grado A)
 
 **Componentes ponderados:**
 - **Trending Topics** (30%): 92/100 → Contribución: 27.6 pts
@@ -189,13 +189,13 @@ netlify deploy --prod
 ## 📁 Estructura del Proyecto
 
 ```
-toyota-algorithm-mvp/
+honda-algorithm-mvp/
 ├── .github/workflows/          # CI/CD
 │   └── scrape-data.yml        # Scrapers automáticos
 ├── scrapers/                   # Scripts de recolección de datos
 │   ├── google_trends.py       # Google Trends (Perú, Autos)
 │   ├── tiktok_scraper.js      # TikTok Creative Center
-│   └── meta_scraper.js        # Meta Graph API
+│   └── meta_scraper.js        # Meta Public Trends
 ├── data/                       # Datos recopilados
 │   ├── trends/                # Google Trends
 │   ├── tiktok/                # TikTok hashtags
@@ -203,13 +203,13 @@ toyota-algorithm-mvp/
 │   └── mock/                  # Datos simulados GA4
 ├── src/
 │   ├── components/
-│   │   ├── Dashboard.jsx          # Dashboard principal Toyota
+│   │   ├── Dashboard.jsx          # Dashboard principal Honda
 │   │   ├── DataLayer.jsx          # Capa 1: Captura de Señales
 │   │   ├── DecisionLayer.jsx      # Capa 2: Inteligencia de Mercado
 │   │   ├── ExecutionLayer.jsx     # Capa 3: Activación Estratégica
 │   │   └── OptimizationLayer.jsx  # Capa 4: Performance & Optimización
 │   ├── data/
-│   │   ├── keywords.js            # Keywords automotrices RAV4
+│   │   ├── keywords.js            # Keywords automotrices CR-V
 │   │   ├── mockData.js            # Datos mock GA4 + métricas
 │   │   └── config.js              # Configuración general
 │   ├── App.jsx
@@ -217,25 +217,25 @@ toyota-algorithm-mvp/
 ├── public/
 ├── netlify.toml               # Config Netlify
 ├── package.json
-├── tailwind.config.js         # Branding Toyota
+├── tailwind.config.js         # Branding Honda
 └── README.md
 ```
 
 ---
 
-## 🎨 Branding Toyota
+## 🎨 Branding Honda
 
 ### Colores Oficiales
 
 ```javascript
 {
-  toyota: {
-    red: '#EB0A1E',        // Toyota Red (principal)
-    darkRed: '#CC0000',    // Rojo oscuro
+  honda: {
+    red: '#CC0000',        // Honda Red (principal)
+    darkRed: '#A00000',    // Rojo oscuro
     black: '#000000',      // Negro (secundario)
     gray: '#54565A',       // Gris corporativo
     lightGray: '#E6E6E6',  // Gris claro
-    green: '#00A650',      // Verde (híbrido/ecológico)
+    blue: '#0056A3',       // Azul (tecnología/híbrido)
     silver: '#C0C0C0',     // Plateado (tecnología)
   }
 }
@@ -243,8 +243,8 @@ toyota-algorithm-mvp/
 
 ### Gradientes
 
-- **Principal**: `linear-gradient(135deg, #EB0A1E 0%, #000000 100%)`
-- **Híbrido**: `linear-gradient(135deg, #00A650 0%, #54565A 100%)`
+- **Principal**: `linear-gradient(135deg, #CC0000 0%, #000000 100%)`
+- **Híbrido**: `linear-gradient(135deg, #0056A3 0%, #54565A 100%)`
 - **Light**: `linear-gradient(135deg, #FFFFFF 0%, #E6E6E6 100%)`
 
 ---
@@ -252,39 +252,40 @@ toyota-algorithm-mvp/
 ## 🔑 Keywords Monitoreadas
 
 ### Principales
-- Toyota RAV4
-- RAV4 Híbrida
-- RAV4 Hybrid Perú
-- Nueva RAV4 2025/2026
-- RAV4 precio Perú
+- Honda CR-V
+- CR-V Híbrida
+- CR-V Advanced Hybrid Perú
+- Nueva CR-V 2025/2026
+- CR-V precio Perú
 
 ### Categoría SUV
 - SUV híbrida
 - mejor SUV Perú
 - SUV familiar
-- SUV 4x4
 - comprar SUV
+- SUV confiable
 
-### Tecnología Híbrida
-- auto híbrido
-- híbridos en Perú
-- tecnología híbrida
+### Tecnología Híbrida e:HEV
+- Honda e:HEV
+- híbrido sin enchufar
+- tecnología e:HEV
 - eficiencia combustible
 - autos ecológicos
 - movilidad sostenible
 
 ### Competencia
-- Honda CR-V
+- Toyota RAV4
 - Mazda CX-5
 - Nissan X-Trail
 - Hyundai Tucson
-- Kia Sportage
-- Mitsubishi Outlander
+- Hyundai Creta
+- Haval H6
 
 ### Intención de Compra (Alta Prioridad)
 - precio SUV Perú
 - financiamiento autos
-- concesionario Toyota
+- concesionario Honda
+- Pana Autos
 - test drive
 - cotizar auto
 
@@ -292,29 +293,29 @@ toyota-algorithm-mvp/
 
 ## 🎯 Audiencias Objetivo
 
-### 1. Familias Jóvenes (30-45 años)
-- **Tamaño**: ~450K en Perú
-- **Mensaje**: "Más espacio, más seguridad, más tranquilidad"
+### 1. Familias Profesionales (35-50 años)
+- **Tamaño**: ~420K en Perú
+- **Mensaje**: "Tecnología que protege lo que más importa"
 - **Engagement**: 11.8%
-- **Intereses**: Seguridad, espacio, confiabilidad
+- **Intereses**: Honda Sensing, espacio, confiabilidad
 
-### 2. Profesionales Eco-conscious (28-40 años)
-- **Tamaño**: ~280K
-- **Mensaje**: "La eficiencia del híbrido, la libertad de Toyota"
+### 2. Profesionales Eco-conscious (30-45 años)
+- **Tamaño**: ~310K
+- **Mensaje**: "Híbrido sin enchufar, 70% del tiempo en modo eléctrico"
 - **Engagement**: 9.4%
-- **Intereses**: Híbridos, sostenibilidad, tecnología
+- **Intereses**: e:HEV, eficiencia, tecnología
 
-### 3. Aventureros Urbanos (25-45 años)
-- **Tamaño**: ~320K
-- **Mensaje**: "Conquista la ciudad y escapa los fines de semana"
+### 3. Millennials Urbanos (25-35 años)
+- **Tamaño**: ~380K
+- **Mensaje**: "Tu primera SUV Honda a precio accesible"
 - **Engagement**: 8.7%
-- **Intereses**: 4x4, outdoor, libertad
+- **Intereses**: Tecnología, precio accesible, Magic Seats
 
-### 4. Upgrade de Sedán (35-50 años)
-- **Tamaño**: ~190K
-- **Mensaje**: "Es hora de crecer"
+### 4. Compradores Pragmáticos (30-50 años)
+- **Tamaño**: ~250K
+- **Mensaje**: "Eficiencia real para el tráfico de Lima"
 - **Engagement**: 7.2%
-- **Intereses**: Espacio, versatilidad, status
+- **Intereses**: Ahorro combustible, confiabilidad, servicio
 
 ---
 
@@ -342,14 +343,14 @@ netlify deploy --prod   # Deploy a producción
 
 ### ✅ Fase 1: MVP (Completado)
 - [x] 4 capas del algorithm funcionando
-- [x] Toyota Opportunity Score implementado
+- [x] Honda Opportunity Score implementado
 - [x] Keywords automotrices monitoreadas
 - [x] Mock data GA4 realista
-- [x] Branding Toyota completo
+- [x] Branding Honda completo
 - [x] Dashboard responsive
 
 ### 🚧 Fase 2: Integraciones Reales (Próximo)
-- [ ] Integrar GA4 real (requiere acceso Toyota)
+- [ ] Integrar GA4 real (requiere acceso Honda)
 - [ ] Integrar Google Ads API (requiere acceso)
 - [ ] Integrar Meta Ads Manager
 - [ ] Scraping real de portales automotrices Perú
@@ -385,9 +386,9 @@ netlify deploy --prod   # Deploy a producción
 ## 👥 Equipo
 
 **Desarrollado por**: Reset (Agencia de Medios - Barranco, Lima)
-**Cliente**: Toyota Perú
+**Cliente**: Honda Perú
 **Versión**: 1.0.0 - MVP
-**Fecha**: Noviembre 2024
+**Fecha**: Noviembre 2025
 **Contacto**: alonso.ternero@reset.com.pe
 
 ---
@@ -396,14 +397,14 @@ netlify deploy --prod   # Deploy a producción
 
 Para preguntas o problemas técnicos:
 - 📧 Email: alonso.ternero@reset.com.pe
-- 📱 GitHub Issues: [github.com/alonsix6/toyota-algorithm-mvp/issues](https://github.com/alonsix6/toyota-algorithm-mvp/issues)
+- 📱 GitHub Issues: [github.com/alonsix6/honda-algorithm-mvp/issues](https://github.com/alonsix6/honda-algorithm-mvp/issues)
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto es propiedad de **Toyota Perú** y **Reset**. Todos los derechos reservados.
+Este proyecto es propiedad de **Honda Perú** y **Reset**. Todos los derechos reservados.
 
 ---
 
-**¡Optimizando el lanzamiento de RAV4 Híbrida con Social Intelligence! 🚗⚡📊**
+**¡Optimizando el lanzamiento de CR-V Advanced Hybrid con Social Intelligence! 🚗⚡📊**

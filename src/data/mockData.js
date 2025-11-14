@@ -158,7 +158,7 @@ export const PERFORMANCE_KPIS = {
 };
 
 // ============================================================================
-// TOYOTA OPPORTUNITY SCORE - Signal Score adaptado
+// HONDA OPPORTUNITY SCORE - Signal Score adaptado
 // ============================================================================
 export const OPPORTUNITY_SCORE = {
   current_score: 87,
@@ -173,7 +173,7 @@ export const OPPORTUNITY_SCORE = {
       weight: 0.30,
       contribution: 27.6,
       indicators: [
-        { name: 'Búsquedas RAV4 (crecimiento)', value: 45, unit: '%', status: 'up' },
+        { name: 'Búsquedas CR-V (crecimiento)', value: 45, unit: '%', status: 'up' },
         { name: 'Conversación híbridos', value: 38, unit: '%', status: 'up' },
         { name: 'Menciones competencia', value: -12, unit: '%', status: 'down' },
       ],

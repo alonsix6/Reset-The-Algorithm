@@ -1,8 +1,8 @@
 {
-  "name": "aruma-scrapers",
+  "name": "honda-scrapers",
   "version": "1.0.0",
   "type": "module",
-  "description": "Data scrapers for Aruma Algorithm MVP",
+  "description": "Data scrapers for Honda Algorithm MVP",
   "main": "index.js",
   "scripts": {
     "scrape:all": "node tiktok_scraper.js && node meta_scraper.js",
@@ -12,9 +12,9 @@
   },
   "keywords": [
     "scraper",
-    "beauty",
+    "automotive",
     "data",
-    "aruma"
+    "honda"
   ],
   "author": "Reset",
   "license": "UNLICENSED",

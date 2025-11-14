@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-01-30T15:30:00Z",
+  "timestamp": "2025-11-14T15:30:00Z",
   "source": "Google Ads (Mock)",
-  "account": "Toyota Perú - RAV4 Launch",
+  "account": "Honda Perú - CR-V Launch",
   "dateRange": {
-    "start": "2025-01-01",
-    "end": "2025-01-30"
+    "start": "2025-10-01",
+    "end": "2025-11-14"
   },
   "performance": {
     "impressions": 3500000,
@@ -18,7 +18,7 @@
   },
   "campaigns": [
     {
-      "name": "RAV4 - Search Brand",
+      "name": "CR-V - Search Brand",
       "status": "active",
       "impressions": 850000,
       "clicks": 42500,
@@ -30,7 +30,7 @@
       "roas": 5.8,
       "topKeywords": [
         {
-          "keyword": "toyota rav4 precio",
+          "keyword": "honda cr-v precio",
           "impressions": 125000,
           "clicks": 7500,
           "ctr": 0.06,
@@ -39,7 +39,7 @@
           "qualityScore": 9
         },
         {
-          "keyword": "rav4 hibrida peru",
+          "keyword": "cr-v hibrida peru",
           "impressions": 98000,
           "clicks": 5880,
           "ctr": 0.06,
@@ -48,7 +48,7 @@
           "qualityScore": 9
         },
         {
-          "keyword": "toyota rav4 2025",
+          "keyword": "honda cr-v 2025",
           "impressions": 87000,
           "clicks": 5220,
           "ctr": 0.06,
@@ -59,7 +59,7 @@
       ]
     },
     {
-      "name": "RAV4 - Search Generic SUV",
+      "name": "CR-V - Search Generic SUV",
       "status": "active",
       "impressions": 1200000,
       "clicks": 36000,
@@ -100,7 +100,7 @@
       ]
     },
     {
-      "name": "RAV4 - Display Network",
+      "name": "CR-V - Display Network",
       "status": "active",
       "impressions": 950000,
       "clicks": 14250,
@@ -112,7 +112,7 @@
       "roas": 3.8
     },
     {
-      "name": "RAV4 - YouTube Video",
+      "name": "CR-V - YouTube Video",
       "status": "active",
       "impressions": 500000,
       "clicks": 12250,
@@ -206,12 +206,12 @@
     {
       "type": "keyword_expansion",
       "priority": "high",
-      "suggestion": "Agregar 'auto hibrido familiar' y 'suv electrica' - alto volumen de búsqueda, baja competencia"
+      "suggestion": "Agregar 'honda e:hev' y 'cr-v advanced hybrid' - alto volumen de búsqueda, baja competencia"
     },
     {
       "type": "budget_allocation",
       "priority": "high",
-      "suggestion": "Incrementar presupuesto en 'RAV4 - Search Brand' (+25%) basado en ROAS superior (5.8x)"
+      "suggestion": "Incrementar presupuesto en 'CR-V - Search Brand' (+25%) basado en ROAS superior (5.8x)"
     },
     {
       "type": "audience_optimization",
@@ -226,7 +226,7 @@
   ],
   "metadata": {
     "note": "Mock data for MVP demonstration",
-    "actualIntegration": "Requires Toyota Peru Google Ads API access",
+    "actualIntegration": "Requires Honda Peru Google Ads API access",
     "updateFrequency": "Daily automatic once integrated"
   }
 }

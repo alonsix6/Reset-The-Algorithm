@@ -1,4 +1,4 @@
-name: Scrape Beauty Data - Aruma Algorithm
+name: Scrape Automotive Data - Honda Algorithm
 
 # Trigger del workflow
 on:
@@ -103,7 +103,7 @@ jobs:
       - name: 💾 Commit and push data
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "Aruma Algorithm Bot"
+          git config --local user.name "Honda Algorithm Bot"
           
           # Agregar archivos de datos
           git add data/
