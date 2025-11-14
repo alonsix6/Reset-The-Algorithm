@@ -10,15 +10,15 @@
       "period": "2025-10-28 to 2025-11-04",
       "topics": [
         {
-          "topic": "RAV4 Híbrida 2025",
+          "topic": "CR-V Advanced Hybrid 2025",
           "mentions": 2850,
           "engagement_score": 9.5,
           "growth": "+125%",
           "sentiment": "very positive",
           "top_brands": [
-            "Toyota",
-            "Derco",
-            "Mitsui"
+            "Honda",
+            "Pana Autos",
+            "VMC"
           ],
           "avg_reactions": 580,
           "avg_comments": 125,
@@ -102,13 +102,13 @@
       ],
       "metadata": {
         "pages_monitored": [
-          "Toyota del Perú (450K likes - Verified)",
-          "Derco Perú (285K likes - Official Dealer)",
+          "Honda Autos Perú (286K likes - Verified)",
+          "Pana Autos Honda (120K likes - Official Dealer)",
           "Autofact Perú (180K likes)",
-          "Grupo Pana (120K likes)",
+          "V Motor Center (68K likes - Official Dealer)",
           "Neoauto Perú (95K likes)",
           "AutoLand Perú (68K likes)",
-          "Mitsui Automotriz (52K likes)"
+          "Honda Motos Perú (150K likes - Official)"
         ],
         "influencers_verified": [
           "José Orihuela - Auto Blog Perú",
@@ -117,9 +117,9 @@
         ],
         "instagram_hashtags": [
           "#autosperu",
-          "#toyotaperu",
+          "#hondaperu",
           "#suvperu",
-          "#rav4peru"
+          "#crvperu"
         ],
         "total_posts_analyzed": 2200,
         "timeframe": "Last 30 days",

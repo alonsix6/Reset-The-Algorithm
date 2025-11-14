@@ -1,14 +1,14 @@
-// Configuración general del Toyota Algorithm
+// Configuración general del Honda Algorithm
 // Textos, mensajes, secciones y configuración de UI
 
 // ============================================================================
 // BRAND CONFIGURATION - Configuración de marca
 // ============================================================================
 export const BRAND_CONFIG = {
-  name: 'Toyota Algorithm',
-  tagline: 'Social Intelligence para RAV4 Híbrida',
+  name: 'Honda Algorithm',
+  tagline: 'Social Intelligence para Honda Perú',
   subtitle: 'Optimización automática de inversión digital',
-  product: 'Toyota RAV4 Híbrida 2025/2026',
+  product: 'Honda CR-V & HR-V 2025/2026',
   market: 'Perú',
   client: 'Reset - Agencia de Medios',
   version: '1.0.0',
@@ -24,7 +24,7 @@ export const LAYER_CONFIG = {
     subtitle: 'Monitoreo en tiempo real del ecosistema digital automotriz',
     description: 'Búsqueda, Tendencia, Intención, Emoción',
     icon: 'Search',
-    color: 'from-toyota-red to-toyota-red',
+    color: 'from-honda-red to-honda-red',
   },
   decision: {
     id: 'decision',
@@ -32,7 +32,7 @@ export const LAYER_CONFIG = {
     subtitle: 'Insights automáticos para optimizar inversión',
     description: 'Análisis y definición de estrategia',
     icon: 'Target',
-    color: 'from-toyota-red via-toyota-darkRed to-toyota-gray',
+    color: 'from-honda-red via-honda-darkRed to-honda-gray',
   },
   execution: {
     id: 'execution',
@@ -40,7 +40,7 @@ export const LAYER_CONFIG = {
     subtitle: 'Distribución inteligente de presupuesto y contenidos',
     description: 'Implementación en tiempo real',
     icon: 'Zap',
-    color: 'from-toyota-gray to-toyota-black',
+    color: 'from-honda-gray to-honda-black',
   },
   optimization: {
     id: 'optimization',
@@ -48,38 +48,38 @@ export const LAYER_CONFIG = {
     subtitle: 'Resultados en tiempo real y ajustes automáticos',
     description: 'Evaluación y redistribución',
     icon: 'TrendingUp',
-    color: 'from-toyota-black to-toyota-black',
+    color: 'from-honda-black to-honda-black',
   },
 };
 
 // ============================================================================
-// KEY MESSAGES - Mensajes clave de comunicación RAV4
+// KEY MESSAGES - Mensajes clave de comunicación Honda
 // ============================================================================
 export const KEY_MESSAGES = {
   hybrid: {
-    title: 'Eficiencia Híbrida',
-    message: 'La eficiencia del híbrido, la libertad de Toyota',
-    description: 'Tecnología que te lleva más lejos con menos',
+    title: 'Tecnología e:HEV',
+    message: 'Híbrido sin enchufar, 70% del tiempo en modo eléctrico',
+    description: 'Ahorra hasta 40% en combustible sin complicaciones',
   },
   family: {
-    title: 'Seguridad Familiar',
-    message: 'Más espacio, más seguridad, más tranquilidad',
-    description: 'Protegemos lo que más importa',
+    title: 'Seguridad Honda Sensing',
+    message: 'Tecnología que protege lo que más importa',
+    description: 'Sistema de asistencia al conductor en 8 de 10 modelos',
   },
   adventure: {
-    title: 'Aventura 4x4',
-    message: 'Conquista la ciudad y escapa los fines de semana',
-    description: 'Libertad sin límites',
+    title: 'Versatilidad SUV',
+    message: 'Desde la ciudad hasta la aventura, sin límites',
+    description: 'CR-V con AWD y HR-V con Magic Seats',
   },
   sustainability: {
-    title: 'Movilidad Sostenible',
-    message: 'Movilidad inteligente para un Perú sostenible',
-    description: 'El futuro es verde',
+    title: 'Movilidad Inteligente',
+    message: 'Eficiencia real para el tráfico de Lima',
+    description: 'Hasta 22 km/litro en modo económico',
   },
   technology: {
-    title: 'Tecnología Toyota',
-    message: 'Innovación que se siente en cada kilómetro',
-    description: 'Toyota Safety Sense y más',
+    title: 'Innovación Honda',
+    message: '82% de reconocimiento por confiabilidad',
+    description: 'Honda Sensing y tecnología e:HEV',
   },
 };
 
@@ -202,39 +202,39 @@ export const CHANNELS_CONFIG = {
 export const TARGET_AUDIENCES = [
   {
     id: 'young-families',
-    name: 'Familias Jóvenes',
-    description: '30-45 años, con hijos',
-    size: '~450K',
+    name: 'Familias Profesionales',
+    description: '35-50 años, con hijos',
+    size: '~420K',
     priority: 'high',
-    interests: ['Seguridad', 'Espacio', 'Confiabilidad'],
+    interests: ['Honda Sensing', 'Espacio', 'Confiabilidad'],
     message: KEY_MESSAGES.family.message,
   },
   {
     id: 'eco-conscious',
-    name: 'Profesionales Eco-conscious',
-    description: '28-40 años, sostenibles',
-    size: '~280K',
+    name: 'Eco-conscious Premium',
+    description: '30-45 años, ejecutivos',
+    size: '~310K',
     priority: 'high',
-    interests: ['Híbrido', 'Sostenibilidad', 'Tecnología'],
+    interests: ['e:HEV', 'Eficiencia', 'Tecnología'],
     message: KEY_MESSAGES.hybrid.message,
   },
   {
-    id: 'urban-adventurers',
-    name: 'Aventureros Urbanos',
-    description: '25-45 años, outdoor',
-    size: '~320K',
-    priority: 'medium',
-    interests: ['4x4', 'Aventura', 'Libertad'],
-    message: KEY_MESSAGES.adventure.message,
+    id: 'urban-millennials',
+    name: 'Millennials Urbanos',
+    description: '25-35 años, primera SUV',
+    size: '~380K',
+    priority: 'high',
+    interests: ['Tecnología', 'Precio accesible', 'Magic Seats'],
+    message: 'Tu primera SUV Honda a precio accesible',
   },
   {
-    id: 'sedan-upgraders',
-    name: 'Upgrade de Sedán',
-    description: '35-50 años, compradores existentes',
-    size: '~190K',
+    id: 'pragmatic-buyers',
+    name: 'Compradores Pragmáticos',
+    description: '30-50 años, eficiencia',
+    size: '~250K',
     priority: 'medium',
-    interests: ['Espacio', 'Versatilidad', 'Status'],
-    message: 'Es hora de crecer',
+    interests: ['Ahorro combustible', 'Confiabilidad', 'Servicio'],
+    message: KEY_MESSAGES.sustainability.message,
   },
 ];
 
@@ -273,32 +273,32 @@ export const METRIC_CARDS_CONFIG = [
     title: 'Leads Calificados',
     description: 'Formularios completos con interés real',
     icon: 'Target',
-    color: 'toyota-red',
-    gradient: 'from-toyota-red to-toyota-darkRed',
+    color: 'honda-red',
+    gradient: 'from-honda-red to-honda-darkRed',
   },
   {
     id: 'reach',
     title: 'Alcance Total',
     description: 'Usuarios únicos impactados',
     icon: 'Users',
-    color: 'toyota-gray',
-    gradient: 'from-toyota-gray to-toyota-black',
+    color: 'honda-gray',
+    gradient: 'from-honda-gray to-honda-black',
   },
   {
     id: 'engagement',
     title: 'Interacciones',
     description: 'Likes, shares, comentarios, saves',
     icon: 'Heart',
-    color: 'toyota-gray',
-    gradient: 'from-toyota-gray to-toyota-black',
+    color: 'honda-gray',
+    gradient: 'from-honda-gray to-honda-black',
   },
   {
     id: 'opportunity',
     title: 'Opportunity Score',
     description: 'Índice de oportunidad de inversión',
     icon: 'Zap',
-    color: 'toyota-red',
-    gradient: 'from-toyota-red to-toyota-black',
+    color: 'honda-red',
+    gradient: 'from-honda-red to-honda-black',
   },
 ];
 
@@ -306,7 +306,7 @@ export const METRIC_CARDS_CONFIG = [
 // UI TEXT - Textos de interfaz
 // ============================================================================
 export const UI_TEXT = {
-  loading: 'Cargando Toyota Algorithm...',
+  loading: 'Cargando Honda Algorithm...',
   lastUpdate: 'Última actualización',
   systemActive: 'Sistema activo',
   noData: 'No hay datos disponibles',
@@ -315,7 +315,7 @@ export const UI_TEXT = {
 
   // Footer
   footer: {
-    copyright: '© 2025 Toyota Algorithm - Powered by Reset',
+    copyright: '© 2025 Honda Algorithm - Powered by Reset',
     version: 'v1.0.0',
   },
 

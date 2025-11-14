@@ -1,17 +1,19 @@
-// Keywords y hashtags para Toyota RAV4 Híbrida - Perú
+// Keywords y hashtags para Honda - Perú (Autos y Motos)
 // Configuración completa para búsquedas y monitoreo social
 
-export const KEYWORDS_TOYOTA = {
+export const KEYWORDS_HONDA_AUTOS = {
   // Producto principal
   principal: [
-    'Toyota RAV4',
-    'RAV4 Híbrida',
-    'RAV4 Hybrid Perú',
-    'Nueva RAV4 2025',
-    'RAV4 2026',
-    'RAV4 precio Perú',
-    'Toyota RAV4 Perú',
-    'RAV4 Hybrid precio',
+    'Honda CR-V',
+    'CR-V Advanced Hybrid',
+    'Honda HR-V 2026',
+    'CR-V Perú',
+    'Honda CR-V precio',
+    'CR-V híbrida Perú',
+    'HR-V precio Perú',
+    'Honda Perú',
+    'CR-V 2025',
+    'HR-V 2026',
   ],
 
   // Categoría SUV
@@ -19,105 +21,176 @@ export const KEYWORDS_TOYOTA = {
     'SUV híbrida',
     'mejor SUV Perú',
     'SUV familiar',
-    'SUV 4x4',
+    'SUV Honda',
     'comprar SUV',
-    'SUV Toyota',
+    'SUV compacta',
     'SUV mediana',
     'SUV confiable',
-    'mejor SUV híbrida',
+    'mejor híbrida Perú',
   ],
 
-  // Tecnología híbrida
+  // Tecnología híbrida e:HEV
   hibrido: [
-    'auto híbrido',
-    'híbridos en Perú',
-    'tecnología híbrida',
+    'Honda e:HEV',
+    'híbrido sin enchufar',
+    'auto híbrido Perú',
+    'tecnología e:HEV',
     'eficiencia combustible',
     'autos ecológicos',
     'movilidad sostenible',
     'ahorro gasolina',
-    'motor híbrido',
-    'auto eléctrico híbrido',
-    'vehículo ecológico',
+    'híbrido autorecargable',
+    'vehículo híbrido',
   ],
 
   // Competencia directa
   competidores: [
-    'Honda CR-V',
+    'Toyota RAV4',
     'Mazda CX-5',
     'Nissan X-Trail',
     'Hyundai Tucson',
+    'Hyundai Creta',
+    'Nissan Kicks',
+    'Mazda CX-30',
     'Kia Sportage',
-    'Mitsubishi Outlander',
-    'Ford Escape',
-    'Volkswagen Tiguan',
   ],
 
   // Intención de compra
   compra: [
-    'precio SUV Perú',
-    'financiamiento autos',
-    'concesionario Toyota',
-    'Toyota Perú',
-    'test drive',
-    'cotizar auto',
+    'precio Honda Perú',
+    'financiamiento Honda',
+    'concesionario Honda',
+    'Pana Autos',
+    'test drive Honda',
+    'cotizar CR-V',
     'crédito vehicular',
-    'comprar auto',
-    'auto nuevo',
+    'comprar Honda',
+    'Honda 29990',
+    'bono Honda 2025',
   ],
 
   // Comparativas
   comparativas: [
-    'RAV4 vs CR-V',
-    'RAV4 vs Tucson',
+    'CR-V vs RAV4',
+    'CR-V vs Tucson',
+    'CR-V vs CX-5',
+    'HR-V vs Creta',
+    'HR-V vs Kicks',
     'mejor híbrida',
     'comparativa SUV',
-    'RAV4 vs CX-5',
-    'RAV4 vs X-Trail',
-    'comparar SUV híbridas',
+    'Honda vs Toyota',
   ],
 
   // Features y características
   features: [
-    'Toyota Safety Sense',
+    'Honda Sensing',
+    'Magic Seats',
     'AWD',
-    '4x4',
     'tracción integral',
     'bajo consumo',
     'espacio familiar',
-    'maletero amplio',
-    'seguridad vehicular',
+    'seguridad Honda',
+    '22 km litro',
+    'BOSE 12 parlantes',
   ],
 };
 
-export const HASHTAGS_TOYOTA = {
+export const KEYWORDS_HONDA_MOTOS = {
+  // Producto principal
+  principal: [
+    'Honda Dio',
+    'Honda Wave',
+    'Honda Navi',
+    'Honda CB',
+    'Honda XR',
+    'motos Honda Perú',
+    'scooter Honda',
+    'Honda PCX',
+    'Honda Elite',
+  ],
+
+  // Categoría motos
+  categoria: [
+    'moto automática',
+    'scooter 110cc',
+    'moto ciudad',
+    'moto económica',
+    'mejor moto Perú',
+    'moto confiable',
+    'moto trabajo',
+    'motos Honda 2025',
+  ],
+
+  // Competencia motos
+  competidores: [
+    'Yamaha',
+    'Suzuki',
+    'Bajaj',
+    'Kawasaki',
+    'Italika',
+  ],
+
+  // Intención de compra motos
+  compra: [
+    'precio motos Honda',
+    'financiamiento motos',
+    'Honda motos Perú',
+    'concesionario motos',
+    'motos Honda precio',
+    'crédito moto',
+  ],
+
+  // Features motos
+  features: [
+    'bajo consumo',
+    'motor 110cc',
+    'automática',
+    'ahorro combustible',
+    'confiable',
+    'servicio Honda',
+  ],
+};
+
+export const HASHTAGS_HONDA_AUTOS = {
   // Principales
   principales: [
-    '#ToyotaRAV4',
-    '#RAV4Hybrid',
-    '#ToyotaPeru',
-    '#RAV4Peru',
-    '#NuevaRAV4',
+    '#HondaPeru',
+    '#HondaCRV',
+    '#CRVHybrid',
+    '#HondaHRV',
+    '#CRVE',
+    '#AdvancedHybrid',
   ],
 
   // SUV
   suv: [
+    '#SUVHonda',
     '#SUVHibrida',
     '#SUVFamiliar',
-    '#SUV4x4',
     '#MejorSUV',
-    '#SUVToyota',
+    '#SUVCompacta',
   ],
 
   // Híbridos y sostenibilidad
   hibrido: [
-    '#Hibrido',
+    '#Hibrida',
+    '#eHEV',
+    '#HibridoSinEnchufar',
     '#AutosEcologicos',
     '#MovilidadSostenible',
     '#TecnologiaHibrida',
     '#EficienciaEnergetica',
     '#EcoFriendly',
-    '#AutoVerde',
+  ],
+
+  // Tecnología Honda
+  tech: [
+    '#HondaSensing',
+    '#MagicSeats',
+    '#TecnologiaHonda',
+    '#InnovacionHonda',
+    '#SafetyFirst',
+    '#HondaTech',
   ],
 
   // Lifestyle
@@ -132,64 +205,125 @@ export const HASHTAGS_TOYOTA = {
 
   // Perú
   peru: [
-    '#AutosEnPeru',
-    '#LimaMovil',
+    '#AutosPeru',
+    '#LimaPeru',
     '#PeruAutomotriz',
-    '#HechoEnPeru',
     '#Lima',
-  ],
-
-  // Performance y tecnología
-  tech: [
-    '#ToyotaTech',
-    '#InnovacionToyota',
-    '#TecnologiaAutomotriz',
-    '#SafetyFirst',
+    '#0km',
+    '#Financiamiento',
   ],
 };
 
-// Combinar todos los hashtags en un array único
-export const ALL_HASHTAGS = [
-  ...HASHTAGS_TOYOTA.principales,
-  ...HASHTAGS_TOYOTA.suv,
-  ...HASHTAGS_TOYOTA.hibrido,
-  ...HASHTAGS_TOYOTA.lifestyle,
-  ...HASHTAGS_TOYOTA.peru,
-  ...HASHTAGS_TOYOTA.tech,
+export const HASHTAGS_HONDA_MOTOS = {
+  // Principales
+  principales: [
+    '#HondaMotos',
+    '#HondaPeru',
+    '#MotosHonda',
+    '#HondaDio',
+    '#HondaWave',
+    '#HondaNavi',
+  ],
+
+  // Categoría
+  categoria: [
+    '#Scooter',
+    '#MotoAutomatica',
+    '#MotosCiudad',
+    '#MotoEconomica',
+    '#110cc',
+  ],
+
+  // Perú motos
+  peru: [
+    '#MotosPeru',
+    '#LimaPeru',
+    '#MotosLima',
+    '#Financiamiento',
+  ],
+};
+
+// Combinar hashtags autos
+export const ALL_HASHTAGS_AUTOS = [
+  ...HASHTAGS_HONDA_AUTOS.principales,
+  ...HASHTAGS_HONDA_AUTOS.suv,
+  ...HASHTAGS_HONDA_AUTOS.hibrido,
+  ...HASHTAGS_HONDA_AUTOS.tech,
+  ...HASHTAGS_HONDA_AUTOS.lifestyle,
+  ...HASHTAGS_HONDA_AUTOS.peru,
 ];
 
-// Combinar todas las keywords en un array único para Google Trends
-export const ALL_KEYWORDS = [
-  ...KEYWORDS_TOYOTA.principal,
-  ...KEYWORDS_TOYOTA.suv,
-  ...KEYWORDS_TOYOTA.hibrido,
-  ...KEYWORDS_TOYOTA.compra,
+// Combinar hashtags motos
+export const ALL_HASHTAGS_MOTOS = [
+  ...HASHTAGS_HONDA_MOTOS.principales,
+  ...HASHTAGS_HONDA_MOTOS.categoria,
+  ...HASHTAGS_HONDA_MOTOS.peru,
 ];
 
-// Keywords de alta intención (para priorizar en búsquedas)
-export const HIGH_INTENT_KEYWORDS = [
-  ...KEYWORDS_TOYOTA.compra,
-  ...KEYWORDS_TOYOTA.principal.filter(k => k.includes('precio')),
-  'test drive',
-  'cotizar',
-  'financiamiento',
+// Combinar keywords autos para Google Trends
+export const ALL_KEYWORDS_AUTOS = [
+  ...KEYWORDS_HONDA_AUTOS.principal,
+  ...KEYWORDS_HONDA_AUTOS.suv,
+  ...KEYWORDS_HONDA_AUTOS.hibrido,
+  ...KEYWORDS_HONDA_AUTOS.compra,
 ];
 
-// Configuración para Google Trends
-export const GOOGLE_TRENDS_CONFIG = {
-  keywords: ALL_KEYWORDS.slice(0, 15), // Máximo 15 keywords principales
+// Combinar keywords motos
+export const ALL_KEYWORDS_MOTOS = [
+  ...KEYWORDS_HONDA_MOTOS.principal,
+  ...KEYWORDS_HONDA_MOTOS.categoria,
+  ...KEYWORDS_HONDA_MOTOS.compra,
+];
+
+// Keywords de alta intención - Autos
+export const HIGH_INTENT_KEYWORDS_AUTOS = [
+  ...KEYWORDS_HONDA_AUTOS.compra,
+  ...KEYWORDS_HONDA_AUTOS.principal.filter(k => k.includes('precio')),
+  'test drive Honda',
+  'cotizar CR-V',
+  'financiamiento Honda',
+  'bono Honda',
+];
+
+// Keywords de alta intención - Motos
+export const HIGH_INTENT_KEYWORDS_MOTOS = [
+  ...KEYWORDS_HONDA_MOTOS.compra,
+  'precio motos Honda',
+  'financiamiento motos',
+];
+
+// Configuración para Google Trends - Autos
+export const GOOGLE_TRENDS_CONFIG_AUTOS = {
+  keywords: ALL_KEYWORDS_AUTOS.slice(0, 15), // Máximo 15 keywords principales
   region: 'PE', // Perú
   category: 47, // Autos & Vehicles
   timeframe: 'now 7-d', // Últimos 7 días
   refreshInterval: 3600000, // 1 hora en ms
 };
 
-// Configuración para TikTok Creative Center
-export const TIKTOK_CONFIG = {
-  hashtags: HASHTAGS_TOYOTA.principales,
+// Configuración para Google Trends - Motos
+export const GOOGLE_TRENDS_CONFIG_MOTOS = {
+  keywords: ALL_KEYWORDS_MOTOS.slice(0, 15),
+  region: 'PE',
+  category: 47, // Autos & Vehicles
+  timeframe: 'now 7-d',
+  refreshInterval: 3600000,
+};
+
+// Configuración para TikTok - Autos
+export const TIKTOK_CONFIG_AUTOS = {
+  hashtags: HASHTAGS_HONDA_AUTOS.principales,
   region: 'PE',
   metrics: ['views', 'likes', 'shares', 'comments'],
-  trending_threshold: 10000, // Mínimo de vistas para considerar trending
+  trending_threshold: 10000,
+};
+
+// Configuración para TikTok - Motos
+export const TIKTOK_CONFIG_MOTOS = {
+  hashtags: HASHTAGS_HONDA_MOTOS.principales,
+  region: 'PE',
+  metrics: ['views', 'likes', 'shares', 'comments'],
+  trending_threshold: 5000,
 };
 
 // Fuentes de datos automotrices Perú
@@ -213,20 +347,33 @@ export const AUTOMOTIVE_SOURCES = [
     scraping: false,
   },
   {
-    name: 'Toyota Perú Oficial',
-    url: 'https://www.toyota.com.pe',
+    name: 'Honda Perú Oficial - Autos',
+    url: 'https://autos.honda.com.pe',
+    type: 'official',
+    scraping: false,
+  },
+  {
+    name: 'Honda Perú Oficial - Motos',
+    url: 'https://motos.honda.com.pe',
     type: 'official',
     scraping: false,
   },
 ];
 
 export default {
-  KEYWORDS_TOYOTA,
-  HASHTAGS_TOYOTA,
-  ALL_HASHTAGS,
-  ALL_KEYWORDS,
-  HIGH_INTENT_KEYWORDS,
-  GOOGLE_TRENDS_CONFIG,
-  TIKTOK_CONFIG,
+  KEYWORDS_HONDA_AUTOS,
+  KEYWORDS_HONDA_MOTOS,
+  HASHTAGS_HONDA_AUTOS,
+  HASHTAGS_HONDA_MOTOS,
+  ALL_HASHTAGS_AUTOS,
+  ALL_HASHTAGS_MOTOS,
+  ALL_KEYWORDS_AUTOS,
+  ALL_KEYWORDS_MOTOS,
+  HIGH_INTENT_KEYWORDS_AUTOS,
+  HIGH_INTENT_KEYWORDS_MOTOS,
+  GOOGLE_TRENDS_CONFIG_AUTOS,
+  GOOGLE_TRENDS_CONFIG_MOTOS,
+  TIKTOK_CONFIG_AUTOS,
+  TIKTOK_CONFIG_MOTOS,
   AUTOMOTIVE_SOURCES,
 };
