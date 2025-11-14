@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Search, TrendingUp, Video, Share2, Car, RefreshCw, ChevronDown, ChevronUp, BarChart3, Info } from 'lucide-react';
+import { Search, TrendingUp, Video, Share2, Car, RefreshCw, ChevronDown, ChevronUp, BarChart3, Info, Bike } from 'lucide-react';
+import { PRODUCT_MODES } from '../data/config';
 
 export default function DataLayer() {
+  const [productMode, setProductMode] = useState('autos'); // 'autos' | 'motos'
   const [trendsData, setTrendsData] = useState(null);
   const [tiktokData, setTiktokData] = useState(null);
   const [metaData, setMetaData] = useState(null);
@@ -19,16 +21,17 @@ export default function DataLayer() {
 
   useEffect(() => {
     loadData();
-  }, []);
+  }, [productMode]); // Recargar cuando cambia el modo
 
   const loadData = async () => {
     setIsRefreshing(true);
     try {
+      const basePath = `/data/${productMode}`;
       const [trends, tiktok, meta, ga4] = await Promise.all([
-        fetch('/data/trends/latest.json').then(r => r.json()).catch(() => null),
-        fetch('/data/tiktok/latest.json').then(r => r.json()).catch(() => null),
-        fetch('/data/meta/latest.json').then(r => r.json()).catch(() => null),
-        fetch('/data/mock/ga4_data.json').then(r => r.json()).catch(() => null)
+        fetch(`${basePath}/trends/latest.json`).then(r => r.json()).catch(() => null),
+        fetch(`${basePath}/tiktok/latest.json`).then(r => r.json()).catch(() => null),
+        fetch(`${basePath}/meta/latest.json`).then(r => r.json()).catch(() => null),
+        fetch(`${basePath}/mock/ga4_data.json`).then(r => r.json()).catch(() => null)
       ]);
 
       setTrendsData(trends);
@@ -188,9 +191,34 @@ export default function DataLayer() {
             <h2 className="text-xl font-bold mb-2">
               Capa de Data - Captura de Señales
             </h2>
-            <p className="text-white/80 text-base">
+            <p className="text-white/80 text-base mb-4">
               Monitoreo en tiempo real del ecosistema digital automotriz en Perú
             </p>
+            {/* Toggle Autos/Motos */}
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg p-1 inline-flex">
+              <button
+                onClick={() => setProductMode('autos')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-200 ${
+                  productMode === 'autos'
+                    ? 'bg-white text-honda-red shadow-lg font-semibold'
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <span className="text-lg">🚗</span>
+                <span className="text-sm font-semibold">Autos</span>
+              </button>
+              <button
+                onClick={() => setProductMode('motos')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-200 ${
+                  productMode === 'motos'
+                    ? 'bg-white text-honda-red shadow-lg font-semibold'
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <span className="text-lg">🏍️</span>
+                <span className="text-sm font-semibold">Motos</span>
+              </button>
+            </div>
           </div>
           <div className="flex items-center gap-4">
             <div className="text-right">
@@ -684,35 +712,75 @@ export default function DataLayer() {
       {/* Keywords Reference */}
       <div className="bg-gradient-to-br from-honda-red to-honda-darkRed rounded-xl p-6 text-white">
         <h3 className="text-base font-bold mb-4 flex items-center gap-2">
-          <Car className="w-6 h-6" />
-          Keywords Monitoreadas - Honda CR-V Híbrida
+          {productMode === 'autos' ? (
+            <>
+              <Car className="w-6 h-6" />
+              Keywords Monitoreadas - Honda Autos (CR-V & HR-V)
+            </>
+          ) : (
+            <>
+              <Bike className="w-6 h-6" />
+              Keywords Monitoreadas - Honda Motos
+            </>
+          )}
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <p className="text-sm text-white/70 mb-2 font-semibold">Principales:</p>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Honda CR-V</span>
-              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">CR-V Híbrida</span>
-              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">SUV Híbrida</span>
+
+        {productMode === 'autos' ? (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <p className="text-sm text-white/70 mb-2 font-semibold">Principales:</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Honda CR-V</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">CR-V Híbrida</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">SUV Híbrida</span>
+              </div>
+            </div>
+            <div>
+              <p className="text-sm text-white/70 mb-2 font-semibold">Intención:</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Precio CR-V</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Test Drive</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Financiamiento</span>
+              </div>
+            </div>
+            <div>
+              <p className="text-sm text-white/70 mb-2 font-semibold">Competencia:</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Toyota RAV4</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Mazda CX-5</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Nissan X-Trail</span>
+              </div>
             </div>
           </div>
-          <div>
-            <p className="text-sm text-white/70 mb-2 font-semibold">Intención:</p>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Precio CR-V</span>
-              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Test Drive</span>
-              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Financiamiento</span>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <p className="text-sm text-white/70 mb-2 font-semibold">Principales:</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Honda Dio</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Honda Wave</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Honda Navi</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Scooter 110cc</span>
+              </div>
+            </div>
+            <div>
+              <p className="text-sm text-white/70 mb-2 font-semibold">Intención:</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Precio Motos</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Financiamiento</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Automáticas</span>
+              </div>
+            </div>
+            <div>
+              <p className="text-sm text-white/70 mb-2 font-semibold">Competencia:</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Bajaj</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Yamaha</span>
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Lifan</span>
+              </div>
             </div>
           </div>
-          <div>
-            <p className="text-sm text-white/70 mb-2 font-semibold">Competencia:</p>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Toyota RAV4</span>
-              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Mazda CX-5</span>
-              <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Nissan X-Trail</span>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

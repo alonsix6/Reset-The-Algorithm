@@ -1,0 +1,211 @@
+{
+  "source": "Google Analytics 4",
+  "property": "Honda Perú - Motos",
+  "dateRange": "Last 30 days",
+  "timestamp": "2025-11-14T18:30:00.000Z",
+  "overview": {
+    "totalUsers": 45200,
+    "sessions": 58700,
+    "conversions": 892,
+    "conversionRate": 0.0152
+  },
+  "topPages": [
+    {
+      "page": "/motos/honda-dio",
+      "title": "Honda Dio 110 - Scooter Automática",
+      "views": 18500,
+      "avgTimeOnPage": "2:15",
+      "exitRate": 0.28,
+      "conversionRate": 0.018
+    },
+    {
+      "page": "/motos/honda-wave",
+      "title": "Honda Wave - Moto de Trabajo",
+      "views": 12200,
+      "avgTimeOnPage": "1:55",
+      "exitRate": 0.32,
+      "conversionRate": 0.016
+    },
+    {
+      "page": "/motos/financiamiento",
+      "title": "Financiamiento Motos Honda",
+      "views": 9800,
+      "avgTimeOnPage": "2:45",
+      "exitRate": 0.22,
+      "conversionRate": 0.022
+    },
+    {
+      "page": "/motos/honda-navi",
+      "title": "Honda Navi 110 - Scooter Urbano",
+      "views": 8400,
+      "avgTimeOnPage": "2:05",
+      "exitRate": 0.30,
+      "conversionRate": 0.015
+    },
+    {
+      "page": "/motos/honda-pcx",
+      "title": "Honda PCX 160 - Scooter Premium",
+      "views": 6800,
+      "avgTimeOnPage": "2:35",
+      "exitRate": 0.26,
+      "conversionRate": 0.019
+    },
+    {
+      "page": "/motos/comparador",
+      "title": "Comparador de Motos",
+      "views": 5200,
+      "avgTimeOnPage": "1:45",
+      "exitRate": 0.42,
+      "conversionRate": 0.008
+    },
+    {
+      "page": "/motos/catalogo",
+      "title": "Catálogo Motos Honda",
+      "views": 4800,
+      "avgTimeOnPage": "3:10",
+      "exitRate": 0.35,
+      "conversionRate": 0.012
+    }
+  ],
+  "searchTerms": [
+    {
+      "term": "precio honda dio",
+      "searches": 2840,
+      "resultClicks": 2180,
+      "conversionRate": 0.024,
+      "trend": "rising"
+    },
+    {
+      "term": "financiamiento motos",
+      "searches": 2120,
+      "resultClicks": 1650,
+      "conversionRate": 0.028,
+      "trend": "rising"
+    },
+    {
+      "term": "honda wave precio",
+      "searches": 1850,
+      "resultClicks": 1420,
+      "conversionRate": 0.021,
+      "trend": "rising"
+    },
+    {
+      "term": "honda navi",
+      "searches": 1680,
+      "resultClicks": 1280,
+      "conversionRate": 0.019,
+      "trend": "rising"
+    },
+    {
+      "term": "scooter automatica",
+      "searches": 1420,
+      "resultClicks": 980,
+      "conversionRate": 0.015,
+      "trend": "stable"
+    },
+    {
+      "term": "moto trabajo",
+      "searches": 1280,
+      "resultClicks": 890,
+      "conversionRate": 0.018,
+      "trend": "rising"
+    },
+    {
+      "term": "honda pcx",
+      "searches": 1150,
+      "resultClicks": 820,
+      "conversionRate": 0.022,
+      "trend": "rising"
+    },
+    {
+      "term": "repuestos honda",
+      "searches": 980,
+      "resultClicks": 680,
+      "conversionRate": 0.008,
+      "trend": "stable"
+    }
+  ],
+  "trafficSources": {
+    "organic": {
+      "sessions": 20462,
+      "percentage": 34.9,
+      "conversions": 342
+    },
+    "paid": {
+      "sessions": 17610,
+      "percentage": 30.0,
+      "conversions": 285
+    },
+    "social": {
+      "sessions": 14675,
+      "percentage": 25.0,
+      "conversions": 178
+    },
+    "direct": {
+      "sessions": 4696,
+      "percentage": 8.0,
+      "conversions": 67
+    },
+    "referral": {
+      "sessions": 1257,
+      "percentage": 2.1,
+      "conversions": 20
+    }
+  },
+  "topCities": [
+    {
+      "city": "Lima",
+      "sessions": 41090,
+      "conversions": 625,
+      "percentage": 70.0
+    },
+    {
+      "city": "Arequipa",
+      "sessions": 5870,
+      "conversions": 89,
+      "percentage": 10.0
+    },
+    {
+      "city": "Trujillo",
+      "sessions": 4109,
+      "conversions": 62,
+      "percentage": 7.0
+    },
+    {
+      "city": "Chiclayo",
+      "sessions": 2348,
+      "conversions": 36,
+      "percentage": 4.0
+    },
+    {
+      "city": "Piura",
+      "sessions": 1761,
+      "conversions": 27,
+      "percentage": 3.0
+    }
+  ],
+  "devices": {
+    "mobile": {
+      "sessions": 42303,
+      "percentage": 72.1,
+      "conversions": 625
+    },
+    "desktop": {
+      "sessions": 14675,
+      "percentage": 25.0,
+      "conversions": 214
+    },
+    "tablet": {
+      "sessions": 1722,
+      "percentage": 2.9,
+      "conversions": 53
+    }
+  },
+  "conversions_breakdown": {
+    "form_submissions": 892,
+    "whatsapp_clicks": 2240,
+    "phone_calls": 428,
+    "brochure_downloads": 1156,
+    "test_ride_requests": 312
+  }
+}

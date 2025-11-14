@@ -1,0 +1,136 @@
+{
+  "timestamp": "2025-11-14T18:30:00.000Z",
+  "source": "TikTok Creative Center",
+  "region": "PE",
+  "category": "Motorcycles",
+  "trends": {
+    "hashtags": [
+      {
+        "hashtag": "#motostiktok",
+        "views": "28.5B",
+        "posts": "890K",
+        "growth": "+72%",
+        "relevanceScore": 92,
+        "region": "Global"
+      },
+      {
+        "hashtag": "#honda",
+        "views": "12.5B",
+        "posts": "485K",
+        "growth": "+52%",
+        "relevanceScore": 94,
+        "region": "Global"
+      },
+      {
+        "hashtag": "#hondamotos",
+        "views": "2.1B",
+        "posts": "85K",
+        "growth": "+68%",
+        "relevanceScore": 89,
+        "region": "Peru"
+      },
+      {
+        "hashtag": "#hondadio",
+        "views": "580M",
+        "posts": "32K",
+        "growth": "+58%",
+        "relevanceScore": 86,
+        "region": "Peru"
+      },
+      {
+        "hashtag": "#scooter",
+        "views": "8.2B",
+        "posts": "420K",
+        "growth": "+55%",
+        "relevanceScore": 88,
+        "region": "Global"
+      },
+      {
+        "hashtag": "#motoautomatica",
+        "views": "1.4B",
+        "posts": "68K",
+        "growth": "+62%",
+        "relevanceScore": 84,
+        "region": "Peru"
+      },
+      {
+        "hashtag": "#motosperu",
+        "views": "3.2B",
+        "posts": "125K",
+        "growth": "+78%",
+        "relevanceScore": 91,
+        "region": "Peru"
+      },
+      {
+        "hashtag": "#hondawave",
+        "views": "650M",
+        "posts": "28K",
+        "growth": "+42%",
+        "relevanceScore": 82,
+        "region": "Peru"
+      },
+      {
+        "hashtag": "#motoeconomica",
+        "views": "920M",
+        "posts": "48K",
+        "growth": "+48%",
+        "relevanceScore": 79,
+        "region": "Peru"
+      },
+      {
+        "hashtag": "#hondanavi",
+        "views": "780M",
+        "posts": "38K",
+        "growth": "+72%",
+        "relevanceScore": 87,
+        "region": "Peru"
+      },
+      {
+        "hashtag": "#mototrabajo",
+        "views": "1.8B",
+        "posts": "95K",
+        "growth": "+52%",
+        "relevanceScore": 81,
+        "region": "Peru"
+      },
+      {
+        "hashtag": "#delivery",
+        "views": "45.2B",
+        "posts": "1.8M",
+        "growth": "+85%",
+        "relevanceScore": 76,
+        "region": "Global"
+      },
+      {
+        "hashtag": "#hondapcx",
+        "views": "1.2B",
+        "posts": "52K",
+        "growth": "+65%",
+        "relevanceScore": 88,
+        "region": "Global"
+      },
+      {
+        "hashtag": "#110cc",
+        "views": "680M",
+        "posts": "35K",
+        "growth": "+38%",
+        "relevanceScore": 75,
+        "region": "Peru"
+      },
+      {
+        "hashtag": "#motosciudad",
+        "views": "1.5B",
+        "posts": "72K",
+        "growth": "+58%",
+        "relevanceScore": 83,
+        "region": "Peru"
+      }
+    ],
+    "summary": {
+      "totalHashtags": 15,
+      "avgRelevanceScore": 84.7,
+      "topGrowthHashtag": "#delivery",
+      "peruSpecificHashtags": 10
+    }
+  }
+}

@@ -15,6 +15,30 @@ export const BRAND_CONFIG = {
 };
 
 // ============================================================================
+// PRODUCT MODES - Configuración Autos/Motos
+// ============================================================================
+export const PRODUCT_MODES = {
+  autos: {
+    id: 'autos',
+    name: 'Honda Autos',
+    icon: '🚗',
+    products: 'CR-V & HR-V 2025/2026',
+    description: 'SUVs híbridas y familiares',
+    market_share: '14%',
+    competitors: ['Toyota', 'Hyundai', 'Mazda', 'Nissan'],
+  },
+  motos: {
+    id: 'motos',
+    name: 'Honda Motos',
+    icon: '🏍️',
+    products: 'Scooters, Urbanas & Deportivas',
+    description: 'Motocicletas para ciudad y aventura',
+    market_share: '24%',
+    competitors: ['Bajaj', 'Yamaha', 'Lifan', 'Zongshen'],
+  },
+};
+
+// ============================================================================
 // LAYER TITLES - Títulos y descripciones de las 4 capas
 // ============================================================================
 export const LAYER_CONFIG = {
@@ -333,6 +357,7 @@ export const UI_TEXT = {
 // ============================================================================
 export default {
   BRAND_CONFIG,
+  PRODUCT_MODES,
   LAYER_CONFIG,
   KEY_MESSAGES,
   DATA_SOURCES_CONFIG,

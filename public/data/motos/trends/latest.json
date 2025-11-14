@@ -1,0 +1,176 @@
+{
+  "timestamp": "2025-11-14T18:30:00.000000",
+  "region": "PE",
+  "category": "Motorcycles",
+  "source": "Google Trends",
+  "keywords": [
+    {
+      "keyword": "motos honda peru",
+      "average_interest": 76,
+      "trend": "rising",
+      "peak_score": 88,
+      "growth_3m": "+42%",
+      "top_regions": {
+        "Lima": 100,
+        "Arequipa": 65,
+        "Trujillo": 58,
+        "Chiclayo": 52,
+        "Piura": 48
+      }
+    },
+    {
+      "keyword": "honda dio",
+      "average_interest": 68,
+      "trend": "rising",
+      "peak_score": 82,
+      "growth_3m": "+38%",
+      "top_regions": {
+        "Lima": 100,
+        "Arequipa": 62,
+        "Trujillo": 55,
+        "Cusco": 48,
+        "Chiclayo": 45
+      }
+    },
+    {
+      "keyword": "honda wave",
+      "average_interest": 64,
+      "trend": "stable",
+      "peak_score": 76,
+      "growth_3m": "+22%",
+      "top_regions": {
+        "Lima": 100,
+        "Arequipa": 58,
+        "Trujillo": 52,
+        "Piura": 48,
+        "Chiclayo": 44
+      }
+    },
+    {
+      "keyword": "honda navi",
+      "average_interest": 72,
+      "trend": "rising",
+      "peak_score": 85,
+      "growth_3m": "+55%",
+      "top_regions": {
+        "Lima": 100,
+        "Arequipa": 68,
+        "Trujillo": 60,
+        "Cusco": 52,
+        "Chiclayo": 48
+      }
+    },
+    {
+      "keyword": "scooter 110cc",
+      "average_interest": 58,
+      "trend": "rising",
+      "peak_score": 72,
+      "growth_3m": "+48%",
+      "top_regions": {
+        "Lima": 100,
+        "Arequipa": 55,
+        "Trujillo": 50,
+        "Piura": 45,
+        "Chiclayo": 42
+      }
+    },
+    {
+      "keyword": "precio motos honda",
+      "average_interest": 82,
+      "trend": "rising",
+      "peak_score": 95,
+      "growth_3m": "+62%",
+      "top_regions": {
+        "Lima": 100,
+        "Arequipa": 72,
+        "Trujillo": 65,
+        "Cusco": 58,
+        "Chiclayo": 55
+      }
+    },
+    {
+      "keyword": "motos automaticas",
+      "average_interest": 54,
+      "trend": "rising",
+      "peak_score": 68,
+      "growth_3m": "+35%",
+      "top_regions": {
+        "Lima": 100,
+        "Arequipa": 52,
+        "Trujillo": 48,
+        "Piura": 42,
+        "Chiclayo": 40
+      }
+    },
+    {
+      "keyword": "motos economicas",
+      "average_interest": 62,
+      "trend": "stable",
+      "peak_score": 75,
+      "growth_3m": "+28%",
+      "top_regions": {
+        "Lima": 100,
+        "Arequipa": 60,
+        "Trujillo": 55,
+        "Piura": 50,
+        "Chiclayo": 48
+      }
+    },
+    {
+      "keyword": "honda vs bajaj",
+      "average_interest": 48,
+      "trend": "stable",
+      "peak_score": 62,
+      "growth_3m": "+18%",
+      "top_regions": {
+        "Lima": 100,
+        "Arequipa": 55,
+        "Trujillo": 50,
+        "Cusco": 45,
+        "Piura": 42
+      }
+    },
+    {
+      "keyword": "honda vs yamaha motos",
+      "average_interest": 52,
+      "trend": "rising",
+      "peak_score": 68,
+      "growth_3m": "+32%",
+      "top_regions": {
+        "Lima": 100,
+        "Arequipa": 58,
+        "Trujillo": 52,
+        "Cusco": 48,
+        "Chiclayo": 45
+      }
+    },
+    {
+      "keyword": "honda pcx",
+      "average_interest": 66,
+      "trend": "rising",
+      "peak_score": 78,
+      "growth_3m": "+45%",
+      "top_regions": {
+        "Lima": 100,
+        "Arequipa": 62,
+        "Trujillo": 55,
+        "Cusco": 50,
+        "Chiclayo": 48
+      }
+    },
+    {
+      "keyword": "financiamiento motos",
+      "average_interest": 70,
+      "trend": "rising",
+      "peak_score": 84,
+      "growth_3m": "+52%",
+      "top_regions": {
+        "Lima": 100,
+        "Arequipa": 65,
+        "Trujillo": 58,
+        "Piura": 52,
+        "Chiclayo": 50
+      }
+    }
+  ]
+}

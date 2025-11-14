@@ -1,0 +1,184 @@
+{
+  "timestamp": "2025-01-30T15:30:00Z",
+  "source": "Google Analytics 4 (Mock)",
+  "property": "Honda Perú - CR-V & HR-V Microsite",
+  "dateRange": {
+    "start": "2024-12-01",
+    "end": "2025-01-30"
+  },
+  "overview": {
+    "totalUsers": 125680,
+    "activeUsers": 98450,
+    "newUsers": 87320,
+    "sessions": 198750,
+    "averageSessionDuration": "4m 28s",
+    "bounceRate": 0.31,
+    "conversions": 1247,
+    "conversionRate": 0.063
+  },
+  "topPages": [
+    {
+      "page": "/cr-v-advanced-hybrid",
+      "views": 48500,
+      "uniquePageviews": 35200,
+      "avgTimeOnPage": "3m 45s",
+      "exitRate": 0.28,
+      "conversionRate": 0.085
+    },
+    {
+      "page": "/cr-v-advanced-hybrid/especificaciones",
+      "views": 32800,
+      "uniquePageviews": 24600,
+      "avgTimeOnPage": "4m 18s",
+      "exitRate": 0.22,
+      "conversionRate": 0.095
+    },
+    {
+      "page": "/hr-v-2026/cotizar",
+      "views": 28200,
+      "uniquePageviews": 21900,
+      "avgTimeOnPage": "5m 12s",
+      "exitRate": 0.18,
+      "conversionRate": 0.152
+    },
+    {
+      "page": "/comparador-suv",
+      "views": 19500,
+      "uniquePageviews": 14200,
+      "avgTimeOnPage": "3m 28s",
+      "exitRate": 0.35,
+      "conversionRate": 0.068
+    }
+  ],
+  "searchTerms": [
+    {
+      "term": "honda cr-v precio peru",
+      "searches": 5450,
+      "resultClicks": 4890,
+      "conversionRate": 0.095,
+      "trend": "rising"
+    },
+    {
+      "term": "suv hibrida honda",
+      "searches": 4280,
+      "resultClicks": 3650,
+      "conversionRate": 0.088,
+      "trend": "rising"
+    },
+    {
+      "term": "honda e:hev",
+      "searches": 3850,
+      "resultClicks": 3420,
+      "conversionRate": 0.072,
+      "trend": "rising"
+    },
+    {
+      "term": "financiamiento honda",
+      "searches": 3150,
+      "resultClicks": 2680,
+      "conversionRate": 0.125,
+      "trend": "rising"
+    },
+    {
+      "term": "test drive honda cr-v",
+      "searches": 2820,
+      "resultClicks": 2520,
+      "conversionRate": 0.185,
+      "trend": "rising"
+    }
+  ],
+  "demographics": {
+    "age": {
+      "25-34": 0.32,
+      "35-44": 0.38,
+      "45-54": 0.21,
+      "55-64": 0.07,
+      "65+": 0.02
+    },
+    "gender": {
+      "male": 0.58,
+      "female": 0.41,
+      "other": 0.01
+    },
+    "locations": {
+      "Lima": 0.62,
+      "Arequipa": 0.11,
+      "Trujillo": 0.08,
+      "Cusco": 0.06,
+      "Chiclayo": 0.05,
+      "Other": 0.08
+    }
+  },
+  "deviceCategory": {
+    "mobile": 0.58,
+    "desktop": 0.35,
+    "tablet": 0.07
+  },
+  "leadGeneration": {
+    "totalLeads": 1247,
+    "qualifiedLeads": 856,
+    "qualificationRate": 0.686,
+    "testDriveRequests": 342,
+    "quotationRequests": 514,
+    "brochureDownloads": 1850,
+    "leadsBySource": [
+      {
+        "source": "google_search",
+        "leads": 456,
+        "qualified": 328,
+        "avgLeadScore": 78
+      },
+      {
+        "source": "facebook",
+        "leads": 325,
+        "qualified": 218,
+        "avgLeadScore": 72
+      },
+      {
+        "source": "instagram",
+        "leads": 248,
+        "qualified": 165,
+        "avgLeadScore": 69
+      },
+      {
+        "source": "youtube",
+        "leads": 142,
+        "qualified": 98,
+        "avgLeadScore": 75
+      },
+      {
+        "source": "tiktok",
+        "leads": 76,
+        "qualified": 47,
+        "avgLeadScore": 64
+      }
+    ]
+  },
+  "interestAreas": {
+    "hybrid_technology": {
+      "pageviews": 38500,
+      "avgTimeOnPage": "4m 12s",
+      "bounceRate": 0.24
+    },
+    "fuel_efficiency": {
+      "pageviews": 32800,
+      "avgTimeOnPage": "3m 48s",
+      "bounceRate": 0.28
+    },
+    "safety_features": {
+      "pageviews": 28500,
+      "avgTimeOnPage": "3m 22s",
+      "bounceRate": 0.31
+    },
+    "pricing_financing": {
+      "pageviews": 41200,
+      "avgTimeOnPage": "5m 05s",
+      "bounceRate": 0.19
+    }
+  },
+  "metadata": {
+    "note": "Mock data for MVP demonstration",
+    "actualIntegration": "Requires Honda Peru GA4 property access",
+    "updateFrequency": "Daily automatic once integrated"
+  }
+}

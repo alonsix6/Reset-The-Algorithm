@@ -1,0 +1,189 @@
+{
+  "timestamp": "2025-11-14T18:30:00.000Z",
+  "source": "Meta Platforms (Facebook + Instagram)",
+  "region": "PE",
+  "category": "Motorcycles",
+  "aggregatedTopics": [
+    {
+      "topic": "Honda Dio - Mejor scooter económico",
+      "mentions": 12500,
+      "engagement_score": 8.4,
+      "growth": "+52%",
+      "sentiment": "very positive",
+      "top_brands": [
+        "Honda",
+        "Yamaha",
+        "Bajaj"
+      ],
+      "keywords": [
+        "bajo consumo",
+        "automática",
+        "ciudad"
+      ]
+    },
+    {
+      "topic": "Motos Honda confiabilidad y durabilidad",
+      "mentions": 18200,
+      "engagement_score": 9.1,
+      "growth": "+48%",
+      "sentiment": "very positive",
+      "top_brands": [
+        "Honda",
+        "Yamaha"
+      ],
+      "keywords": [
+        "calidad japonesa",
+        "confiable",
+        "durabilidad"
+      ]
+    },
+    {
+      "topic": "Comparativa Honda vs Bajaj motos",
+      "mentions": 8400,
+      "engagement_score": 7.2,
+      "growth": "+38%",
+      "sentiment": "positive",
+      "top_brands": [
+        "Honda",
+        "Bajaj",
+        "Yamaha"
+      ],
+      "keywords": [
+        "precio",
+        "calidad",
+        "repuestos"
+      ]
+    },
+    {
+      "topic": "Honda Wave para delivery y trabajo",
+      "mentions": 15800,
+      "engagement_score": 8.8,
+      "growth": "+62%",
+      "sentiment": "very positive",
+      "top_brands": [
+        "Honda",
+        "Bajaj"
+      ],
+      "keywords": [
+        "trabajo",
+        "delivery",
+        "económica"
+      ]
+    },
+    {
+      "topic": "Scooters automáticas 110cc - Honda Navi",
+      "mentions": 9200,
+      "engagement_score": 7.8,
+      "growth": "+55%",
+      "sentiment": "positive",
+      "top_brands": [
+        "Honda",
+        "Yamaha",
+        "Italika"
+      ],
+      "keywords": [
+        "automática",
+        "fácil manejo",
+        "ciudad"
+      ]
+    },
+    {
+      "topic": "Financiamiento motos Honda - Crédito fácil",
+      "mentions": 11500,
+      "engagement_score": 8.2,
+      "growth": "+58%",
+      "sentiment": "positive",
+      "top_brands": [
+        "Honda",
+        "Bajaj",
+        "Suzuki"
+      ],
+      "keywords": [
+        "cuotas bajas",
+        "sin inicial",
+        "crédito"
+      ]
+    },
+    {
+      "topic": "Consumo de combustible motos Honda",
+      "mentions": 14200,
+      "engagement_score": 8.6,
+      "growth": "+45%",
+      "sentiment": "very positive",
+      "top_brands": [
+        "Honda",
+        "Yamaha"
+      ],
+      "keywords": [
+        "ahorro",
+        "eficiencia",
+        "económico"
+      ]
+    },
+    {
+      "topic": "Repuestos Honda originales vs genéricos",
+      "mentions": 6800,
+      "engagement_score": 6.9,
+      "growth": "+32%",
+      "sentiment": "neutral",
+      "top_brands": [
+        "Honda",
+        "Yamaha",
+        "Bajaj"
+      ],
+      "keywords": [
+        "repuestos",
+        "garantía",
+        "calidad"
+      ]
+    },
+    {
+      "topic": "Honda PCX - Scooter premium urbano",
+      "mentions": 7200,
+      "engagement_score": 8.0,
+      "growth": "+48%",
+      "sentiment": "very positive",
+      "top_brands": [
+        "Honda",
+        "Yamaha"
+      ],
+      "keywords": [
+        "premium",
+        "confort",
+        "tecnología"
+      ]
+    },
+    {
+      "topic": "Primera moto Honda - Guía para principiantes",
+      "mentions": 10500,
+      "engagement_score": 7.5,
+      "growth": "+42%",
+      "sentiment": "positive",
+      "top_brands": [
+        "Honda",
+        "Yamaha",
+        "Bajaj"
+      ],
+      "keywords": [
+        "principiante",
+        "fácil",
+        "segura"
+      ]
+    }
+  ],
+  "summary": {
+    "totalMentions": 114300,
+    "avgEngagementScore": 8.05,
+    "sentimentBreakdown": {
+      "very positive": 5,
+      "positive": 4,
+      "neutral": 1
+    },
+    "topCompetitors": [
+      "Honda",
+      "Yamaha",
+      "Bajaj",
+      "Suzuki"
+    ]
+  }
+}
