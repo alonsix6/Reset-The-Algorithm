@@ -6,21 +6,21 @@ import { LAYER_CONFIG, METRIC_CARDS_CONFIG, HUBSPOT_CONFIG } from '../data/confi
 export default function OptimizationLayer() {
   // Performance últimos 7 días - UCSP Admisiones
   const performanceData = [
-    { date: '14 Nov', postulaciones: 168, reach: 118000, engagement: 18200, spent: 6450 },
-    { date: '15 Nov', postulaciones: 175, reach: 122000, engagement: 19100, spent: 6780 },
-    { date: '16 Nov', postulaciones: 182, reach: 127000, engagement: 20300, spent: 6920 },
-    { date: '17 Nov', postulaciones: 178, reach: 124000, engagement: 19800, spent: 6850 },
-    { date: '18 Nov', postulaciones: 191, reach: 131000, engagement: 21500, spent: 7100 },
-    { date: '19 Nov', postulaciones: 185, reach: 128000, engagement: 20700, spent: 6950 },
-    { date: '20 Nov', postulaciones: 198, reach: 135000, engagement: 22400, spent: 7250 }
+    { date: '14 Nov', leads: 95, reach: 105000, engagement: 15200, spent: 5950 },
+    { date: '15 Nov', leads: 142, reach: 118000, engagement: 18500, spent: 6480 },
+    { date: '16 Nov', leads: 118, reach: 110000, engagement: 16800, spent: 6120 },
+    { date: '17 Nov', leads: 88, reach: 98000, engagement: 14200, spent: 5680 },
+    { date: '18 Nov', leads: 156, reach: 128000, engagement: 20100, spent: 6850 },
+    { date: '19 Nov', leads: 135, reach: 122000, engagement: 18900, spent: 6590 },
+    { date: '20 Nov', leads: 108, reach: 115000, engagement: 17400, spent: 6250 }
   ];
 
   // Channel performance distribution (sin TikTok ni LinkedIn)
   const channelData = [
-    { name: 'Google Search', value: 35, postulaciones: 439, color: '#003B7A' }, // UCSP Blue
-    { name: 'Meta Ads', value: 35, postulaciones: 439, color: '#6B1B3D' }, // UCSP Burgundy
-    { name: 'YouTube', value: 20, postulaciones: 251, color: '#EF4444' }, // Rojo YouTube
-    { name: 'Display', value: 10, postulaciones: 125, color: '#C5A572' } // UCSP Gold
+    { name: 'Google Search', value: 35, leads: 291, color: '#003B7A' }, // UCSP Blue
+    { name: 'Meta Ads', value: 35, leads: 291, color: '#6B1B3D' }, // UCSP Burgundy
+    { name: 'YouTube', value: 20, leads: 166, color: '#EF4444' }, // Rojo YouTube
+    { name: 'Display', value: 10, leads: 83, color: '#C5A572' } // UCSP Gold
   ];
 
   // Funnel de conversión UCSP - Simplificado
@@ -101,15 +101,15 @@ export default function OptimizationLayer() {
               {PERFORMANCE_KPIS.leads.trend}
             </span>
           </div>
-          <h3 className="text-sm font-medium text-white/80 mb-1">Postulaciones Completadas</h3>
-          <p className="text-2xl font-bold mb-2">{PERFORMANCE_KPIS.leads.qualified.toLocaleString()}</p>
+          <h3 className="text-sm font-medium text-white/80 mb-1">Leads Generados (Formularios)</h3>
+          <p className="text-2xl font-bold mb-2">{PERFORMANCE_KPIS.leads.total.toLocaleString()}</p>
           <div className="flex items-baseline gap-2">
-            <span className="text-sm text-white/70">de {PERFORMANCE_KPIS.leads.total.toLocaleString()} total</span>
-            <span className="text-xs bg-white/20 px-2 py-1 rounded">{PERFORMANCE_KPIS.leads.qualification_rate}% válidas</span>
+            <span className="text-sm text-white/70">{PERFORMANCE_KPIS.leads.qualified.toLocaleString()} postulaciones</span>
+            <span className="text-xs bg-white/20 px-2 py-1 rounded">{PERFORMANCE_KPIS.leads.qualification_rate}% conversión</span>
           </div>
           <div className="mt-3 pt-3 border-t border-white/20">
             <div className="flex justify-between text-xs">
-              <span className="text-white/70">CPP</span>
+              <span className="text-white/70">CPL</span>
               <span className="font-bold">${PERFORMANCE_KPIS.leads.cost_per_lead}</span>
             </div>
           </div>
@@ -194,7 +194,7 @@ export default function OptimizationLayer() {
           <div className="flex gap-4 text-sm">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-ucsp-burgundy"></div>
-              <span>Postulaciones</span>
+              <span>Leads</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-ucsp-blue"></div>
@@ -213,7 +213,7 @@ export default function OptimizationLayer() {
               contentStyle={{ backgroundColor: '#fff', border: '1px solid #e5e7eb', borderRadius: '8px' }}
               labelStyle={{ fontWeight: 'bold', marginBottom: '8px' }}
             />
-            <Line yAxisId="left" type="monotone" dataKey="postulaciones" stroke="#6B1B3D" strokeWidth={3} dot={{ r: 5 }} />
+            <Line yAxisId="left" type="monotone" dataKey="leads" stroke="#6B1B3D" strokeWidth={3} dot={{ r: 5 }} />
             <Line yAxisId="right" type="monotone" dataKey="engagement" stroke="#003B7A" strokeWidth={3} dot={{ r: 5 }} />
           </LineChart>
         </ResponsiveContainer>
@@ -221,7 +221,7 @@ export default function OptimizationLayer() {
 
       {/* Channel Distribution */}
       <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-        <h3 className="text-base font-bold text-gray-900 mb-8 text-center md:text-left">Distribución de Postulaciones por Canal</h3>
+        <h3 className="text-base font-bold text-gray-900 mb-8 text-center md:text-left">Distribución de Leads por Canal</h3>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
           {/* Pie Chart */}
@@ -259,7 +259,7 @@ export default function OptimizationLayer() {
                   <span className="text-sm font-medium text-gray-900 truncate">{channel.name}</span>
                 </div>
                 <div className="flex items-center gap-3 flex-shrink-0 ml-4">
-                  <span className="text-sm font-bold text-gray-900">{channel.postulaciones}</span>
+                  <span className="text-sm font-bold text-gray-900">{channel.leads}</span>
                   <span className="text-sm font-bold text-gray-700 bg-gray-200 px-2.5 py-1 rounded-md min-w-[48px] text-center">
                     {channel.value}%
                   </span>
