@@ -104,6 +104,16 @@ export const PERFORMANCE_KPIS = {
     description: 'Total de postulaciones válidas en periodo',
   },
 
+  // Alias para compatibilidad con OptimizationLayer.jsx
+  leads: {
+    qualified: 1256,
+    total: 1580,
+    qualification_rate: 79.5,
+    cost_per_lead: 38.50,
+    trend: '+15.0%',
+    trend_value: 15.0,
+  },
+
   // Alcance total
   alcance: {
     current: 875000,
@@ -114,14 +124,31 @@ export const PERFORMANCE_KPIS = {
     description: 'Usuarios únicos impactados',
   },
 
+  // Alias para compatibilidad
+  reach: {
+    unique_reach: 875000,
+    impressions: 2450000,
+    frequency: 2.8,
+    trend: '+21.9%',
+    trend_value: 21.9,
+  },
+
   // Engagement/Interacciones
   engagement: {
-    current: 142500,
-    previous: 131800,
-    change: '+8.1',
-    trend: 'up',
-    label: 'Interacciones',
-    description: 'Likes, shares, comentarios, saves',
+    total_interactions: 142500,
+    engagement_rate: 16.3,
+    shares: 18500,
+    trend: '+8.1%',
+    trend_value: 8.1,
+  },
+
+  // Budget / Presupuesto
+  budget: {
+    total_budget: 85000, // S/ mensual
+    total_spent: 78200,
+    spent_percentage: 92.0,
+    cost_per_click: 2.85,
+    trend: 'on-track',
   },
 
   // CPP (Costo por Postulación) - reemplazo de CPL
@@ -667,6 +694,255 @@ export const HUBSPOT_MOCKUP = {
 };
 
 // ============================================================================
+// BUDGET ALLOCATION - Distribución de presupuesto por canal
+// ============================================================================
+export const BUDGET_ALLOCATION = {
+  total_budget: 85000, // S/ mensual para Admisiones 2025-I
+  distribution: {
+    google_search: {
+      amount: 29750, // 35%
+      percentage: 35,
+      status: 'overperforming',
+      kpi: 'CPL (Costo por Lead)',
+      target: 'S/35 o menos',
+      current_performance: 'S/32.50',
+    },
+    social_media: {
+      amount: 29750, // 35%
+      percentage: 35,
+      status: 'performing',
+      kpi: 'CPP (Costo por Postulación)',
+      target: 'S/40 o menos',
+      current_performance: 'S/38.20',
+      whatsapp_metrics: {
+        conversations: 1847,
+        response_rate: 68,
+      },
+    },
+    youtube: {
+      amount: 17000, // 20%
+      percentage: 20,
+      status: 'ontrack',
+      kpi: 'CPV (Costo por Vista)',
+      target: 'S/0.15 o menos',
+      current_performance: 'S/0.14',
+    },
+    display: {
+      amount: 8500, // 10%
+      percentage: 10,
+      status: 'performing',
+      kpi: 'CPM (Costo por Mil)',
+      target: 'S/12 o menos',
+      current_performance: 'S/11.80',
+    },
+  },
+  recommendations: [
+    {
+      type: 'increase',
+      channel: 'google_search',
+      from: 35,
+      to: 40,
+      reason: 'CPL 7% por debajo del objetivo, excelente performance en búsquedas de carreras',
+      impact: '+120 postulaciones/mes estimadas',
+    },
+    {
+      type: 'maintain',
+      channel: 'social_media',
+      reason: 'Meta Ads con buen engagement en Pregrado, WhatsApp con 68% de respuesta',
+      impact: 'Mantener volumen actual',
+    },
+    {
+      type: 'decrease',
+      channel: 'display',
+      from: 10,
+      to: 5,
+      reason: 'Bajo engagement en Display, redirigir a Search',
+      impact: 'Redistribución más eficiente',
+    },
+  ],
+};
+
+// ============================================================================
+// CONTENT PILLARS - Pilares de contenido UCSP
+// ============================================================================
+export const CONTENT_PILLARS = [
+  {
+    id: 1,
+    title: 'Licenciamiento y Calidad Académica',
+    description: 'Universidad licenciada por SUNEDU con altos estándares de calidad',
+    status: 'overperforming',
+    performance: {
+      engagement_rate: 14.2,
+      reach: 182000,
+      conversions: 385,
+    },
+    recommended_budget: 0.30, // 30%
+    formats: ['Video institucional', 'Infografías', 'Testimoniales'],
+  },
+  {
+    id: 2,
+    title: 'Formación Profesional Integral',
+    description: 'Educación de excelencia con valores católicos y visión humanista',
+    status: 'performing',
+    performance: {
+      engagement_rate: 11.8,
+      reach: 156000,
+      conversions: 298,
+    },
+    recommended_budget: 0.25, // 25%
+    formats: ['Historias de éxito', 'Videos emocionales', 'Lives'],
+  },
+  {
+    id: 3,
+    title: 'Acreditación Internacional',
+    description: 'Carreras acreditadas internacionalmente, reconocimiento global',
+    status: 'performing',
+    performance: {
+      engagement_rate: 10.5,
+      reach: 134000,
+      conversions: 245,
+    },
+    recommended_budget: 0.20, // 20%
+    formats: ['Reconocimientos', 'Casos de éxito', 'Infografías'],
+  },
+  {
+    id: 4,
+    title: 'Innovación y Tecnología',
+    description: 'Laboratorios de última generación, investigación aplicada',
+    status: 'ontrack',
+    performance: {
+      engagement_rate: 9.2,
+      reach: 118000,
+      conversions: 185,
+    },
+    recommended_budget: 0.15, // 15%
+    formats: ['Tour virtual', 'Videos tech', 'Demos'],
+  },
+  {
+    id: 5,
+    title: 'Empleabilidad y Convenios',
+    description: 'Alta tasa de empleabilidad, convenios con empresas líderes',
+    status: 'performing',
+    performance: {
+      engagement_rate: 8.8,
+      reach: 105000,
+      conversions: 156,
+    },
+    recommended_budget: 0.10, // 10%
+    formats: ['Data viz', 'Testimoniales empresas', 'Estadísticas'],
+  },
+];
+
+// ============================================================================
+// ALERTS - Alertas automáticas del sistema
+// ============================================================================
+export const ALERTS = [
+  {
+    id: 1,
+    severity: 'high',
+    title: 'CPL elevado en Medicina',
+    message: 'Campaña de Medicina en Google Search superó S/53, cerca del límite de S/55',
+    action: 'Revisar keywords y ajustar bids, considerar pausar temporalmente',
+    timestamp: '2025-11-20T14:30:00',
+  },
+  {
+    id: 2,
+    severity: 'medium',
+    title: 'Engagement bajo en YouTube',
+    message: 'Videos de carreras tech tienen 35% menos engagement que promedio',
+    action: 'Mejorar thumbnails y primeros 5 segundos, probar formato shorts',
+    timestamp: '2025-11-20T13:15:00',
+  },
+  {
+    id: 3,
+    severity: 'low',
+    title: 'Oportunidad en Puno',
+    message: 'Tráfico desde Puno creció +28% esta semana, bajo CPL de S/28',
+    action: 'Considerar aumentar budget 15% para Puno en próxima semana',
+    timestamp: '2025-11-20T11:45:00',
+  },
+];
+
+// ============================================================================
+// A/B TESTS - Tests activos
+// ============================================================================
+export const AB_TESTS = [
+  {
+    id: 1,
+    name: 'Copy Lead Ads: "Tu futuro inicia aquí" vs "Fórmate con los mejores"',
+    status: 'running',
+    variant_a: {
+      name: 'Tu futuro inicia aquí',
+      ctr: 3.8,
+      conversions: 142,
+    },
+    variant_b: {
+      name: 'Fórmate con los mejores',
+      ctr: 4.5,
+      conversions: 168,
+    },
+    recommendation: 'Variante B tiene +18% mejor CTR, escalar al 100%',
+  },
+  {
+    id: 2,
+    name: 'Video thumbnail: Campus vs Estudiantes',
+    status: 'completed',
+    variant_a: {
+      name: 'Campus UCSP',
+      view_rate: 28.5,
+      watch_time: '0:42',
+    },
+    variant_b: {
+      name: 'Estudiantes',
+      view_rate: 35.2,
+      watch_time: '0:58',
+    },
+    recommendation: 'Variante B (Estudiantes) ganó, usar para próximas campañas',
+  },
+];
+
+// ============================================================================
+// COMPETITOR INSIGHTS - Análisis de competencia universitaria
+// ============================================================================
+export const COMPETITOR_INSIGHTS = [
+  {
+    brand: 'UNSA',
+    share_of_voice: 38,
+    sentiment: 72,
+    threat_level: 'high',
+    trending_topics: ['Universidad pública', 'Ingeniería', 'Tradición'],
+  },
+  {
+    brand: 'UCSM',
+    share_of_voice: 22,
+    sentiment: 68,
+    threat_level: 'high',
+    trending_topics: ['Infraestructura', 'Medicina', 'Campus'],
+  },
+  {
+    brand: 'UTP',
+    share_of_voice: 12,
+    sentiment: 65,
+    threat_level: 'medium',
+    trending_topics: ['Empleabilidad', 'Carreras tech', 'Innovación'],
+  },
+  {
+    brand: 'UAP',
+    share_of_voice: 8,
+    sentiment: 58,
+    threat_level: 'medium',
+    trending_topics: ['Flexibilidad', 'Costos', 'Online'],
+  },
+  {
+    brand: 'UCSP',
+    share_of_voice: 15,
+    sentiment: 82,
+    threat_level: null,
+    trending_topics: ['Calidad', 'Acreditación', 'Valores católicos'],
+  },
+];
+
+// ============================================================================
 // EXPORTS
 // ============================================================================
 export default {
@@ -676,4 +952,9 @@ export default {
   CARRERAS_PERFORMANCE,
   COMPETENCIA,
   HUBSPOT_MOCKUP,
+  BUDGET_ALLOCATION,
+  CONTENT_PILLARS,
+  ALERTS,
+  AB_TESTS,
+  COMPETITOR_INSIGHTS,
 };
