@@ -224,7 +224,7 @@ export const TARGET_AUDIENCES = [
       'Display': 15,
     },
     engagement_rate: 12.5,
-    cpl_target: 35, // S/ costo por lead objetivo
+    cpl_target: 9.5, // USD costo por lead objetivo
     conversion_funnel: {
       alcance: 850000,
       visitas_landing: 12000,
@@ -263,7 +263,7 @@ export const TARGET_AUDIENCES = [
       'Display': 10,
     },
     engagement_rate: 8.5,
-    cpl_target: 65, // S/ costo por lead objetivo (más alto que pregrado)
+    cpl_target: 17.5, // USD costo por lead objetivo (más alto que pregrado)
     conversion_funnel: {
       alcance: 120000,
       visitas_landing: 4500,

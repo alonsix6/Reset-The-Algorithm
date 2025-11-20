@@ -187,45 +187,40 @@ export const PERFORMANCE_KPIS = {
 // UCSP OPPORTUNITY SCORE - Reemplazo de Honda Opportunity Score
 // ============================================================================
 export const OPPORTUNITY_SCORE = {
-  total: 82,
-  grade: 'A',
-  components: [
-    {
-      name: 'Interés de Búsqueda',
+  current_score: 82,
+  trend: '+5.2%',
+  components: {
+    search_interest: {
       score: 85,
-      weight: 25,
-      trend: 'rising',
-      description: 'Tendencias de Google Trends en zonas objetivo',
+      weight: 0.25,
+      contribution: 21.25,
     },
-    {
-      name: 'Engagement Social',
+    social_engagement: {
       score: 78,
-      weight: 20,
-      trend: 'stable',
-      description: 'Interacciones en TikTok, Instagram y Facebook',
+      weight: 0.20,
+      contribution: 15.6,
     },
-    {
-      name: 'Intención de Conversión',
+    conversion_intent: {
       score: 88,
-      weight: 30,
-      trend: 'rising',
-      description: 'Lead Ads + Conversaciones WhatsApp',
+      weight: 0.30,
+      contribution: 26.4,
     },
-    {
-      name: 'Calidad de Leads',
+    lead_quality: {
       score: 75,
-      weight: 15,
-      trend: 'stable',
-      description: 'HubSpot Lead Score promedio',
+      weight: 0.15,
+      contribution: 11.25,
     },
-    {
-      name: 'Competitividad',
+    competitiveness: {
       score: 80,
-      weight: 10,
-      trend: 'rising',
-      description: 'Share of Voice vs UNSA/UCSM',
+      weight: 0.10,
+      contribution: 8.0,
     },
-  ],
+  },
+  recommendation: {
+    message: 'Momento óptimo para escalar inversión en Google Search y Meta Ads enfocados en Ingeniería Industrial y Medicina. Score superior a 80 indica alta receptividad del mercado educativo en Arequipa.',
+    confidence: '95%',
+    priority: 'high',
+  },
 };
 
 // ============================================================================
