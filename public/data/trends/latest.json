@@ -47,17 +47,17 @@
       }
     },
     {
-      "keyword": "derecho ucsp",
-      "average_interest": 38,
-      "trend": "declining",
-      "peak_score": 52,
-      "growth_3m": "-8%",
+      "keyword": "carreras con más empleabilidad",
+      "average_interest": 71,
+      "trend": "rising",
+      "peak_score": 82,
+      "growth_3m": "+19%",
       "top_regions": {
         "Arequipa": 100,
-        "Puno": 48,
-        "Cusco": 40,
-        "Moquegua": 25,
-        "Tacna": 30
+        "Cusco": 78,
+        "Puno": 72,
+        "Lima": 65,
+        "Tacna": 45
       }
     },
     {
@@ -75,45 +75,45 @@
       }
     },
     {
-      "keyword": "ciencia de datos ucsp",
-      "average_interest": 42,
-      "trend": "stable",
-      "peak_score": 58,
-      "growth_3m": "+3%",
-      "top_regions": {
-        "Arequipa": 100,
-        "Puno": 38,
-        "Cusco": 32,
-        "Moquegua": 22,
-        "Tacna": 18
-      }
-    },
-    {
-      "keyword": "maestrías ucsp 2026",
-      "average_interest": 35,
-      "trend": "stable",
-      "peak_score": 48,
-      "growth_3m": "+2%",
-      "top_regions": {
-        "Arequipa": 100,
-        "Puno": 40,
-        "Cusco": 45,
-        "Moquegua": 25,
-        "Tacna": 28
-      }
-    },
-    {
-      "keyword": "becas ucsp arequipa",
-      "average_interest": 58,
+      "keyword": "mejores universidades arequipa",
+      "average_interest": 62,
       "trend": "rising",
-      "peak_score": 70,
-      "growth_3m": "+15%",
+      "peak_score": 74,
+      "growth_3m": "+14%",
       "top_regions": {
         "Arequipa": 100,
-        "Puno": 68,
-        "Cusco": 55,
-        "Moquegua": 48,
-        "Tacna": 42
+        "Puno": 58,
+        "Cusco": 62,
+        "Moquegua": 40,
+        "Tacna": 35
+      }
+    },
+    {
+      "keyword": "maestrías arequipa 2026",
+      "average_interest": 54,
+      "trend": "rising",
+      "peak_score": 66,
+      "growth_3m": "+11%",
+      "top_regions": {
+        "Arequipa": 100,
+        "Cusco": 58,
+        "Puno": 52,
+        "Moquegua": 38,
+        "Tacna": 35
+      }
+    },
+    {
+      "keyword": "becas universitarias arequipa",
+      "average_interest": 66,
+      "trend": "rising",
+      "peak_score": 78,
+      "growth_3m": "+20%",
+      "top_regions": {
+        "Arequipa": 100,
+        "Puno": 75,
+        "Cusco": 68,
+        "Moquegua": 52,
+        "Tacna": 48
       }
     },
     {
