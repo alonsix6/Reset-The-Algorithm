@@ -116,9 +116,11 @@ export default function DataLayer() {
     if (tiktokData?.trends?.hashtags?.length > 0) {
       const topHashtag = tiktokData.trends.hashtags[0];
       const ucspHashtags = tiktokData.trends.hashtags.filter(h =>
-        h.hashtag.toLowerCase().includes('ucsp')
+        h.hashtag?.toLowerCase().includes('ucsp')
       );
-      const avgRelevance = ucspHashtags.reduce((sum, h) => sum + h.relevanceScore, 0) / ucspHashtags.length || 0;
+      const avgRelevance = ucspHashtags.length > 0
+        ? ucspHashtags.reduce((sum, h) => sum + (h.relevanceScore || 0), 0) / ucspHashtags.length
+        : 0;
       insights.push({
         source: 'TikTok',
         icon: '🎥',
@@ -130,10 +132,10 @@ export default function DataLayer() {
     if (metaData?.aggregatedTopics?.length > 0) {
       const topTopic = metaData.aggregatedTopics[0];
       const ucspInTop = metaData.aggregatedTopics.filter(t =>
-        t.top_brands.includes('UCSP Perú')
+        t.top_brands?.includes('UCSP') || t.top_brands?.includes('UCSP Perú')
       ).length;
       const ucspLeads = metaData.aggregatedTopics.filter(t =>
-        t.top_brands[0] === 'UCSP Perú'
+        t.top_brands?.[0] === 'UCSP' || t.top_brands?.[0] === 'UCSP Perú'
       ).length;
       insights.push({
         source: 'Meta',
@@ -158,9 +160,9 @@ export default function DataLayer() {
     if (trendsData?.keywords && tiktokData?.trends?.hashtags) {
       // Buscar keywords que aparecen en hashtags (evitar duplicados)
       trendsData.keywords.slice(0, 5).forEach(kw => {
-        const kwTokens = kw.keyword.toLowerCase().split(' ');
+        const kwTokens = kw.keyword?.toLowerCase().split(' ') || [];
         tiktokData.trends.hashtags.forEach(tag => {
-          const tagLower = tag.hashtag.toLowerCase();
+          const tagLower = tag.hashtag?.toLowerCase() || '';
           kwTokens.forEach(token => {
             if (token.length > 4 && tagLower.includes(token)) {
               connectionSet.add(kw.keyword);
