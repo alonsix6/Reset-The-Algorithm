@@ -328,51 +328,7 @@ export const OPPORTUNITY_SCORE = {
 
 ### 🚀 Migración de Mockup a Producción (Paso a Paso)
 
-#### **Fase 1: Integración HubSpot (Real-time CPL Monitoring)**
-
-1. **Obtener credenciales HubSpot**:
-   - Ir a HubSpot → Settings → Integrations → API Key
-   - Copiar Private App Access Token
-
-2. **Configurar en el sistema**:
-   ```javascript
-   // src/data/config.js
-   export const HUBSPOT_CONFIG = {
-     enabled: true,  // ✅ Cambiar a true
-     api_key: 'pat-na1-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',  // ✅ Pegar token
-     // ... resto de configuración
-   };
-   ```
-
-3. **Crear endpoint backend** (Node.js/Express o Netlify Functions):
-   ```javascript
-   // netlify/functions/hubspot-cpl.js
-   const axios = require('axios');
-
-   exports.handler = async (event) => {
-     const response = await axios.get('https://api.hubapi.com/crm/v3/objects/deals', {
-       headers: { 'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}` }
-     });
-     // Calcular CPL por campaña
-     return { statusCode: 200, body: JSON.stringify(response.data) };
-   };
-   ```
-
-4. **Actualizar DataLayer para consumir endpoint**:
-   ```javascript
-   // src/components/OptimizationLayer.jsx
-   const [hubspotData, setHubspotData] = useState(null);
-
-   useEffect(() => {
-     if (HUBSPOT_CONFIG.enabled) {
-       fetch('/.netlify/functions/hubspot-cpl')
-         .then(r => r.json())
-         .then(data => setHubspotData(data));
-     }
-   }, []);
-   ```
-
-#### **Fase 2: Activar Scrapers Automáticos**
+#### **Fase 1: Activar Scrapers Automáticos (OBLIGATORIO)**
 
 1. **Configurar GitHub Actions** (ya existe en `.github/workflows/`):
    ```yaml
@@ -397,7 +353,9 @@ export const OPPORTUNITY_SCORE = {
    - GitHub → Settings → Secrets → New repository secret
    - Agregar: `APIFY_API_KEY`, `RAPIDAPI_KEY`, etc.
 
-#### **Fase 3: Conectar Google Analytics 4 Real**
+#### **Fase 2: Conectar Google Analytics 4 Real (OPCIONAL)**
+
+> Solo si el cliente tiene GA4 configurado y quiere métricas web reales.
 
 1. **Crear Service Account en Google Cloud**:
    - Google Cloud Console → IAM & Admin → Service Accounts
@@ -436,7 +394,9 @@ export const OPPORTUNITY_SCORE = {
      : '/data';               // Mockup
    ```
 
-#### **Fase 4: Integrar Meta Ads API y Google Ads API**
+#### **Fase 3: Integrar Meta Ads API y Google Ads API (OPCIONAL)**
+
+> Solo si el cliente quiere pausado automático de campañas basado en CPL.
 
 1. **Meta Ads API** (pausado automático):
    ```javascript
@@ -475,6 +435,36 @@ export const OPPORTUNITY_SCORE = {
    };
    ```
 
+#### **Fase 4: Integración HubSpot (OPCIONAL - Solo UCSP)**
+
+> Esta integración fue solicitada específicamente por UCSP para monitoreo de CPL en tiempo real. Otros clientes pueden no necesitarla.
+
+1. **Obtener credenciales HubSpot**:
+   - Ir a HubSpot → Settings → Integrations → API Key
+   - Copiar Private App Access Token
+
+2. **Configurar en el sistema**:
+   ```javascript
+   // src/data/config.js
+   export const HUBSPOT_CONFIG = {
+     enabled: true,  // Cambiar a true solo si se usa
+     api_key: 'pat-na1-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+   };
+   ```
+
+3. **Crear endpoint backend** (Netlify Functions):
+   ```javascript
+   // netlify/functions/hubspot-cpl.js
+   const axios = require('axios');
+
+   exports.handler = async (event) => {
+     const response = await axios.get('https://api.hubapi.com/crm/v3/objects/deals', {
+       headers: { 'Authorization': `Bearer ${process.env.HUBSPOT_API_KEY}` }
+     });
+     return { statusCode: 200, body: JSON.stringify(response.data) };
+   };
+   ```
+
 ### 🧪 Testing Antes de Producción
 
 ```bash
@@ -495,21 +485,27 @@ node -e "const data = require('./src/data/mockData.js'); console.log(data.OPPORT
 
 ### 📝 Checklist de Producción
 
+**Obligatorio:**
 - [ ] Todos los valores en USD ($)
 - [ ] CPL targets actualizados (Pregrado $9.5, Posgrado $17.5)
 - [ ] OPPORTUNITY_SCORE con estructura correcta
-- [ ] HubSpot API key configurada
-- [ ] GA4 Service Account creada
 - [ ] Scrapers testeados localmente
 - [ ] GitHub Actions activadas
+- [ ] APIFY_TOKEN configurado en GitHub Secrets
+- [ ] Build exitoso sin errores
+
+**Opcional (según necesidad del cliente):**
+- [ ] GA4 Service Account creada
 - [ ] Variables de entorno en Netlify
 - [ ] Meta Ads API token válido
 - [ ] Google Ads API configurada
-- [ ] Build exitoso sin errores
+- [ ] HubSpot API key configurada *(Solo UCSP)*
 
 ---
 
-## 🔄 Integración HubSpot
+## 🔄 Integración HubSpot (Opcional - Solo UCSP)
+
+> ⚠️ **Nota**: Esta integración fue solicitada específicamente por UCSP. Otros clientes pueden no necesitarla y pueden ignorar esta sección.
 
 El sistema incluye espacio para integración con HubSpot API:
 
@@ -634,10 +630,12 @@ Principales universidades competidoras en el sur del Perú (Arequipa y Cusco):
 
 Para implementación en producción:
 
-1. **Fase 1**: Configurar API keys de HubSpot
-2. **Fase 2**: Activar scrapers automáticos (GitHub Actions cada lunes)
-3. **Fase 3**: Conectar con GA4 real de UCSP
-4. **Fase 4**: Integrar Meta Ads API y Google Ads API para pausado automático
+1. **Fase 1 (Obligatoria)**: Activar scrapers automáticos con Apify (GitHub Actions cada lunes)
+2. **Fase 2 (Opcional)**: Conectar con GA4 real (si el cliente tiene GA4)
+3. **Fase 3 (Opcional - Solo UCSP)**: Configurar API keys de HubSpot para monitoreo CPL
+4. **Fase 4 (Opcional)**: Integrar Meta Ads API y Google Ads API para pausado automático
+
+> **Nota**: HubSpot fue solicitado específicamente por UCSP. Otros clientes pueden no necesitar esta integración.
 
 ---
 
@@ -1177,6 +1175,7 @@ git push -u origin main
 
 ### Checklist de nuevo cliente
 
+**Obligatorio:**
 - [ ] Repo clonado y remote actualizado
 - [ ] `configs/clients/[cliente].js` creado con:
   - [ ] Hashtags TikTok relevantes
@@ -1186,14 +1185,17 @@ git push -u origin main
 - [ ] `src/data/config.js` actualizado:
   - [ ] BRAND_CONFIG (colores, logo, nombre)
   - [ ] TARGET_AUDIENCES (si aplica)
-  - [ ] HUBSPOT_CONFIG (thresholds CPL)
 - [ ] Secretos configurados en GitHub:
   - [ ] `APIFY_TOKEN`
-  - [ ] Otros según necesidad (GA4, HubSpot, etc.)
 - [ ] GitHub Actions habilitado
 - [ ] Netlify conectado (o hosting alternativo)
 - [ ] Primer scraping manual ejecutado (workflow_dispatch)
 - [ ] Datos aparecen en el dashboard
+
+**Opcional (solo si el cliente lo requiere):**
+- [ ] HUBSPOT_CONFIG (monitoreo CPL automático) - *UCSP lo usa, otros clientes pueden no necesitarlo*
+- [ ] GA4 API (métricas web reales)
+- [ ] Meta Ads API (pausado automático de campañas)
 
 ### Costos estimados por cliente
 
