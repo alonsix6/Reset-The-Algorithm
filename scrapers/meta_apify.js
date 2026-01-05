@@ -31,9 +31,9 @@ const __dirname = path.dirname(__filename);
 
 const APIFY_TOKEN = process.env.APIFY_TOKEN;
 
-// Actor ID - cambiar por tu username de Apify después de hacer push
-// Formato: "tu-username/social-listening-meta"
-const ACTOR_ID = process.env.APIFY_ACTOR_META || 'apify/facebook-posts-scraper';
+// Actor ID - Custom social listening actor
+// Formato: "username/actor-name"
+const ACTOR_ID = process.env.APIFY_ACTOR_META || 'globular_cinema/my-actor';
 
 // ============================================================================
 // ARGUMENTOS
