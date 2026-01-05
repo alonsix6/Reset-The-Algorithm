@@ -6,6 +6,7 @@
   "category": "Education",
   "timeRange": "today 1-m",
   "outputDir": "ucsp",
+
   "keywords": [
     "universidad arequipa",
     "estudiar en arequipa",
@@ -14,13 +15,13 @@
     "medicina peru",
     "derecho peru"
   ],
-  "brand_keywords": [
-    "UCSP",
-    "Universidad Católica San Pablo"
+
+  "facebook_pages": [
+    "https://www.facebook.com/UCSPoficial"
   ],
+
   "metadata": {
     "market": "Sur del Perú (Arequipa, Puno, Cusco, Moquegua, Tacna)",
-    "product": "Pregrado y Posgrado 2026-I",
-    "note": "Keywords genéricos de alto volumen. Los brand_keywords son opcionales para scraping separado."
+    "product": "Pregrado y Posgrado 2026-I"
   }
 }
