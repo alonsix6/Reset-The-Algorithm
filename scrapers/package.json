@@ -1,6 +1,6 @@
 {
   "name": "ucsp-scrapers",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "Data scrapers for UCSP Algorithm - Social Intelligence para Universidad Católica San Pablo",
   "main": "index.js",
@@ -8,20 +8,26 @@
     "scrape:all": "node tiktok_scraper.js && node meta_scraper.js",
     "scrape:tiktok": "node tiktok_scraper.js",
     "scrape:meta": "node meta_scraper.js",
-    "scrape:trends": "python google_trends.py"
+    "scrape:trends": "python google_trends.py",
+    "scrape:apify": "node examples/apify_integration_example.js",
+    "validate": "node validate_data.js"
   },
   "keywords": [
     "scraper",
     "education",
     "ucsp",
     "university",
-    "social-listening"
+    "social-listening",
+    "apify"
   ],
   "author": "Reset",
   "license": "UNLICENSED",
   "dependencies": {
+    "apify-client": "^2.9.0",
     "axios": "^1.6.2",
     "cheerio": "^1.0.0-rc.12",
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "p-retry": "^6.2.0",
+    "winston": "^3.11.0"
   }
 }
