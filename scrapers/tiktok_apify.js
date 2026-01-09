@@ -71,13 +71,18 @@ async function scrapeTikTokTrends(clientConfig) {
   // Input para TikTok Trends Scraper (formato correcto del actor)
   // Nota: TikTok solo soporta ciertos países para creators/videos
   // Países válidos: AU, BR, CA, EG, FR, DE, ID, IL, IT, JP, MY, PH, RU, SA, SG, KR, ES, TW, TH, TR, AE, GB, US, VN
+  // Para Perú: usamos BR (Brasil) para hashtags LATAM, US para sounds globales
   const validCountries = ['AU', 'BR', 'CA', 'EG', 'FR', 'DE', 'ID', 'IL', 'IT', 'JP', 'MY', 'PH', 'RU', 'SA', 'SG', 'KR', 'ES', 'TW', 'TH', 'TR', 'AE', 'GB', 'US', 'VN'];
   const region = clientConfig.region || 'PE';
-  const fallbackCountry = validCountries.includes(region) ? region : 'US';
+
+  // Para hashtags: usar Brasil como proxy LATAM si el país no está soportado
+  const hashtagCountry = validCountries.includes(region) ? region : 'BR';
+  // Para sounds: usar US para tendencias globales
+  const soundsCountry = validCountries.includes(region) ? region : 'US';
 
   const input = {
-    // Configuración general - hashtags soportan cualquier país
-    adsCountryCode: region,
+    // Configuración general - usar BR para hashtags LATAM
+    adsCountryCode: hashtagCountry,
     adsTimeRange: clientConfig.tiktok?.timeRange || '30',  // 7, 30, 120 días
     resultsPerPage: clientConfig.tiktok?.resultsPerPage || 20,
 
@@ -91,9 +96,9 @@ async function scrapeTikTokTrends(clientConfig) {
     adsHashtagIndustry: clientConfig.tiktok?.industry || 'Education',
 
     // Configuración de países (usar fallback para los que requieren país válido)
-    adsSoundsCountryCode: fallbackCountry,
-    adsCreatorsCountryCode: fallbackCountry,
-    adsVideosCountryCode: fallbackCountry,
+    adsSoundsCountryCode: soundsCountry,
+    adsCreatorsCountryCode: soundsCountry,
+    adsVideosCountryCode: soundsCountry,
 
     // Ordenamiento
     adsRankType: 'popular',
@@ -127,7 +132,7 @@ async function scrapeTikTokTrends(clientConfig) {
     const { items } = await client.dataset(finishedRun.defaultDatasetId).listItems();
     console.log(`📊 Items obtenidos: ${items.length}`);
 
-    const data = transformData(items, clientConfig);
+    const data = transformData(items, clientConfig, { hashtagCountry, soundsCountry });
     await saveResults(data);
 
     return data;
@@ -141,8 +146,12 @@ async function scrapeTikTokTrends(clientConfig) {
 // ============================================================================
 // TRANSFORMAR DATOS
 // ============================================================================
-function transformData(items, clientConfig) {
-  console.log('\n🔄 Transformando datos...');
+function transformData(items, clientConfig, countries = {}) {
+  console.log('\n[Transform] Transformando datos...');
+
+  // Determine labels based on country used
+  const hashtagLabel = countries.hashtagCountry === 'BR' ? 'LATAM' : clientConfig.region;
+  const soundsLabel = clientConfig.region; // Always show actual region for sounds
 
   const trends = {
     hashtags: [],
@@ -161,7 +170,8 @@ function transformData(items, clientConfig) {
         posts: formatNumber(item.publishCnt || item.posts || item.videoCount || 0),
         growth: item.trend || '+0%',
         relevanceScore: item.rank ? Math.max(100 - item.rank * 2, 50) : 85,
-        region: clientConfig.region,
+        region: hashtagLabel,
+        regionNote: hashtagLabel === 'LATAM' ? 'Tendencias Brasil (proxy LATAM)' : null,
         category: item.industry || clientConfig.tiktok?.industry || 'Education',
         isPromoted: item.isPromoted || false
       });
@@ -177,7 +187,9 @@ function transformData(items, clientConfig) {
           usage: formatNumber(item.useCnt || item.videoCount || item.usage || 0),
           growth: item.trend || '+0%',
           duration: item.duration || 0,
-          category: 'Music'
+          category: 'Music',
+          region: soundsLabel,
+          regionNote: 'Tendencias globales para Peru'
         });
       }
     }
@@ -217,7 +229,9 @@ function transformData(items, clientConfig) {
           author: item.authorName || 'Unknown',
           usage: formatNumber(item.useCnt || 0),
           growth: '+0%',
-          category: 'Music'
+          category: 'Music',
+          region: soundsLabel,
+          regionNote: 'Tendencias globales para Peru'
         });
       }
     });
@@ -239,7 +253,11 @@ function transformData(items, clientConfig) {
       note: 'Datos reales de TikTok Creative Center',
       timeframe: `Last ${clientConfig.tiktok?.timeRange || 30} days`,
       industry: clientConfig.tiktok?.industry || 'Education',
-      items_fetched: items.length
+      items_fetched: items.length,
+      hashtags_region: hashtagLabel,
+      sounds_region: soundsLabel,
+      hashtags_source: countries.hashtagCountry === 'BR' ? 'Brasil (proxy LATAM)' : clientConfig.region,
+      sounds_source: 'Global trends'
     }
   };
 }

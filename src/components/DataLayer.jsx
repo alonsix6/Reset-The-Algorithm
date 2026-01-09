@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search, TrendingUp, Video, Share2, GraduationCap, RefreshCw, ChevronDown, ChevronUp, BarChart3, Info } from 'lucide-react';
+import { Search, TrendingUp, Video, Share2, GraduationCap, RefreshCw, ChevronDown, ChevronUp, BarChart3, Info, Music, Target, DollarSign, Layers, Lightbulb, Users, Globe, MapPin } from 'lucide-react';
 
 export default function DataLayer() {
   const [trendsData, setTrendsData] = useState(null);
@@ -57,17 +57,26 @@ export default function DataLayer() {
     }));
   };
 
-  // Helper para iconos de insights ML
+  // Helper para iconos de insights ML (Lucide components)
   const getInsightIcon = (type) => {
-    const icons = {
-      trend: '📈',
-      social: '📱',
-      tiktok: '🎥',
-      intent: '🎯',
-      budget: '💰',
-      multi_source: '🔗'
+    const iconMap = {
+      trend: TrendingUp,
+      social: Users,
+      tiktok: Video,
+      intent: Target,
+      budget: DollarSign,
+      multi_source: Layers
     };
-    return icons[type] || '💡';
+    return iconMap[type] || Lightbulb;
+  };
+
+  // Helper para iconos de fuentes (Lucide components)
+  const getSourceIcon = (source) => {
+    if (source === 'Google Trends') return Search;
+    if (source === 'TikTok') return Video;
+    if (source === 'Meta') return Share2;
+    if (source === 'GA4') return BarChart3;
+    return Layers;
   };
 
   // Calcular scores de cada fuente (usa ML si disponible)
@@ -134,7 +143,7 @@ export default function DataLayer() {
     if (mlInsights?.insights?.length > 0) {
       return mlInsights.insights.slice(0, 5).map(insight => ({
         source: insight.source || 'ML Analysis',
-        icon: getInsightIcon(insight.type),
+        IconComponent: getInsightIcon(insight.type),
         text: `${insight.title}. ${insight.description}`,
         priority: insight.priority,
         action: insight.action,
@@ -154,7 +163,7 @@ export default function DataLayer() {
       }, 0) / trendsData.keywords.length;
       insights.push({
         source: 'Google Trends',
-        icon: '🔍',
+        IconComponent: Search,
         text: `"${topKeyword.keyword}" lidera búsquedas con ${topKeyword.average_interest}/100 de interés. El mercado educativo muestra crecimiento promedio de ${avgGrowth.toFixed(0)}% en keywords universitarias de Arequipa.`
       });
     }
@@ -170,7 +179,7 @@ export default function DataLayer() {
         : 0;
       insights.push({
         source: 'TikTok',
-        icon: '🎥',
+        IconComponent: Video,
         text: `${topHashtag.hashtag} alcanza ${topHashtag.views} de visualizaciones. UCSP tiene ${ucspHashtags.length} hashtags activos con relevancia promedio de ${avgRelevance.toFixed(0)}/100 (bajo alcance comparado con competencia).`
       });
     }
@@ -186,7 +195,7 @@ export default function DataLayer() {
       ).length;
       insights.push({
         source: 'Meta',
-        icon: '📱',
+        IconComponent: Share2,
         text: `"${topTopic.topic}" genera ${topTopic.mentions?.toLocaleString()} menciones con engagement ${topTopic.engagement_score}/10. UCSP aparece en ${ucspInTop}/${metaData.aggregatedTopics.length} temas pero lidera solo ${ucspLeads} (dominancia: UNSA y UCSM).`
       });
     }
@@ -197,7 +206,7 @@ export default function DataLayer() {
       const topPage = ga4Data.topPages?.[0];
       insights.push({
         source: 'GA4',
-        icon: '📊',
+        IconComponent: BarChart3,
         text: `${ga4Data.overview.totalUsers?.toLocaleString()} usuarios generaron ${ga4Data.overview.conversions} leads (${convRate}% conversión), "${topPage?.page}" es la página más efectiva.`
       });
     }
@@ -224,13 +233,13 @@ export default function DataLayer() {
       const formatted = connections.map(c => `"${c}"`).join(' y ');
       insights.push({
         source: 'Conexión Multi-fuente',
-        icon: '🔗',
+        IconComponent: Layers,
         text: `${formatted} ${connections.length > 1 ? 'aparecen' : 'aparece'} como señales fuertes en Google Trends, TikTok y Meta simultáneamente, indicando interés del mercado educativo en Arequipa.`
       });
     } else {
       insights.push({
         source: 'Conexión Multi-fuente',
-        icon: '🔗',
+        IconComponent: Layers,
         text: `Las 4 fuentes confirman interés educativo moderado: búsquedas +${((scores.search / 10) * 10).toFixed(0)}%, presencia social baja en TikTok, competencia dominando Meta, y conversión del ${(ga4Data?.overview?.conversionRate * 100 || 5.8).toFixed(1)}%.`
       });
     }
@@ -309,7 +318,7 @@ export default function DataLayer() {
       <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-ucsp-lg p-8 border border-gray-100">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-12 h-12 bg-gradient-to-br from-ucsp-burgundy to-ucsp-darkBurgundy rounded-xl flex items-center justify-center shadow-lg">
-            <span className="text-2xl">📊</span>
+            <BarChart3 className="w-6 h-6 text-white" />
           </div>
           <div>
             <h3 className="text-lg font-bold text-gray-900">Insights Clave del Mercado</h3>
@@ -335,11 +344,12 @@ export default function DataLayer() {
             // El último insight (Conexión Multi-fuente) abarca 2 columnas
             const isMultiSource = insight.source === 'Conexión Multi-fuente';
 
+            const InsightIcon = insight.IconComponent || Lightbulb;
             return (
               <div key={idx} className={`relative ${colorScheme.bg} rounded-xl p-5 border-2 border-transparent hover:border-gray-200 transition-all duration-300 hover:shadow-lg group ${isMultiSource ? 'md:col-span-2' : ''}`}>
                 <div className="flex items-start gap-4">
                   <div className={`w-12 h-12 bg-gradient-to-br ${colorScheme.gradient} rounded-xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                    <span className="text-2xl">{insight.icon}</span>
+                    <InsightIcon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
@@ -524,9 +534,12 @@ export default function DataLayer() {
                         <span className="text-sm font-bold text-gray-700">{tag.relevanceScore}/100</span>
                       </td>
                       <td className="px-4 py-3 text-center">
-                        <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
-                          tag.region === 'Peru' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'
+                        <span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-semibold rounded-full ${
+                          tag.region === 'LATAM' ? 'bg-purple-100 text-purple-700' :
+                          tag.region === 'PE' || tag.region === 'Peru' ? 'bg-green-100 text-green-700' :
+                          'bg-gray-100 text-gray-700'
                         }`}>
+                          <Globe className="w-3 h-3" />
                           {tag.region}
                         </span>
                       </td>
@@ -535,6 +548,52 @@ export default function DataLayer() {
                 </tbody>
               </table>
             </div>
+
+            {/* Sounds Section */}
+            {tiktokData?.trends?.sounds?.length > 0 && (
+              <div className="mt-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <Music className="w-5 h-5 text-cyan-600" />
+                  <h4 className="text-sm font-semibold text-gray-700">Sonidos Trending</h4>
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium rounded-full bg-green-100 text-green-700">
+                    <MapPin className="w-3 h-3" />
+                    Peru
+                  </span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {tiktokData.trends.sounds.slice(0, 6).map((sound, idx) => (
+                    <div key={idx} className="bg-gradient-to-br from-cyan-50 to-white rounded-xl p-4 border border-cyan-100 hover:shadow-md transition-shadow">
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Music className="w-5 h-5 text-white" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h5 className="text-sm font-semibold text-gray-900 truncate" title={sound.soundName}>
+                            {sound.soundName}
+                          </h5>
+                          <p className="text-xs text-gray-600 truncate">{sound.author}</p>
+                          <div className="flex items-center gap-3 mt-2">
+                            <span className="text-xs font-medium text-cyan-700">
+                              {sound.usage} usos
+                            </span>
+                            {sound.growth && (
+                              <span className="text-xs font-medium text-green-600">
+                                {sound.growth}
+                              </span>
+                            )}
+                            {sound.duration > 0 && (
+                              <span className="text-xs text-gray-500">
+                                {Math.floor(sound.duration / 60)}:{(sound.duration % 60).toString().padStart(2, '0')}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
