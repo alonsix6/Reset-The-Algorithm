@@ -6,6 +6,8 @@ export default function DataLayer() {
   const [tiktokData, setTiktokData] = useState(null);
   const [metaData, setMetaData] = useState(null);
   const [ga4Data, setGA4Data] = useState(null);
+  const [mlData, setMLData] = useState(null); // ML predictions
+  const [mlInsights, setMLInsights] = useState(null); // ML insights
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [lastRefresh, setLastRefresh] = useState(null);
 
@@ -25,17 +27,21 @@ export default function DataLayer() {
     setIsRefreshing(true);
     try {
       const basePath = `/data`; // Datos UCSP
-      const [trends, tiktok, meta, ga4] = await Promise.all([
+      const [trends, tiktok, meta, ga4, mlPredictions, mlInsightsData] = await Promise.all([
         fetch(`${basePath}/trends/latest.json`).then(r => r.json()).catch(() => null),
         fetch(`${basePath}/tiktok/latest.json`).then(r => r.json()).catch(() => null),
         fetch(`${basePath}/meta/latest.json`).then(r => r.json()).catch(() => null),
-        fetch(`${basePath}/mock/ga4_data.json`).then(r => r.json()).catch(() => null)
+        fetch(`${basePath}/mock/ga4_data.json`).then(r => r.json()).catch(() => null),
+        fetch(`${basePath}/ml/predictions.json`).then(r => r.json()).catch(() => null),
+        fetch(`${basePath}/ml/insights.json`).then(r => r.json()).catch(() => null)
       ]);
 
       setTrendsData(trends);
       setTiktokData(tiktok);
       setMetaData(meta);
       setGA4Data(ga4);
+      setMLData(mlPredictions);
+      setMLInsights(mlInsightsData);
       setLastRefresh(new Date());
     } catch (error) {
       console.error('Error loading data:', error);
@@ -51,8 +57,35 @@ export default function DataLayer() {
     }));
   };
 
-  // Calcular scores de cada fuente
+  // Helper para iconos de insights ML
+  const getInsightIcon = (type) => {
+    const icons = {
+      trend: '📈',
+      social: '📱',
+      tiktok: '🎥',
+      intent: '🎯',
+      budget: '💰',
+      multi_source: '🔗'
+    };
+    return icons[type] || '💡';
+  };
+
+  // Calcular scores de cada fuente (usa ML si disponible)
   const calculateScores = () => {
+    // Si hay datos ML, usar scores del pipeline ML
+    if (mlData?.scores?.individual) {
+      return {
+        overall: mlData.scores.overall?.toFixed(1) || '7.5',
+        search: mlData.scores.individual.search?.final?.toFixed(1) || '7.5',
+        trend: mlData.scores.individual.trend?.final?.toFixed(1) || '5.0',
+        social: mlData.scores.individual.social?.final?.toFixed(1) || '5.0',
+        intent: mlData.scores.individual.intent?.final?.toFixed(1) || '8.7',
+        isML: true, // Flag para indicar que son scores ML
+        weights: mlData.scores.weights
+      };
+    }
+
+    // Fallback: calcular manualmente si no hay ML
     let searchScore = 7.5;
     let trendScore = 8.2;
     let socialScore = 8.5;
@@ -88,14 +121,28 @@ export default function DataLayer() {
       search: searchScore,
       trend: trendScore,
       social: socialScore,
-      intent: intentScore
+      intent: intentScore,
+      isML: false
     };
   };
 
   const scores = calculateScores();
 
-  // Generar insights basados en los datos
+  // Generar insights basados en los datos (usa ML si disponible)
   const generateInsights = () => {
+    // Si hay insights ML, usarlos con formato adaptado
+    if (mlInsights?.insights?.length > 0) {
+      return mlInsights.insights.slice(0, 5).map(insight => ({
+        source: insight.source || 'ML Analysis',
+        icon: getInsightIcon(insight.type),
+        text: `${insight.title}. ${insight.description}`,
+        priority: insight.priority,
+        action: insight.action,
+        isML: true
+      }));
+    }
+
+    // Fallback: generar insights manualmente
     const insights = [];
 
     // Google Trends Insight
