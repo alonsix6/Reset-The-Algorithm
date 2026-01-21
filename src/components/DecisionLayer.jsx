@@ -63,7 +63,7 @@ export default function DecisionLayer() {
   return (
     <div className="space-y-8">
       {/* Header */}
-      <div className="bg-fitzone-slate rounded-2xl shadow-lg p-6 border border-fitzone-orange/10">
+      <div className="bg-fitzone-slate rounded-2xl shadow-lg p-6 border border-fitzone-purple/10">
         <div className="flex items-start justify-between">
           <div>
             <h2 className="text-lg font-bold text-white mb-2">
@@ -74,7 +74,7 @@ export default function DecisionLayer() {
             </p>
           </div>
           <div className="flex gap-2">
-            <span className="px-3 py-1 bg-fitzone-orange text-white rounded-full text-sm font-medium">
+            <span className="px-3 py-1 bg-fitzone-purple text-white rounded-full text-sm font-medium">
               IA Activa
             </span>
           </div>
@@ -82,7 +82,7 @@ export default function DecisionLayer() {
       </div>
 
       {/* FitZone Opportunity Score */}
-      <div className="bg-fitzone-orange text-white rounded-2xl shadow-lg p-8">
+      <div className="bg-fitzone-purple text-white rounded-2xl shadow-lg p-8">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-8">
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
@@ -101,12 +101,12 @@ export default function DecisionLayer() {
             </div>
             <div className="flex items-center justify-center lg:justify-end gap-3 mt-2">
               <span className={`px-4 py-2 rounded-lg text-base font-bold ${
-                OPPORTUNITY_SCORE.current_score >= 75 ? 'bg-fitzone-lime text-fitzone-charcoal' :
+                OPPORTUNITY_SCORE.current_score >= 75 ? 'bg-fitzone-emerald text-fitzone-charcoal' :
                 OPPORTUNITY_SCORE.current_score >= 60 ? 'bg-yellow-500' : 'bg-red-500'
               }`}>
                 Grado {getScoreGrade(OPPORTUNITY_SCORE.current_score)}
               </span>
-              <span className="text-fitzone-lime font-semibold text-sm">
+              <span className="text-fitzone-emerald font-semibold text-sm">
                 {OPPORTUNITY_SCORE.trend} vs período anterior
               </span>
             </div>
@@ -161,9 +161,9 @@ export default function DecisionLayer() {
       </div>
 
       {/* Strategic Recommendations */}
-      <div className="bg-fitzone-slate rounded-2xl shadow-lg p-6 border border-fitzone-orange/10">
+      <div className="bg-fitzone-slate rounded-2xl shadow-lg p-6 border border-fitzone-purple/10">
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-12 h-12 bg-fitzone-orange rounded-xl flex items-center justify-center">
+          <div className="w-12 h-12 bg-fitzone-purple rounded-xl flex items-center justify-center">
             <TrendingUp className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -176,19 +176,19 @@ export default function DecisionLayer() {
           {recommendations.map((rec, idx) => (
             <div key={idx} className={`p-5 rounded-xl border-2 ${
               rec.priority === 'high'
-                ? 'bg-fitzone-orange/10 border-fitzone-orange/30'
+                ? 'bg-fitzone-purple/10 border-fitzone-purple/30'
                 : rec.priority === 'medium'
                 ? 'bg-yellow-500/10 border-yellow-500/30'
-                : 'bg-fitzone-electric/10 border-fitzone-electric/30'
+                : 'bg-fitzone-cyan/10 border-fitzone-cyan/30'
             }`}>
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-3">
                   <span className={`px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 ${
                     rec.priority === 'high'
-                      ? 'bg-fitzone-orange/30 text-fitzone-orange'
+                      ? 'bg-fitzone-purple/30 text-fitzone-purple'
                       : rec.priority === 'medium'
                       ? 'bg-yellow-500/30 text-yellow-400'
-                      : 'bg-fitzone-electric/30 text-fitzone-electric'
+                      : 'bg-fitzone-cyan/30 text-fitzone-cyan'
                   }`}>
                     {rec.priority === 'high' ? <><Flame className="w-3 h-3" /> ALTA</> :
                      rec.priority === 'medium' ? <><Zap className="w-3 h-3" /> MEDIA</> : <><BarChart3 className="w-3 h-3" /> BAJA</>}
@@ -202,7 +202,7 @@ export default function DecisionLayer() {
               </div>
 
               <p className="text-white font-medium mb-2">{rec.action}</p>
-              <p className="text-sm text-fitzone-lime font-semibold flex items-center gap-1">
+              <p className="text-sm text-fitzone-emerald font-semibold flex items-center gap-1">
                 <Target className="w-4 h-4" />
                 {rec.impact}
               </p>
@@ -212,9 +212,9 @@ export default function DecisionLayer() {
       </div>
 
       {/* Target Audiences */}
-      <div className="bg-fitzone-slate rounded-2xl shadow-lg p-6 border border-fitzone-orange/10">
+      <div className="bg-fitzone-slate rounded-2xl shadow-lg p-6 border border-fitzone-purple/10">
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-12 h-12 bg-fitzone-electric rounded-xl flex items-center justify-center">
+          <div className="w-12 h-12 bg-fitzone-cyan rounded-xl flex items-center justify-center">
             <Users className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -225,13 +225,13 @@ export default function DecisionLayer() {
 
         <div className="grid gap-4">
           {audiences.map((aud, idx) => (
-            <div key={idx} className="p-5 bg-fitzone-charcoal rounded-xl border border-fitzone-slate hover:border-fitzone-orange/30 transition-colors">
+            <div key={idx} className="p-5 bg-fitzone-charcoal rounded-xl border border-fitzone-slate hover:border-fitzone-purple/30 transition-colors">
               <div className="flex items-start justify-between mb-3">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
                     <h4 className="font-bold text-white text-base">{aud.name}</h4>
                     <span className={`px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 ${
-                      aud.status === 'active' ? 'bg-fitzone-lime/20 text-fitzone-lime' : 'bg-yellow-500/20 text-yellow-400'
+                      aud.status === 'active' ? 'bg-fitzone-emerald/20 text-fitzone-emerald' : 'bg-yellow-500/20 text-yellow-400'
                     }`}>
                       {aud.status === 'active' ? <><CheckCircle className="w-3 h-3" /> ACTIVA</> : <><FlaskConical className="w-3 h-3" /> TESTING</>}
                     </span>
@@ -247,11 +247,11 @@ export default function DecisionLayer() {
                 </div>
                 <div>
                   <p className="text-xs text-fitzone-textGray">Engagement Rate</p>
-                  <p className="text-xl font-bold text-fitzone-electric">{aud.engagement}</p>
+                  <p className="text-xl font-bold text-fitzone-cyan">{aud.engagement}</p>
                 </div>
                 <div>
                   <p className="text-xs text-fitzone-textGray">CPL Target</p>
-                  <p className="text-xl font-bold text-fitzone-orange">${aud.cpl_target}</p>
+                  <p className="text-xl font-bold text-fitzone-purple">${aud.cpl_target}</p>
                 </div>
               </div>
 
@@ -265,76 +265,76 @@ export default function DecisionLayer() {
       </div>
 
       {/* Content Pillars */}
-      <div className="bg-fitzone-charcoal text-white rounded-2xl shadow-lg p-8 border border-fitzone-orange/20">
+      <div className="bg-fitzone-charcoal text-white rounded-2xl shadow-lg p-8 border border-fitzone-purple/20">
         <div className="flex items-center gap-3 mb-6">
-          <MessageSquare className="w-8 h-8 text-fitzone-orange" />
+          <MessageSquare className="w-8 h-8 text-fitzone-purple" />
           <h3 className="text-lg font-bold">Pilares de Contenido Sugeridos</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-fitzone-slate rounded-xl p-5 border border-fitzone-orange/20">
+          <div className="bg-fitzone-slate rounded-xl p-5 border border-fitzone-purple/20">
             <div className="flex items-center gap-2 mb-3">
-              <Dumbbell className="w-5 h-5 text-fitzone-orange" />
+              <Dumbbell className="w-5 h-5 text-fitzone-purple" />
               <p className="text-fitzone-textGray text-sm font-semibold">Pilar 1: {KEY_MESSAGES.espacio.title}</p>
             </div>
             <p className="text-base font-bold mb-2">"{KEY_MESSAGES.espacio.message}"</p>
             <p className="text-fitzone-textGray text-sm mb-3">{KEY_MESSAGES.espacio.description}</p>
             <div className="flex gap-2">
-              <span className="px-2 py-1 bg-fitzone-orange/20 rounded text-xs">Horarios flexibles</span>
-              <span className="px-2 py-1 bg-fitzone-orange/20 rounded text-xs">Libertad</span>
+              <span className="px-2 py-1 bg-fitzone-purple/20 rounded text-xs">Horarios flexibles</span>
+              <span className="px-2 py-1 bg-fitzone-purple/20 rounded text-xs">Libertad</span>
             </div>
           </div>
 
-          <div className="bg-fitzone-slate rounded-xl p-5 border border-fitzone-orange/20">
+          <div className="bg-fitzone-slate rounded-xl p-5 border border-fitzone-purple/20">
             <div className="flex items-center gap-2 mb-3">
-              <Zap className="w-5 h-5 text-fitzone-orange" />
+              <Zap className="w-5 h-5 text-fitzone-purple" />
               <p className="text-fitzone-textGray text-sm font-semibold">Pilar 2: {KEY_MESSAGES.tecnologia.title}</p>
             </div>
             <p className="text-base font-bold mb-2">"{KEY_MESSAGES.tecnologia.message}"</p>
             <p className="text-fitzone-textGray text-sm mb-3">{KEY_MESSAGES.tecnologia.description}</p>
             <div className="flex gap-2">
-              <span className="px-2 py-1 bg-fitzone-orange/20 rounded text-xs">App</span>
-              <span className="px-2 py-1 bg-fitzone-orange/20 rounded text-xs">IA</span>
+              <span className="px-2 py-1 bg-fitzone-purple/20 rounded text-xs">App</span>
+              <span className="px-2 py-1 bg-fitzone-purple/20 rounded text-xs">IA</span>
             </div>
           </div>
 
-          <div className="bg-fitzone-slate rounded-xl p-5 border border-fitzone-orange/20">
+          <div className="bg-fitzone-slate rounded-xl p-5 border border-fitzone-purple/20">
             <div className="flex items-center gap-2 mb-3">
-              <Users className="w-5 h-5 text-fitzone-orange" />
+              <Users className="w-5 h-5 text-fitzone-purple" />
               <p className="text-fitzone-textGray text-sm font-semibold">Pilar 3: {KEY_MESSAGES.comunidad.title}</p>
             </div>
             <p className="text-base font-bold mb-2">"{KEY_MESSAGES.comunidad.message}"</p>
             <p className="text-fitzone-textGray text-sm mb-3">{KEY_MESSAGES.comunidad.description}</p>
             <div className="flex gap-2">
-              <span className="px-2 py-1 bg-fitzone-orange/20 rounded text-xs">Clases grupales</span>
-              <span className="px-2 py-1 bg-fitzone-orange/20 rounded text-xs">Challenges</span>
+              <span className="px-2 py-1 bg-fitzone-purple/20 rounded text-xs">Clases grupales</span>
+              <span className="px-2 py-1 bg-fitzone-purple/20 rounded text-xs">Challenges</span>
             </div>
           </div>
 
-          <div className="bg-fitzone-slate rounded-xl p-5 border border-fitzone-orange/20">
+          <div className="bg-fitzone-slate rounded-xl p-5 border border-fitzone-purple/20">
             <div className="flex items-center gap-2 mb-3">
-              <Target className="w-5 h-5 text-fitzone-orange" />
+              <Target className="w-5 h-5 text-fitzone-purple" />
               <p className="text-fitzone-textGray text-sm font-semibold">Pilar 4: {KEY_MESSAGES.resultados.title}</p>
             </div>
             <p className="text-base font-bold mb-2">"{KEY_MESSAGES.resultados.message}"</p>
             <p className="text-fitzone-textGray text-sm mb-3">{KEY_MESSAGES.resultados.description}</p>
             <div className="flex gap-2">
-              <span className="px-2 py-1 bg-fitzone-orange/20 rounded text-xs">Transformaciones</span>
-              <span className="px-2 py-1 bg-fitzone-orange/20 rounded text-xs">Nutrición</span>
+              <span className="px-2 py-1 bg-fitzone-purple/20 rounded text-xs">Transformaciones</span>
+              <span className="px-2 py-1 bg-fitzone-purple/20 rounded text-xs">Nutrición</span>
             </div>
           </div>
 
-          <div className="bg-fitzone-slate rounded-xl p-5 border border-fitzone-orange/20 md:col-span-2">
+          <div className="bg-fitzone-slate rounded-xl p-5 border border-fitzone-purple/20 md:col-span-2">
             <div className="flex items-center gap-2 mb-3">
-              <AlertCircle className="w-5 h-5 text-fitzone-orange" />
+              <AlertCircle className="w-5 h-5 text-fitzone-purple" />
               <p className="text-fitzone-textGray text-sm font-semibold">Pilar 5: {KEY_MESSAGES.precio.title}</p>
             </div>
             <p className="text-base font-bold mb-2">"{KEY_MESSAGES.precio.message}"</p>
             <p className="text-fitzone-textGray text-sm mb-3">{KEY_MESSAGES.precio.description}</p>
             <div className="flex gap-2">
-              <span className="px-2 py-1 bg-fitzone-orange/20 rounded text-xs">Precio justo</span>
-              <span className="px-2 py-1 bg-fitzone-orange/20 rounded text-xs">Sin costos ocultos</span>
-              <span className="px-2 py-1 bg-fitzone-orange/20 rounded text-xs">Congelamiento gratis</span>
+              <span className="px-2 py-1 bg-fitzone-purple/20 rounded text-xs">Precio justo</span>
+              <span className="px-2 py-1 bg-fitzone-purple/20 rounded text-xs">Sin costos ocultos</span>
+              <span className="px-2 py-1 bg-fitzone-purple/20 rounded text-xs">Congelamiento gratis</span>
             </div>
           </div>
         </div>

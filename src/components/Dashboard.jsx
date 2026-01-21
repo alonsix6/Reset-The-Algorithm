@@ -36,28 +36,28 @@ export default function Dashboard() {
       name: LAYER_CONFIG.data.name,
       icon: iconMap[LAYER_CONFIG.data.icon],
       description: LAYER_CONFIG.data.description,
-      color: LAYER_CONFIG.data.color
+      color: 'bg-fitzone-purple'
     },
     {
       id: 'decision',
       name: LAYER_CONFIG.decision.name,
       icon: iconMap[LAYER_CONFIG.decision.icon],
       description: LAYER_CONFIG.decision.description,
-      color: LAYER_CONFIG.decision.color
+      color: 'bg-fitzone-cyan'
     },
     {
       id: 'execution',
       name: LAYER_CONFIG.execution.name,
       icon: iconMap[LAYER_CONFIG.execution.icon],
       description: LAYER_CONFIG.execution.description,
-      color: LAYER_CONFIG.execution.color
+      color: 'bg-fitzone-emerald'
     },
     {
       id: 'optimization',
       name: LAYER_CONFIG.optimization.name,
       icon: iconMap[LAYER_CONFIG.optimization.icon],
       description: LAYER_CONFIG.optimization.description,
-      color: LAYER_CONFIG.optimization.color
+      color: 'bg-fitzone-amber'
     }
   ];
 
@@ -65,7 +65,7 @@ export default function Dashboard() {
     return (
       <div className="min-h-screen bg-fitzone-charcoal flex items-center justify-center">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-fitzone-orange border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-16 h-16 border-4 border-fitzone-purple border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-white text-lg font-medium">{UI_TEXT.loading}</p>
         </div>
       </div>
@@ -75,16 +75,16 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-fitzone-charcoal">
       {/* Header */}
-      <header className="bg-fitzone-slate text-white shadow-lg border-b border-fitzone-orange/20">
+      <header className="bg-fitzone-slate text-white shadow-lg border-b border-fitzone-purple/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3 sm:gap-4">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-fitzone-orange rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-fitzone-purple rounded-xl flex items-center justify-center flex-shrink-0">
                 <Dumbbell className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
               </div>
               <div className="min-w-0">
                 <h1 className="text-xl sm:text-2xl font-bold truncate">{BRAND_CONFIG.name}</h1>
-                <p className="text-fitzone-orange text-xs sm:text-sm mt-1 font-medium">
+                <p className="text-fitzone-lightPurple text-xs sm:text-sm mt-1 font-medium">
                   {BRAND_CONFIG.tagline}
                 </p>
               </div>
@@ -106,8 +106,8 @@ export default function Dashboard() {
                   })}
                 </p>
               </div>
-              <div className="w-10 h-10 bg-fitzone-orange/20 rounded-full flex items-center justify-center backdrop-blur-sm flex-shrink-0 hover:bg-fitzone-orange/30 transition-colors">
-                <Zap className="w-5 h-5 text-fitzone-orange" fill="currentColor" />
+              <div className="w-10 h-10 bg-fitzone-purple/20 rounded-full flex items-center justify-center backdrop-blur-sm flex-shrink-0 hover:bg-fitzone-purple/30 transition-colors">
+                <Zap className="w-5 h-5 text-fitzone-purple" fill="currentColor" />
               </div>
             </div>
           </div>
@@ -115,21 +115,12 @@ export default function Dashboard() {
       </header>
 
       {/* Layer Navigation */}
-      <div className="bg-fitzone-darkSlate border-b border-fitzone-orange/10 sticky top-0 z-40 shadow-lg">
+      <div className="bg-fitzone-darkSlate border-b border-fitzone-purple/10 sticky top-0 z-40 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-3 overflow-x-auto py-4 scrollbar-hide">
             {layers.map((layer) => {
               const Icon = layer.icon;
               const isActive = activeLayer === layer.id;
-
-              // Usar colores sólidos en lugar de gradientes
-              const solidColorMap = {
-                'from-fitzone-electric to-fitzone-cyan': 'bg-fitzone-electric',
-                'from-fitzone-orange to-fitzone-darkOrange': 'bg-fitzone-orange',
-                'from-fitzone-lime to-green-500': 'bg-fitzone-lime',
-                'from-amber-500 to-orange-500': 'bg-amber-500',
-              };
-              const solidColor = solidColorMap[layer.color] || 'bg-fitzone-orange';
 
               return (
                 <button
@@ -138,8 +129,8 @@ export default function Dashboard() {
                   className={`
                     flex-shrink-0 flex items-center gap-3 px-5 py-3.5 rounded-xl font-medium transition-all duration-300
                     ${isActive
-                      ? `${solidColor} text-white shadow-lg`
-                      : 'bg-fitzone-charcoal text-fitzone-textGray hover:bg-fitzone-slate hover:text-white border border-fitzone-slate hover:border-fitzone-orange/30'
+                      ? `${layer.color} text-white shadow-lg`
+                      : 'bg-fitzone-charcoal text-fitzone-textGray hover:bg-fitzone-slate hover:text-white border border-fitzone-slate hover:border-fitzone-purple/30'
                     }
                   `}
                 >
@@ -176,10 +167,10 @@ export default function Dashboard() {
             </p>
             <div className="flex items-center gap-3 sm:gap-4">
               <span className="flex items-center gap-2 text-xs sm:text-sm text-fitzone-textGray">
-                <div className="w-2 h-2 bg-fitzone-lime rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-fitzone-emerald rounded-full animate-pulse"></div>
                 {UI_TEXT.systemActive}
               </span>
-              <span className="text-fitzone-orange font-semibold text-xs sm:text-sm">{UI_TEXT.footer.version}</span>
+              <span className="text-fitzone-purple font-semibold text-xs sm:text-sm">{UI_TEXT.footer.version}</span>
             </div>
           </div>
         </div>
