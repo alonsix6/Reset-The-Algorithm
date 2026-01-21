@@ -1,152 +1,115 @@
 {
-  "timestamp": "2026-01-05T17:02:08.274Z",
+  "timestamp": "2026-01-21T08:30:00.000Z",
   "region": "PE",
-  "category": "Education",
+  "category": "Health & Fitness",
   "source": "Google Trends (Curated Fallback)",
-  "client": "UCSP - Universidad Católica San Pablo",
+  "client": "FitZone Peru - Cadena de Gimnasios",
   "keywords": [
     {
-      "keyword": "universidad arequipa",
-      "average_interest": 78,
-      "trend": "rising",
-      "peak_score": 92,
-      "growth_3m": "+35%",
-      "top_regions": {
-        "Arequipa": 100,
-        "Puno": 58,
-        "Cusco": 50,
-        "Lima": 42,
-        "Tacna": 38
-      },
-      "rising_queries": [
-        "universidades arequipa ranking",
-        "mejores universidades arequipa",
-        "carreras arequipa"
-      ],
-      "related_topics": [
-        {
-          "title": "UCSP",
-          "type": "University",
-          "value": 85
-        },
-        {
-          "title": "UCSM",
-          "type": "University",
-          "value": 75
-        },
-        {
-          "title": "UNSA",
-          "type": "University",
-          "value": 70
-        }
-      ],
-      "source": "curated"
-    },
-    {
-      "keyword": "estudiar en arequipa",
-      "average_interest": 72,
-      "trend": "rising",
-      "peak_score": 88,
-      "growth_3m": "+28%",
-      "top_regions": {
-        "Arequipa": 100,
-        "Puno": 62,
-        "Cusco": 55,
-        "Tacna": 45,
-        "Moquegua": 40
-      },
-      "rising_queries": [
-        "donde estudiar arequipa",
-        "carreras universitarias arequipa",
-        "becas arequipa"
-      ],
-      "related_topics": [
-        {
-          "title": "Ingeniería",
-          "type": "Field",
-          "value": 80
-        },
-        {
-          "title": "Medicina",
-          "type": "Field",
-          "value": 75
-        },
-        {
-          "title": "Derecho",
-          "type": "Field",
-          "value": 65
-        }
-      ],
-      "source": "curated"
-    },
-    {
-      "keyword": "carreras universitarias peru",
-      "average_interest": 85,
+      "keyword": "gimnasio lima",
+      "average_interest": 92,
       "trend": "rising",
       "peak_score": 100,
-      "growth_3m": "+45%",
+      "growth_3m": "+85%",
       "top_regions": {
         "Lima": 100,
-        "Arequipa": 72,
-        "Cusco": 65,
-        "Trujillo": 58,
-        "Puno": 52
+        "Callao": 78,
+        "Arequipa": 45,
+        "Trujillo": 38,
+        "Cusco": 32
       },
       "rising_queries": [
-        "carreras mejor pagadas peru",
-        "carreras con futuro",
-        "que estudiar peru 2026"
+        "gimnasio cerca de mi",
+        "gimnasio 24 horas lima",
+        "gimnasio barato lima"
       ],
       "related_topics": [
         {
-          "title": "Ingeniería de Sistemas",
-          "type": "Career",
-          "value": 90
+          "title": "Smart Fit",
+          "type": "Brand",
+          "value": 95
         },
         {
-          "title": "Medicina",
-          "type": "Career",
+          "title": "b2 Gimnasios",
+          "type": "Brand",
+          "value": 68
+        },
+        {
+          "title": "FitZone",
+          "type": "Brand",
+          "value": 45
+        }
+      ],
+      "source": "curated"
+    },
+    {
+      "keyword": "membresia gimnasio",
+      "average_interest": 78,
+      "trend": "rising",
+      "peak_score": 95,
+      "growth_3m": "+62%",
+      "top_regions": {
+        "Lima": 100,
+        "Callao": 72,
+        "Arequipa": 48,
+        "Cusco": 35,
+        "Piura": 32
+      },
+      "rising_queries": [
+        "membresia gimnasio precio",
+        "membresia sin permanencia",
+        "membresia gimnasio promocion"
+      ],
+      "related_topics": [
+        {
+          "title": "Plan mensual",
+          "type": "Product",
           "value": 88
         },
         {
-          "title": "Administración",
-          "type": "Career",
-          "value": 75
+          "title": "Plan anual",
+          "type": "Product",
+          "value": 72
+        },
+        {
+          "title": "Pase libre",
+          "type": "Product",
+          "value": 65
         }
       ],
       "source": "curated"
     },
     {
-      "keyword": "ingenieria industrial peru",
-      "average_interest": 76,
+      "keyword": "crossfit lima",
+      "average_interest": 68,
       "trend": "rising",
-      "peak_score": 92,
-      "growth_3m": "+52%",
+      "peak_score": 82,
+      "growth_3m": "+45%",
       "top_regions": {
         "Lima": 100,
-        "Arequipa": 68,
-        "Cusco": 55,
-        "Trujillo": 52,
-        "Puno": 48
+        "Miraflores": 92,
+        "San Isidro": 85,
+        "Surco": 78,
+        "La Molina": 72
       },
       "rising_queries": [
-        "ingenieria industrial campo laboral",
-        "ingenieria industrial sueldo",
-        "mejores universidades ingenieria industrial"
+        "crossfit para principiantes",
+        "crossfit precio",
+        "box crossfit lima"
       ],
       "related_topics": [
         {
-          "title": "Industria 4.0",
-          "type": "Topic",
-          "value": 85
+          "title": "HIIT",
+          "type": "Activity",
+          "value": 82
         },
         {
-          "title": "Automatización",
-          "type": "Topic",
-          "value": 72
+          "title": "Funcional",
+          "type": "Activity",
+          "value": 78
         },
         {
-          "title": "Gestión de calidad",
+          "title": "WOD",
           "type": "Topic",
           "value": 65
         }
@@ -154,74 +117,111 @@
       "source": "curated"
     },
     {
-      "keyword": "medicina peru",
-      "average_interest": 82,
-      "trend": "stable",
-      "peak_score": 95,
-      "growth_3m": "+18%",
+      "keyword": "personal trainer lima",
+      "average_interest": 72,
+      "trend": "rising",
+      "peak_score": 88,
+      "growth_3m": "+38%",
       "top_regions": {
         "Lima": 100,
-        "Arequipa": 75,
-        "Cusco": 62,
-        "Trujillo": 58,
-        "Puno": 55
+        "San Isidro": 88,
+        "Miraflores": 85,
+        "La Molina": 75,
+        "Surco": 72
       },
       "rising_queries": [
-        "estudiar medicina peru",
-        "mejores universidades medicina",
-        "medicina costo"
+        "personal trainer precio",
+        "entrenador personal lima",
+        "personal trainer online"
       ],
       "related_topics": [
         {
-          "title": "UPCH",
-          "type": "University",
-          "value": 90
-        },
-        {
-          "title": "San Marcos",
-          "type": "University",
+          "title": "Nutricion",
+          "type": "Service",
           "value": 85
         },
         {
-          "title": "Residencia médica",
+          "title": "Plan de entrenamiento",
+          "type": "Service",
+          "value": 80
+        },
+        {
+          "title": "Resultados",
           "type": "Topic",
-          "value": 78
+          "value": 75
         }
       ],
       "source": "curated"
     },
     {
-      "keyword": "derecho peru",
-      "average_interest": 70,
-      "trend": "stable",
-      "peak_score": 85,
-      "growth_3m": "+12%",
+      "keyword": "bajar de peso gimnasio",
+      "average_interest": 88,
+      "trend": "rising",
+      "peak_score": 100,
+      "growth_3m": "+92%",
       "top_regions": {
         "Lima": 100,
+        "Callao": 82,
         "Arequipa": 65,
-        "Cusco": 58,
-        "Trujillo": 52,
-        "Puno": 48
+        "Trujillo": 58,
+        "Chiclayo": 52
       },
       "rising_queries": [
-        "estudiar derecho peru",
-        "abogado peru",
-        "derecho laboral"
+        "como bajar de peso rapido",
+        "rutina para bajar de peso",
+        "cardio para quemar grasa"
       ],
       "related_topics": [
         {
-          "title": "Derecho constitucional",
-          "type": "Field",
-          "value": 75
+          "title": "Propositos 2026",
+          "type": "Topic",
+          "value": 95
         },
         {
-          "title": "Derecho penal",
-          "type": "Field",
-          "value": 70
+          "title": "Transformacion",
+          "type": "Topic",
+          "value": 88
         },
         {
-          "title": "Derecho civil",
-          "type": "Field",
+          "title": "Dieta",
+          "type": "Topic",
+          "value": 82
+        }
+      ],
+      "source": "curated"
+    },
+    {
+      "keyword": "clases de spinning",
+      "average_interest": 65,
+      "trend": "stable",
+      "peak_score": 78,
+      "growth_3m": "+22%",
+      "top_regions": {
+        "Lima": 100,
+        "Miraflores": 88,
+        "San Borja": 75,
+        "Surco": 70,
+        "Magdalena": 65
+      },
+      "rising_queries": [
+        "spinning beneficios",
+        "spinning para bajar de peso",
+        "clases spinning lima"
+      ],
+      "related_topics": [
+        {
+          "title": "Ciclismo indoor",
+          "type": "Activity",
+          "value": 78
+        },
+        {
+          "title": "Cardio",
+          "type": "Activity",
+          "value": 72
+        },
+        {
+          "title": "Clases grupales",
+          "type": "Service",
           "value": 68
         }
       ],
@@ -230,11 +230,11 @@
   ],
   "metadata": {
     "method": "Curated data (Apify unavailable)",
-    "note": "Keywords genéricos de alto volumen. Los brand_keywords son opcionales para scraping separado.",
+    "note": "Keywords fitness de alto volumen para Lima Peru. Pico estacional de Enero por propositos de ano nuevo.",
     "timeframe": "today 1-m",
     "apify_keywords": 0,
     "curated_keywords": 6,
-    "market": "Sur del Perú (Arequipa, Puno, Cusco, Moquegua, Tacna)",
-    "product": "Pregrado y Posgrado 2026-I"
+    "market": "Lima Metropolitana (12 distritos)",
+    "product": "Membresias y Servicios Fitness 2026"
   }
 }

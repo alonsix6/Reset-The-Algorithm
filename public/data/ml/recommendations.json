@@ -1,86 +1,86 @@
 {
-  "generated_at": "2026-01-05T22:12:57.591Z",
+  "generated_at": "2026-01-21T08:30:00.000Z",
   "budget": [
     {
-      "channel": "display",
+      "channel": "tiktok_ads",
       "type": "increase",
+      "from": 15,
+      "to": 20,
+      "change": "+5.0%",
+      "impact": 1250,
+      "confidence": "high",
+      "reason": "TikTok muestra CPL 12% inferior al target en audiencia joven"
+    },
+    {
+      "channel": "influencers",
+      "type": "increase",
+      "from": 5,
+      "to": 7,
+      "change": "+2.0%",
+      "impact": 500,
+      "confidence": "medium",
+      "reason": "Alto engagement rate (12.5%) con influencers fitness locales"
+    },
+    {
+      "channel": "google_display",
+      "type": "decrease",
       "from": 10,
-      "to": 23.9,
-      "change": "+13.9%",
-      "impact": 3196.9999999999995,
+      "to": 7,
+      "change": "-3.0%",
+      "impact": 750,
       "confidence": "high",
-      "reason": "display muestra ROI superior (36.0%)"
-    },
-    {
-      "channel": "meta_ads",
-      "type": "decrease",
-      "from": 35,
-      "to": 25,
-      "change": "-10.0%",
-      "impact": 2300,
-      "confidence": "high",
-      "reason": "meta_ads muestra menor efectividad"
-    },
-    {
-      "channel": "google_search",
-      "type": "decrease",
-      "from": 35,
-      "to": 29,
-      "change": "-6.0%",
-      "impact": 1380,
-      "confidence": "high",
-      "reason": "google_search muestra menor efectividad"
+      "reason": "Display muestra menor conversion rate vs otros canales"
     }
   ],
   "actions": [
     {
       "priority": "high",
-      "action": "Aprovechar momento para escalar inversión en Search",
+      "action": "Maximizar inversion en Meta Ads y TikTok durante enero",
       "source": "ML Trend Analysis"
     },
     {
       "priority": "high",
-      "action": "Crear contenido targeting estos keywords emergentes",
+      "action": "Crear contenido targeting keywords emergentes de fitness",
       "source": "Google Trends"
     },
     {
       "priority": "high",
-      "action": "Investigar causas de percepción negativa y activar PR",
+      "action": "Amplificar contenido de transformaciones y resultados",
       "source": "Meta Social Listening"
     },
     {
       "priority": "high",
-      "action": "Priorizar estos temas en la estrategia de contenido",
+      "action": "Priorizar membresias, transformaciones, clases grupales en contenido",
       "source": "Multi-Source Analysis"
     },
     {
       "priority": "high",
-      "action": "Aumentar inversión en este keyword en Google Ads",
+      "action": "Aumentar inversion en keyword gimnasio lima en Google Ads",
       "source": "Google Trends"
     },
     {
       "priority": "medium",
-      "action": "display muestra ROI superior (50.0%)",
+      "action": "Aumentar budget TikTok de 15% a 20%",
       "source": "ML Budget Optimizer"
     },
     {
       "priority": "medium",
-      "action": "Mantener estrategia actual y escalar tráfico",
+      "action": "Optimizar landing de trial-gratis con 12.5% conversion",
       "source": "Google Analytics 4"
     },
     {
       "priority": "medium",
-      "action": "Considerar campañas geo-segmentadas",
+      "action": "Geo-segmentar campanas por distrito y sede",
       "source": "Google Trends"
     },
     {
       "priority": "medium",
-      "action": "Analizar qué hace exitosa esta página y replicar",
+      "action": "Dirigir mas trafico a /trial-gratis y replicar estructura",
       "source": "Google Analytics 4"
     },
     {
       "priority": "medium",
-      "action": "Aumentar share of voice en temas donde no aparece UCSP",
+      "action": "Mantener share of voice y mejorar posicionamiento en precios",
       "source": "Meta Social Listening"
     }
   ]

@@ -1,409 +1,440 @@
-// Keywords y hashtags para UCSP - Universidad Católica San Pablo (Arequipa, Perú)
-// Configuración completa para búsquedas y monitoreo social
+// Keywords y hashtags para FitZone - Cadena de gimnasios Peru
+// Configuracion completa para busquedas y monitoreo social
 
-export const KEYWORDS_UCSP = {
-  // Marca UCSP
+export const KEYWORDS_FITZONE = {
+  // Marca FitZone
   marca: [
-    'UCSP',
-    'Universidad Católica San Pablo',
-    'San Pablo Arequipa',
-    'UCSP admisión',
-    'admisión UCSP 2026',
-    'examen UCSP',
-    'UCSP Perú',
-    'Universidad San Pablo',
-    'Católica San Pablo',
-    'UCSP 2026',
+    'fitzone peru',
+    'fitzone gimnasio',
+    'fitzone miraflores',
+    'fitzone precio',
+    'fitzone membresia',
+    'fitzone san isidro',
+    'fitzone surco',
+    'fitzone promocion',
+    'fitzone horarios',
+    'fitzone clases',
   ],
 
-  // Carreras principales (top 5 más demandadas)
-  carreras: [
-    'ingeniería industrial UCSP',
-    'derecho UCSP',
-    'medicina UCSP',
-    'administración UCSP',
-    'arquitectura UCSP',
-    'ingeniería civil Arequipa',
-    'psicología UCSP',
-    'contabilidad Arequipa',
-    'ciencia de datos UCSP',
-    'mecatrónica Arequipa',
+  // Keywords de categoria
+  categoria: [
+    'gimnasio lima',
+    'gym cerca de mi',
+    'mejor gimnasio lima',
+    'gimnasio precio mensual',
+    'membresia gimnasio',
+    'gimnasio barato lima',
+    'gimnasio miraflores',
+    'gimnasio san isidro',
+    'gimnasio surco',
+    'gimnasio premium lima',
   ],
 
-  // Intención de búsqueda (postulación)
+  // Intencion de compra alta
   intencion: [
-    'donde estudiar en Arequipa',
-    'mejores universidades Arequipa',
-    'universidad católica Arequipa',
-    'costo universidad UCSP',
-    'pensiones UCSP',
-    'becas UCSP',
-    'admisión 2026 Arequipa',
-    'examen de admisión UCSP',
-    'requisitos UCSP',
-    'cronograma admisión UCSP',
+    'inscripcion gimnasio',
+    'promocion gimnasio enero',
+    'gimnasio sin matricula',
+    'gimnasio 24 horas lima',
+    'gimnasio con piscina lima',
+    'gimnasio cerca a mi ubicacion',
+    'precio gimnasio mensual lima',
+    'membresia gym lima',
+    'oferta gimnasio lima',
+    'gimnasio prueba gratis',
   ],
 
-  // Competencia directa
+  // Keywords de servicios
+  servicios: [
+    'clases spinning lima',
+    'yoga miraflores',
+    'crossfit lima precio',
+    'personal trainer lima',
+    'funcional training lima',
+    'pilates reformer lima',
+    'clases grupales gimnasio',
+    'entrenador personal precio',
+    'hiit clases lima',
+    'zumba lima',
+  ],
+
+  // Competencia
   competidores: [
-    'UNSA admisión',
-    'UCSM Arequipa',
-    'UCSP vs UCSM',
-    'UCSP vs UNSA',
-    'universidades Arequipa ranking',
-    'UTP Arequipa',
-    'UAP Arequipa',
-    'universidad Arequipa',
-    'mejores universidades sur Perú',
+    'smart fit peru',
+    'smart fit precio',
+    'b2 gimnasio',
+    'b2 gimnasio precio',
+    'bio ritmo gimnasio',
+    'sportlife peru',
+    'ko urban lima',
+    'gimnasio vs smart fit',
+    'alternativa smart fit',
+    'mejor que smart fit',
   ],
 
-  // Información académica
-  academico: [
-    'universidad licenciada Arequipa',
-    'acreditación SUNEDU',
-    'licenciamiento UCSP',
-    'universidad católica licenciada',
-    'acreditación internacional UCSP',
-    'ranking universidades Arequipa',
-    'calidad educativa UCSP',
+  // Disciplinas fitness
+  disciplinas: [
+    'crossfit lima',
+    'funcional lima',
+    'spinning lima',
+    'yoga lima',
+    'pilates lima',
+    'boxeo fitness lima',
+    'hiit lima',
+    'entrenamiento fuerza',
+    'musculacion lima',
+    'cardio lima',
   ],
 
-  // Proceso de admisión
-  admision: [
-    'postular UCSP',
-    'examen UCSP 2026',
-    'inscripción UCSP',
-    'vacantes UCSP',
-    'modalidades admisión UCSP',
-    'preparación examen UCSP',
-    'sílabo UCSP',
-    'resultados admisión UCSP',
+  // Resultados/transformacion
+  resultados: [
+    'bajar de peso gimnasio',
+    'ganar musculo gym',
+    'transformacion fitness',
+    'antes y despues gym',
+    'resultados gimnasio',
+    'rutina para principiantes',
+    'como empezar gym',
+    'dieta y gimnasio',
+    'perder grasa gym',
+    'tonificar cuerpo',
   ],
 
-  // Geografías clave
+  // Geografias Lima
   geografias: [
-    'universidad Arequipa',
-    'universidad Puno',
-    'universidad Cusco',
-    'universidad Moquegua',
-    'universidad Tacna',
-    'universidad Juliaca',
-    'estudiar en Arequipa',
-  ],
-
-  // Posgrado
-  posgrado: [
-    'maestría UCSP',
-    'posgrado Arequipa',
-    'diplomados UCSP',
-    'MBA Arequipa',
-    'maestría derecho UCSP',
-    'maestría ingeniería',
-    'educación continua UCSP',
+    'gimnasio miraflores',
+    'gimnasio san isidro',
+    'gimnasio surco',
+    'gimnasio la molina',
+    'gimnasio san borja',
+    'gimnasio magdalena',
+    'gimnasio jesus maria',
+    'gimnasio lince',
+    'gimnasio los olivos',
+    'gimnasio lima norte',
   ],
 };
 
-export const HASHTAGS_UCSP = {
-  // Principales UCSP
-  principales: [
-    '#UCSP',
-    '#UniversidadCatolicaSanPablo',
-    '#SanPabloArequipa',
-    '#AdmisionUCSP',
-    '#UCSP2026',
-    '#SomosUCSP',
+export const HASHTAGS_FITZONE = {
+  // Core (usar siempre)
+  core: [
+    '#gymtok',
+    '#fitnessperu',
+    '#gimnasio',
+    '#gym',
+    '#fitness',
+    '#FitZone',
+    '#FitZonePeru',
   ],
 
-  // Carreras
-  carreras: [
-    '#IngenieriaUCSP',
-    '#DerechoUCSP',
-    '#MedicinaUCSP',
-    '#AdministracionUCSP',
-    '#ArquitecturaUCSP',
-    '#PsicologiaUCSP',
-    '#CienciaDeDatosUCSP',
-    '#IngenieriaCivil',
-    '#Mecatronica',
+  // Engagement (rotar)
+  engagement: [
+    '#fyp',
+    '#parati',
+    '#viral',
+    '#trending',
+    '#fypシ',
+    '#xyzbca',
   ],
 
-  // Admisión y postulantes
-  admision: [
-    '#Postulantes2026',
-    '#Admision2026',
-    '#ExamenDeAdmision',
-    '#Preuniversitario',
-    '#PostulaUCSP',
-    '#VacantesUCSP',
-    '#AdmisionUCSP2026',
+  // Nicho fitness
+  fitness: [
+    '#legday',
+    '#glutesday',
+    '#transformacion',
+    '#gymrat',
+    '#fitfam',
+    '#gymmotivation',
+    '#workout',
+    '#fitnessmotivation',
+    '#gains',
+    '#bodybuilding',
   ],
 
-  // Vida universitaria
-  vidaUniversitaria: [
-    '#VidaUniversitaria',
-    '#EstudiaUniversitario',
-    '#CampusUCSP',
-    '#UniversitariosArequipa',
-    '#ViveUCSP',
-    '#ExperienciaUCSP',
+  // Local Peru
+  local: [
+    '#lima',
+    '#peru',
+    '#peruanos',
+    '#limalife',
+    '#miraflores',
+    '#sanisidro',
+    '#gymlima',
+    '#fitnessperu',
   ],
 
-  // Geografía
-  geografia: [
-    '#Arequipa',
-    '#UniversidadesArequipa',
-    '#EstudiaEnArequipa',
-    '#ArequipaPeru',
-    '#SurPeru',
-    '#Puno',
-    '#Cusco',
-    '#Moquegua',
-    '#Tacna',
+  // Disciplinas
+  disciplinas: [
+    '#crossfit',
+    '#funcional',
+    '#hiit',
+    '#pilates',
+    '#yoga',
+    '#spinning',
+    '#boxeo',
+    '#cardio',
+    '#fuerza',
+    '#entrenamiento',
   ],
 
-  // Generales educación
-  educacion: [
-    '#UniversidadesPeru',
-    '#EstudiaPeru',
-    '#EducacionSuperior',
-    '#UniversidadLicenciada',
-    '#CalidadAcademica',
-    '#FormacionIntegral',
+  // Transformaciones
+  transformaciones: [
+    '#antesydespues',
+    '#transformacion',
+    '#progreso',
+    '#fitjourney',
+    '#weightloss',
+    '#musclegain',
+    '#beforeandafter',
+    '#glow up',
   ],
 
-  // Competencia (para monitoreo)
+  // Motivacion
+  motivacion: [
+    '#motivation',
+    '#gymlife',
+    '#nopainnogain',
+    '#nevergiveup',
+    '#disciplina',
+    '#constancia',
+    '#lifestyle',
+    '#healthylifestyle',
+  ],
+
+  // Competencia (monitoreo)
   competencia: [
-    '#UNSA',
-    '#UCSM',
-    '#UTP',
-    '#UniversidadesCatolicas',
+    '#smartfit',
+    '#smartfitperu',
+    '#b2gimnasio',
+    '#kourban',
+    '#biorhythm',
   ],
 };
 
 // Combinar todos los hashtags
 export const ALL_HASHTAGS = [
-  ...HASHTAGS_UCSP.principales,
-  ...HASHTAGS_UCSP.carreras,
-  ...HASHTAGS_UCSP.admision,
-  ...HASHTAGS_UCSP.vidaUniversitaria,
-  ...HASHTAGS_UCSP.geografia,
-  ...HASHTAGS_UCSP.educacion,
+  ...HASHTAGS_FITZONE.core,
+  ...HASHTAGS_FITZONE.fitness,
+  ...HASHTAGS_FITZONE.local,
+  ...HASHTAGS_FITZONE.disciplinas,
+  ...HASHTAGS_FITZONE.transformaciones,
 ];
 
 // Combinar keywords para Google Trends
 export const ALL_KEYWORDS = [
-  ...KEYWORDS_UCSP.marca,
-  ...KEYWORDS_UCSP.carreras,
-  ...KEYWORDS_UCSP.intencion,
-  ...KEYWORDS_UCSP.admision,
+  ...KEYWORDS_FITZONE.marca,
+  ...KEYWORDS_FITZONE.categoria,
+  ...KEYWORDS_FITZONE.intencion,
+  ...KEYWORDS_FITZONE.servicios,
 ];
 
-// Keywords de alta intención (conversión)
+// Keywords de alta intencion (conversion)
 export const HIGH_INTENT_KEYWORDS = [
-  ...KEYWORDS_UCSP.admision,
-  ...KEYWORDS_UCSP.intencion.filter(k => k.includes('costo') || k.includes('becas') || k.includes('admisión')),
-  'postular UCSP',
-  'examen UCSP 2025',
-  'inscripción UCSP',
-  'vacantes UCSP',
-  'pensiones UCSP',
+  ...KEYWORDS_FITZONE.intencion,
+  'inscripcion gimnasio',
+  'membresia gym',
+  'precio gimnasio',
+  'promocion gimnasio',
+  'gimnasio sin matricula',
+  'prueba gratis gimnasio',
 ];
 
-// Configuración para Google Trends
+// Configuracion para Google Trends
 export const GOOGLE_TRENDS_CONFIG = {
-  keywords: ALL_KEYWORDS.slice(0, 15), // Máximo 15 keywords principales
-  region: 'PE', // Perú
-  // Geografías específicas a monitorear
+  keywords: ALL_KEYWORDS.slice(0, 15),
+  region: 'PE',
   geo: {
-    arequipa: 'PE-ARE',
-    puno: 'PE-PUN',
-    cusco: 'PE-CUS',
-    moquegua: 'PE-MOQ',
-    tacna: 'PE-TAC',
+    lima: 'PE-LIM',
   },
-  category: 67, // Education
-  timeframe: 'now 7-d', // Últimos 7 días
-  refreshInterval: 3600000, // 1 hora en ms
+  category: 44, // Health & Fitness
+  timeframe: 'now 7-d',
+  refreshInterval: 3600000,
 };
 
-// Configuración para TikTok
+// Configuracion para TikTok
 export const TIKTOK_CONFIG = {
-  hashtags: HASHTAGS_UCSP.principales,
+  hashtags: [
+    ...HASHTAGS_FITZONE.core,
+    ...HASHTAGS_FITZONE.fitness.slice(0, 5),
+    ...HASHTAGS_FITZONE.local.slice(0, 3),
+  ],
   region: 'PE',
   metrics: ['views', 'likes', 'shares', 'comments'],
-  trending_threshold: 5000, // Threshold para nicho educación
+  trending_threshold: 10000,
+  sounds: [
+    { name: 'NEFFEX tracks', category: 'Workout Motivation' },
+    { name: 'Tevvez - Legend', category: 'Gymtok classic' },
+    { name: 'Bad Bunny hits', category: 'Reggaeton workout' },
+    { name: 'Phonk remixes', category: 'Powerlifting' },
+    { name: 'Eminem/2Pac workout', category: 'Hip Hop gym' },
+  ],
 };
 
-// Configuración para Meta (Facebook/Instagram)
+// Configuracion para Meta (Facebook/Instagram)
 export const META_CONFIG = {
   hashtags: [
-    ...HASHTAGS_UCSP.principales,
-    ...HASHTAGS_UCSP.carreras,
-    ...HASHTAGS_UCSP.admision,
+    ...HASHTAGS_FITZONE.core,
+    ...HASHTAGS_FITZONE.fitness,
+    ...HASHTAGS_FITZONE.local,
   ],
   pages: [
-    'Universidad Católica San Pablo',
-    'UCSP Oficial',
-    'Admisión UCSP',
+    'FitZone Peru',
+    'FitZone Oficial',
+    'Smart Fit Peru',
+    'b2 gimnasio',
   ],
   groups: [
-    'Postulantes UCSP 2025',
-    'Estudiantes UCSP',
-    'Ingresantes UCSP',
+    'Fitness Peru',
+    'Gym Lima',
+    'Runners Lima',
+    'CrossFit Peru',
+  ],
+  interests: [
+    'Fitness and wellness',
+    'Gym',
+    'Weight training',
+    'Physical exercise',
+    'Healthy lifestyle',
   ],
 };
 
-// Fuentes de información educativa Perú
-export const EDUCATION_SOURCES = [
+// Fuentes de informacion fitness Peru
+export const FITNESS_SOURCES = [
   {
-    name: 'UCSP Oficial',
-    url: 'https://ucsp.edu.pe',
-    type: 'official',
-    scraping: false,
-  },
-  {
-    name: 'Admisión UCSP',
-    url: 'https://admision.ucsp.edu.pe',
-    type: 'official',
-    scraping: false,
-  },
-  {
-    name: 'SUNEDU',
-    url: 'https://www.sunedu.gob.pe',
-    type: 'regulatory',
-    scraping: false,
-  },
-  {
-    name: 'Ponte en Carrera',
-    url: 'https://www.ponteencarrera.pe',
-    type: 'platform',
+    name: 'Mercado Fitness',
+    url: 'https://mercadofitness.com',
+    type: 'industry',
     scraping: true,
   },
   {
-    name: 'Estudia Perú',
-    url: 'https://estudiaperu.pe',
-    type: 'platform',
+    name: 'AGP',
+    url: 'https://agpperu.org',
+    type: 'association',
+    scraping: false,
+  },
+  {
+    name: 'El Comercio - Fitness',
+    url: 'https://elcomercio.pe/respuestas/fitness',
+    type: 'news',
+    scraping: true,
+  },
+  {
+    name: 'Gestion - Negocios Fitness',
+    url: 'https://gestion.pe',
+    type: 'business',
     scraping: true,
   },
 ];
 
-// Carreras UCSP (para monitoreo individual)
-export const CARRERAS_UCSP = [
+// Sedes FitZone (para monitoreo individual)
+export const SEDES_FITZONE = [
   {
     id: 1,
-    nombre: 'Ingeniería Industrial',
-    slug: 'ingenieria-industrial',
-    demanda: 'Alta',
-    keywords: ['ingeniería industrial UCSP', 'ingeniería industrial Arequipa'],
-    hashtags: ['#IngenieriaIndustrial', '#IngenieriaUCSP'],
+    nombre: 'FitZone Miraflores',
+    slug: 'miraflores',
+    distrito: 'Miraflores',
+    keywords: ['gimnasio miraflores', 'gym miraflores', 'fitzone miraflores'],
+    hashtags: ['#Miraflores', '#GymMiraflores'],
   },
   {
     id: 2,
-    nombre: 'Derecho',
-    slug: 'derecho',
-    demanda: 'Alta',
-    keywords: ['derecho UCSP', 'abogado Arequipa', 'derecho católica'],
-    hashtags: ['#DerechoUCSP', '#Derecho', '#Abogado'],
+    nombre: 'FitZone San Isidro',
+    slug: 'san-isidro',
+    distrito: 'San Isidro',
+    keywords: ['gimnasio san isidro', 'gym san isidro', 'fitzone san isidro'],
+    hashtags: ['#SanIsidro', '#GymSanIsidro'],
   },
   {
     id: 3,
-    nombre: 'Medicina Humana',
-    slug: 'medicina',
-    demanda: 'Muy Alta',
-    keywords: ['medicina UCSP', 'medicina Arequipa', 'carrera medicina'],
-    hashtags: ['#MedicinaUCSP', '#Medicina', '#FuturosDoctor'],
+    nombre: 'FitZone Surco',
+    slug: 'surco',
+    distrito: 'Surco',
+    keywords: ['gimnasio surco', 'gym surco', 'fitzone surco'],
+    hashtags: ['#Surco', '#GymSurco'],
   },
   {
     id: 4,
-    nombre: 'Administración',
-    slug: 'administracion',
-    demanda: 'Alta',
-    keywords: ['administración negocios UCSP', 'administración Arequipa'],
-    hashtags: ['#AdministracionUCSP', '#Negocios'],
+    nombre: 'FitZone La Molina',
+    slug: 'la-molina',
+    distrito: 'La Molina',
+    keywords: ['gimnasio la molina', 'gym la molina', 'fitzone la molina'],
+    hashtags: ['#LaMolina', '#GymLaMolina'],
   },
   {
     id: 5,
-    nombre: 'Arquitectura y Urbanismo',
-    slug: 'arquitectura',
-    demanda: 'Media-Alta',
-    keywords: ['arquitectura UCSP', 'arquitectura Arequipa'],
-    hashtags: ['#ArquitecturaUCSP', '#Arquitectura'],
+    nombre: 'FitZone San Borja',
+    slug: 'san-borja',
+    distrito: 'San Borja',
+    keywords: ['gimnasio san borja', 'gym san borja', 'fitzone san borja'],
+    hashtags: ['#SanBorja', '#GymSanBorja'],
   },
   {
     id: 6,
-    nombre: 'Psicología',
-    slug: 'psicologia',
-    demanda: 'Alta',
-    keywords: ['psicología UCSP', 'psicología Arequipa'],
-    hashtags: ['#PsicologiaUCSP', '#Psicologia'],
+    nombre: 'FitZone Magdalena',
+    slug: 'magdalena',
+    distrito: 'Magdalena',
+    keywords: ['gimnasio magdalena', 'gym magdalena', 'fitzone magdalena'],
+    hashtags: ['#Magdalena', '#GymMagdalena'],
   },
   {
     id: 7,
-    nombre: 'Ingeniería Civil',
-    slug: 'ingenieria-civil',
-    demanda: 'Media',
-    keywords: ['ingeniería civil UCSP', 'civil Arequipa'],
-    hashtags: ['#IngenieriaCivil', '#CivilUCSP'],
+    nombre: 'FitZone Jesus Maria',
+    slug: 'jesus-maria',
+    distrito: 'Jesus Maria',
+    keywords: ['gimnasio jesus maria', 'gym jesus maria'],
+    hashtags: ['#JesusMaria', '#GymJesusMaria'],
   },
   {
     id: 8,
-    nombre: 'Contabilidad',
-    slug: 'contabilidad',
-    demanda: 'Media',
-    keywords: ['contabilidad UCSP', 'contador Arequipa'],
-    hashtags: ['#ContabilidadUCSP', '#Contabilidad'],
+    nombre: 'FitZone Lince',
+    slug: 'lince',
+    distrito: 'Lince',
+    keywords: ['gimnasio lince', 'gym lince', 'fitzone lince'],
+    hashtags: ['#Lince', '#GymLince'],
   },
   {
     id: 9,
-    nombre: 'Ciencia de la Computación',
-    slug: 'ciencia-computacion',
-    demanda: 'Media-Alta',
-    keywords: ['ciencia computación UCSP', 'computación Arequipa'],
-    hashtags: ['#CienciaComputacion', '#TechUCSP'],
+    nombre: 'FitZone San Miguel',
+    slug: 'san-miguel',
+    distrito: 'San Miguel',
+    keywords: ['gimnasio san miguel', 'gym san miguel', 'fitzone san miguel'],
+    hashtags: ['#SanMiguel', '#GymSanMiguel'],
   },
   {
     id: 10,
-    nombre: 'Ciencia de Datos',
-    slug: 'ciencia-datos',
-    demanda: 'Alta',
-    keywords: ['ciencia datos UCSP', 'data science Arequipa'],
-    hashtags: ['#CienciaDatos', '#DataScience'],
+    nombre: 'FitZone Independencia',
+    slug: 'independencia',
+    distrito: 'Independencia',
+    keywords: ['gimnasio independencia', 'gym lima norte', 'fitzone independencia'],
+    hashtags: ['#Independencia', '#LimaNorte'],
   },
   {
     id: 11,
-    nombre: 'Ingeniería Electrónica y Telecomunicaciones',
-    slug: 'electronica-telecomunicaciones',
-    demanda: 'Media',
-    keywords: ['electrónica UCSP', 'telecomunicaciones Arequipa'],
-    hashtags: ['#ElectronicaUCSP', '#Telecomunicaciones'],
+    nombre: 'FitZone Los Olivos',
+    slug: 'los-olivos',
+    distrito: 'Los Olivos',
+    keywords: ['gimnasio los olivos', 'gym los olivos', 'fitzone los olivos'],
+    hashtags: ['#LosOlivos', '#GymLosOlivos'],
   },
   {
     id: 12,
-    nombre: 'Ingeniería Mecatrónica',
-    slug: 'mecatronica',
-    demanda: 'Media',
-    keywords: ['mecatrónica UCSP', 'mecatrónica Arequipa'],
-    hashtags: ['#MecatronicaUCSP', '#Mecatronica'],
-  },
-  {
-    id: 13,
-    nombre: 'Ingeniería Ambiental',
-    slug: 'ingenieria-ambiental',
-    demanda: 'Media',
-    keywords: ['ingeniería ambiental UCSP', 'ambiental Arequipa'],
-    hashtags: ['#IngenieriaAmbiental', '#Sostenibilidad'],
+    nombre: 'FitZone Ate',
+    slug: 'ate',
+    distrito: 'Ate',
+    keywords: ['gimnasio ate', 'gym lima este', 'fitzone ate'],
+    hashtags: ['#Ate', '#LimaEste'],
   },
 ];
 
 export default {
-  KEYWORDS_UCSP,
-  HASHTAGS_UCSP,
+  KEYWORDS_FITZONE,
+  HASHTAGS_FITZONE,
   ALL_HASHTAGS,
   ALL_KEYWORDS,
   HIGH_INTENT_KEYWORDS,
   GOOGLE_TRENDS_CONFIG,
   TIKTOK_CONFIG,
   META_CONFIG,
-  EDUCATION_SOURCES,
-  CARRERAS_UCSP,
+  FITNESS_SOURCES,
+  SEDES_FITZONE,
 };
